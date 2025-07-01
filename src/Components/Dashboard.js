@@ -1,7 +1,7 @@
 const Dashboard = () => {
   return (
     <div className="dashboard">
-        <h1>Inventory Management Dashboard</h1>
+        <h1 className="bg-orange-300 font-bold">Inventory Management Dashboard</h1>
         <p>Welcome to the Inventory Management System. Here you can manage your inventory efficiently.</p>
         <div className="dashboard-links">
             <a href="/products" className="dashboard-link">Manage Products</a>
