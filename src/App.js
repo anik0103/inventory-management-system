@@ -8,11 +8,8 @@ function App() {
   return (
     <div className="App">
       <SignIn/>
-      {/* <SignUp /> */}
-      {/* <Dashboard /> */}
-
     </div>
   );
 }
-
+//Taslim's test for PR!!
 export default App;
