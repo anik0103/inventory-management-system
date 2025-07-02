@@ -22,9 +22,10 @@ const SummaryCards = () => {
             <p className="text-2xl font-bold text-white">10</p>
           </div>
 
-          <div className="bg-slate-400 w-52 h-24 p-4 mx-7 rounded-lg shadow">
+          <div className="bg-slate-400 w-52 h-24 p-4  rounded-lg shadow">
             <h3 className="text-sm font-semibold text-white">Pending Deliveries</h3>
             <p className="text-2xl font-bold text-white">5</p>
+            <p>Changes</p>
           </div>
         </div>
       </div>
