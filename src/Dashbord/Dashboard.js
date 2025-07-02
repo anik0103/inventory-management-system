@@ -1,5 +1,5 @@
 import React from 'react';
-import SummaryCards from './SummaryCards';
+// import SummaryCards from './SummaryCards';
 import SalesOverview from './SalesOverview';
 import TopProducts from './TopProducts';
 import OrderStatus from './OrderStatus';
@@ -13,7 +13,7 @@ const Dashboard = () => {
         Welcome to the Inventory Management System. Here you can manage your inventory efficiently.
       </p>
 
-      <SummaryCards />
+      {/* <SummaryCards /> */}
       <SalesOverview />
       <TopProducts />
       <OrderStatus />
