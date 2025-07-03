@@ -1,9 +1,12 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 const SignIn = () => {
   return (
     <div className="sign-in border border-cyan-100 rounded-lg p-8 max-w-md mx-auto mt-10 shadow-md bg-white">
       <h2 className="font-bold text-2xl text-center mb-6 text-cyan-700">Sign In</h2>
       <form>
-        <div className="mb-4 ">
+        <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 mb-2">Email:</label>
           <input
             type="email"
@@ -29,10 +32,17 @@ const SignIn = () => {
         >
           Sign In
         </button>
-        <h4 className="mt-2">Forget Password?</h4>
-       <link to="signup"><button className="font-bold m-2">SignUp</button></link>
+        {/* <div className="flex justify-between items-center mt-4">
+          <Link to="/forgot-password" className="text-cyan-600 hover:underline text-sm">
+            Forgot Password?
+          </Link>
+          <Link to="/signup" className="font-bold text-cyan-700 hover:underline text-sm">
+            Sign Up
+          </Link>
+        </div> */}
       </form>
     </div>
   );
-}
+};
+
 export default SignIn;
