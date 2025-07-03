@@ -16,8 +16,7 @@ const Dashboard = () => {
 
       <SummaryCards />
       <TopProducts />
-      <SalesOverview />
-      
+      <SalesOverview />      
       <OrderStatus />
     </div>
   );
