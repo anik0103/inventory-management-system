@@ -32,14 +32,8 @@ const SignIn = () => {
         >
           Sign In
         </button>
-        {/* <div className="flex justify-between items-center mt-4">
-          <Link to="/forgot-password" className="text-cyan-600 hover:underline text-sm">
-            Forgot Password?
-          </Link>
-          <Link to="/signup" className="font-bold text-cyan-700 hover:underline text-sm">
-            Sign Up
-          </Link>
-        </div> */}
+        <h4 className="mt-2">Forget Password?</h4>
+       {/* <link to="signup"><button className="font-bold m-2">SignUp</button></link> */}
       </form>
     </div>
   );
