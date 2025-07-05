@@ -1,9 +1,12 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 const SignIn = () => {
   return (
     <div className="sign-in border border-cyan-100 rounded-lg p-8 max-w-md mx-auto mt-10 shadow-md bg-white">
       <h2 className="font-bold text-2xl text-center mb-6 text-cyan-700">Sign In</h2>
       <form>
-        <div className="mb-4 ">
+        <div className="mb-4">
           <label htmlFor="email" className="block text-gray-700 mb-2">Email:</label>
           <input
             type="email"
@@ -34,5 +37,6 @@ const SignIn = () => {
       </form>
     </div>
   );
-}
+};
+
 export default SignIn;
