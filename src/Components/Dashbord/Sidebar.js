@@ -3,7 +3,7 @@ import React from "react";
 
 const Sidebar=()=>{
     return(
-        <div className="h-96 w-1/6 color-">
+        <div className="h-96 w-1/6 color-cyan-400">
             <ul>
                 <li>
                     <Link to="/">Dashboard</Link>
