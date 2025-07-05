@@ -30,7 +30,7 @@ const SignIn = () => {
           Sign In
         </button>
         <h4 className="mt-2">Forget Password?</h4>
-       <link to="signup"><button className="font-bold m-2">SignUp</button></link>
+       {/* <link to="signup"><button className="font-bold m-2">SignUp</button></link> */}
       </form>
     </div>
   );
