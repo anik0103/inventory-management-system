@@ -1,4 +1,4 @@
-ata dak Inventory Management System
+ Inventory Management System
 ├── Landing Page
 │   ├── Login Page
 │   │   ├── Admin Login Option
@@ -40,7 +40,7 @@ ata dak Inventory Management System
 │
 ├── User Dashboard
 │   ├── Sidebar Navigation
-│   │   ├── Home / Dashboard
+│   │   ├── Home
 │   │   ├── My Orders
 │   │   ├── Browse Products
 │   │   ├── Request Product
@@ -49,7 +49,7 @@ ata dak Inventory Management System
 │   │   ├── Search Bar
 │   │   ├── Notifications
 │   │   └── Profile Icon
-│   ├── Inner Container (Dashboard Area)
+│   ├── Inner Container
 │   │   ├── My Orders Summary
 │   │   ├── Order Status Tracker
 │   │   │   ├── Delivered
@@ -63,9 +63,36 @@ ata dak Inventory Management System
 
 
 
-const cards = [
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- const cards = [
     { title: 'Total Products', value: 120, bg: 'bg-slate-300', text: 'text-blue-700' },
     { title: 'Low Stock Items', value: 8, bg: 'bg-red-100', text: 'text-red-700' },
     { title: 'New Orders', value: 15, bg: 'bg-green-100', text: 'text-green-700' },
     { title: 'Pending Deliveries', value: 5, bg: 'bg-yellow-100', text: 'text-yellow-700' }
-  ];
+  ]; -->
