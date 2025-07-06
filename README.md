@@ -1,8 +1,8 @@
-ata dak Inventory Management System
+ Inventory Management System
 ├── Landing Page
 │   ├── Login Page
 │   │   ├── Admin Login Option
-│   │   └── User Login Option
+│   │   └── Staf Login Option
 │   └── Signup Page (User Only)
 │       └── Popup on Success
 │
@@ -58,14 +58,3 @@ ata dak Inventory Management System
 │   │   │   └── Returned
 │   │   └── Suggested Products / Announcements
 
-
-
-
-
-
-const cards = [
-    { title: 'Total Products', value: 120, bg: 'bg-slate-300', text: 'text-blue-700' },
-    { title: 'Low Stock Items', value: 8, bg: 'bg-red-100', text: 'text-red-700' },
-    { title: 'New Orders', value: 15, bg: 'bg-green-100', text: 'text-green-700' },
-    { title: 'Pending Deliveries', value: 5, bg: 'bg-yellow-100', text: 'text-yellow-700' }
-  ];

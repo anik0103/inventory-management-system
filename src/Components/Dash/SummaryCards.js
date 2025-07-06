@@ -3,7 +3,7 @@ import React from "react";
 const SummaryCards = () => {
   return (
     <div>
-      <div className="bg-slate-300 w-fit p-6 rounded-xl  mx-auto ml-[900] ">
+      <div className="bg-slate-300 w-fit p-6 rounded-xl  mx-auto ml-[750px] ">
         <h2 className="text-xl font-bold text-gray-800 mb-4">Sales Summary</h2>
 
         <div className="flex flex-col gap-4">

@@ -1,8 +1,8 @@
 import React from 'react';
-import OrderStatus from '../Dash/OrderStatus';
-import SummaryCards from '../Dash/SummaryCards';
-import SalesOverview from '../Dash/SalesOverview';
-import TopProducts from '../Dash/TopProducts';
+import SummaryCards from './Dash/SummaryCards';
+import SalesOverview from './Dash/SalesOverview';
+import TopProducts from './Dash/TopProducts';
+import OrderStatus from './Dash/OrderStatus';
 
 const Dashboard = () => {
   return (
@@ -15,9 +15,9 @@ const Dashboard = () => {
       </p>
 
       <SummaryCards />
+      <SalesOverview />
       <TopProducts />
-      <SalesOverview />      
-      <OrderStatus />
+      <OrderStatus />    
     </div>
   );
 };
