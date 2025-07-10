@@ -39,8 +39,9 @@ function App() {
     <div className="App">
       <SignIn/>
       <SignUp/>
-      <Dashboard />
       <Sidebar />
+      <Dashboard />
+      
       
     </div>
   );
