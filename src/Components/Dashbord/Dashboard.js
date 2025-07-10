@@ -12,7 +12,6 @@ const Dashboard = () => {
       <p className="mb-6 text-gray-600">
         Welcome to the Inventory Management System. Here you can manage your inventory efficiently.
       </p>
-      <Sidebar/>
       <SummaryCards />
       <SalesOverview />
       <TopProducts />
