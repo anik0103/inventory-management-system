@@ -5,6 +5,7 @@ import SignUp from './Components/Authentication/SignUp';
 import { createBrowserRouter } from 'react-router-dom';
 import Sidebar from './Components/Sidebar';
 import Head from './Components/Product/Head';
+import Filters from './Components/Product/Filters';
 
 function App() {
   // const appRouter= createBrowserRouter([
@@ -43,6 +44,8 @@ function App() {
       <Dashboard />
       <Sidebar />
       <Head/>
+      <Filters />
+      
       
     </div>
   );
