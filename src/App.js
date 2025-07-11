@@ -1,9 +1,10 @@
 import './App.css';
-import Dashboard from './Components/Dashbord/Dashboard'
-import SignIn from './Components/Authentication/SignIn';
-import SignUp from './Components/Authentication/SignUp';
-import { createBrowserRouter } from 'react-router-dom';
-import Sidebar from './Components/Sidebar';
+// import Dashboard from './Components/Dashbord/Dashboard'
+// import SignIn from './Components/Authentication/SignIn';
+// import SignUp from './Components/Authentication/SignUp';
+// import { createBrowserRouter } from 'react-router-dom';
+// import Sidebar from './Components/Sidebar';
+import Navbar from './Components/Navbar';
 
 function App() {
   // const appRouter= createBrowserRouter([
@@ -37,11 +38,7 @@ function App() {
   // ])
   return (
     <div className="App">
-      <SignIn/>
-      <SignUp/>
-      <Dashboard />
-      <Sidebar />
-      
+      <Navbar/>
     </div>
   );
 }
