@@ -4,6 +4,7 @@ import SignIn from './Components/Authentication/SignIn';
 import SignUp from './Components/Authentication/SignUp';
 import { createBrowserRouter } from 'react-router-dom';
 import Sidebar from './Components/Sidebar';
+import Head from './Components/Product/Head';
 
 function App() {
   // const appRouter= createBrowserRouter([
@@ -41,6 +42,7 @@ function App() {
       <SignUp/>
       <Dashboard />
       <Sidebar />
+      <Head/>
       
     </div>
   );
