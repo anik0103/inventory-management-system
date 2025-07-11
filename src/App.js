@@ -4,7 +4,9 @@ import SignIn from './Components/Authentication/SignIn';
 import SignUp from './Components/Authentication/SignUp';
 import { createBrowserRouter } from 'react-router-dom';
 import Sidebar from './Components/Sidebar';
+import Navbar from './Components/Navbar';
 import Head from './Components/Product/Head';
+
 
 function App() {
   // const appRouter= createBrowserRouter([
@@ -38,12 +40,12 @@ function App() {
   // ])
   return (
     <div className="App">
+      <Navbar/>
       <SignIn/>
       <SignUp/>
       <Dashboard />
       <Sidebar />
       <Head/>
-      
     </div>
   );
 }
