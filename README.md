@@ -1,4 +1,4 @@
-ata dak Inventory Management System
+                                        Inventory Management System
 ├── Landing Page
 │   ├── Login Page
 │   │   ├── Admin Login Option
