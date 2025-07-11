@@ -41,9 +41,6 @@ function App() {
       <SignUp/>
       <Dashboard />
       <Sidebar />
-      
-      <SignUp/>
-      <Dashboard/>
     </div>
   );
 }
