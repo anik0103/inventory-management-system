@@ -1,5 +1,3 @@
-
-
 const SalesActivityCard = () => {
   return (
     <div className="flex flex-wrap gap-4 justify-center p-6 bg-white">
