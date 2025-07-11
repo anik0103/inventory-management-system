@@ -1,6 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
 const SignIn = () => {
   return (
     <div className="sign-in border border-cyan-100 rounded-lg p-8 max-w-md mx-auto mt-10 shadow-md bg-white">
@@ -33,7 +30,6 @@ const SignIn = () => {
           Sign In
         </button>
         <h4 className="mt-2">Forget Password?</h4>
-       {/* <link to="signup"><button className="font-bold m-2">SignUp</button></link> */}
       </form>
     </div>
   );
