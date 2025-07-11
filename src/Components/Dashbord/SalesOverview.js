@@ -2,7 +2,7 @@ const SalesOverview = () => {
   return (
     <div>
       <div className="bg-white border border-gray-300 p-4 rounded-3xl shadow-md mb-6 w-[500px] h-48 ml-[200px] mt-[40px] ">
-        <h2 className="font-bold text-base border-b border-blue-300 pb-2 mb-2">
+        <h2 className="font-bold text-base pb-2 mb-2  border-b border-blue-300">
           Item Details
         </h2>
         {/* Left Side of the card border */}

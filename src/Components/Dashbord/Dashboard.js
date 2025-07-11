@@ -18,8 +18,8 @@ const Dashboard = () => {
       <SummaryCards />
       <SalesOverview />
       <TopProducts />
-      <OrderStatus />
       <PurchaseOrder />
+      <OrderStatus />
     </div>
   );
 };
