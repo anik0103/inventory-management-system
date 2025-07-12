@@ -5,6 +5,7 @@ import SignUp from './Components/Authentication/SignUp';
 import Sidebar from './Components/Sidebar';
 import Navbar from './Components/Navbar';
 import Head from './Components/Product/Head';
+import Filters from './Components/Product/Filters';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Dashboard />
       <Sidebar />
       <Head/>
-      
+      <Filters/>
     </div>
   );
 }
