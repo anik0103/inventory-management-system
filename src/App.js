@@ -6,8 +6,8 @@ import Sidebar from './Components/Sidebar';
 import Head from './Components/Product/Head';
 import Filters from './Components/Product/Filters';
 
-function App() {
 
+function App() {
   return (
     <div className="App">
       <SignIn/>
@@ -15,9 +15,7 @@ function App() {
       <Dashboard />
       <Sidebar />
       <Head/>
-      <Filters />
-      
-      
+      <Filters/>
     </div>
   );
 }
