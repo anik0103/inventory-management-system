@@ -6,6 +6,7 @@ import Sidebar from './Components/Sidebar';
 import Navbar from './Components/Navbar';
 import Head from './Components/Product/Head';
 import Filters from './Components/Product/Filters';
+import ProductTable from './Components/Product/ProductTable';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Sidebar />
       <Head/>
       <Filters/>
+      <ProductTable/>
     </div>
   );
 }
