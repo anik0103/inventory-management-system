@@ -12,34 +12,29 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
   const appRouter = createBrowserRouter([
     {
-      // base route
       path: "/",
       element: <Dashboard />,
-      children: [
-        {
-          path: "",
-          element: <Dashboard />,
-        },
-        {
-          path: "products",
-          element: <Filters />,
-        },
-        {
-          path: "signup",
-          element: <SignUp/>,
-        },
-        {
-          path: "signin",
-          element: <SignIn/>,
-        },
-      ],
+    },
+    {
+      path: "/products",
+      element: <Filters />,
+    },
+    {
+      path: "/signup",
+      element: <SignUp />,
+    },
+    {
+      path: "/signin",
+      element: <SignIn />,
     },
   ]);
   return (
     <div className="App">
       <Navbar />
-      <Sidebar />
-      <RouterProvider router={appRouter} />
+      <div className="flex">
+        <Sidebar />
+        <RouterProvider router={appRouter} />
+      </div>
     </div>
   );
 }
