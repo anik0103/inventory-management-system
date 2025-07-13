@@ -1,46 +1,45 @@
 import { useState } from "react";
-import { FaHome, FaBox, FaTruck, FaClipboardList, FaUsers, FaChartBar, FaBars } from "react-icons/fa";
-
-const menuItems = [
-    { key: "Dashboard", icon: <FaHome />, label: "Dashboard" },
-    { key: "Products", icon: <FaBox />, label: "Products" },
-    { key: "Suppliers", icon: <FaTruck />, label: "Suppliers" },
-    { key: "Orders", icon: <FaClipboardList />, label: "Orders" },
-    { key: "Customer", icon: <FaUsers />, label: "Customer" },
-    { key: "Reports", icon: <FaChartBar />, label: "Reports" },
-];
+import {FaHome,FaBox,FaTruck,FaClipboardList,FaUsers,FaChartBar,FaBars,} from "react-icons/fa";
 
 const Sidebar = () => {
-    const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(true);
+  const iconSize = 24;
 
-    return (
-        <div
-            className={`sidebar h-screen ${expanded ? "w-64" : "w-16"} bg-purple-600 text-white flex flex-col transition-all duration-300`}
-            style={{ minHeight: "100vh" }}
-        >
-            <div className={`flex items-center ${expanded ? "justify-between" : "justify-center"}`}>
-                {expanded && <span className="px-6 py-4 font-bold text-lg">Menu</span>}
-                <button
-                    className={`p-4 focus:outline-none hover:bg-purple-700 flex items-center justify-center ${expanded ? "ml-auto" : ""}`}
-                    onClick={() => setExpanded((prev) => !prev)}
-                    aria-label={expanded ? "Collapse sidebar" : "Expand sidebar"}
-                >
-                    <FaBars />
-                </button>
-            </div>
-            <ul className="flex-1 py-6 space-y-2">
-                {menuItems.map((item) => (
-                    <li
-                        key={item.key}
-                        className="px-6 py-2 hover:bg-purple-800 rounded cursor-pointer flex items-center gap-3"
-                    >
-                        {item.icon}
-                        {expanded && <span>{item.label}</span>}
-                    </li>
-                ))}
-            </ul>
+  const menuItems = [
+    { key: "Dashboard", icon: <FaHome size={iconSize} />, label: "Dashboard" },
+    { key: "Products", icon: <FaBox size={iconSize} />, label: "Products" },
+    { key: "Suppliers", icon: <FaTruck size={iconSize} />, label: "Suppliers" },
+    { key: "Orders", icon: <FaClipboardList size={iconSize} />, label: "Orders" },
+    { key: "Customer", icon: <FaUsers size={iconSize} />, label: "Customer" },
+    { key: "Reports", icon: <FaChartBar size={iconSize} />, label: "Reports" },
+  ];
+
+  return (
+    <div className={`sidebar h-screen ${expanded ? "w-64" : "w-16"} bg-purple-600 text-white font-semibold flex flex-col transition-all duration-300`}>
+      {/* Header section with toggle */}
+        <div className={`flex items-center ${expanded ? "justify-between px-6" : "justify-center"} py-4`}>
+        {expanded && <span className="font-bold text-lg">Menu</span>}
+            <button
+                className="p-2 focus:outline-none hover:bg-purple-700 rounded"
+                onClick={() => setExpanded((prev) => !prev)}
+                aria-label={expanded ? "Collapse sidebar" : "Expand sidebar"}>
+                <FaBars size={iconSize} />
+            </button>
         </div>
-    );
+
+        {/* Menu items */}
+        <ul className="flex-1 space-y-2">
+            {menuItems.map((item) => (
+                <li
+                    key={item.key}
+                    className="hover:bg-purple-800 rounded cursor-pointer flex items-center gap-3 px-4 py-2">
+                        <div className="flex justify-center w-6">{item.icon}</div>
+                        {expanded && <span className="whitespace-nowrap">{item.label}</span>}
+                </li>
+           ))}
+        </ul>
+    </div>
+  );
 };
 
 export default Sidebar;
