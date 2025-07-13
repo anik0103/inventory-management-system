@@ -1,14 +1,40 @@
+import { useState } from "react";
+import { FaHome, FaBox, FaTruck, FaClipboardList, FaUsers, FaChartBar, FaBars } from "react-icons/fa";
+
+const menuItems = [
+    { key: "Dashboard", icon: <FaHome />, label: "Dashboard" },
+    { key: "Products", icon: <FaBox />, label: "Products" },
+    { key: "Suppliers", icon: <FaTruck />, label: "Suppliers" },
+    { key: "Orders", icon: <FaClipboardList />, label: "Orders" },
+    { key: "Customer", icon: <FaUsers />, label: "Customer" },
+    { key: "Reports", icon: <FaChartBar />, label: "Reports" },
+];
 
 const Sidebar = () => {
+    const [expanded, setExpanded] = useState(true);
+
     return (
-        <div className="sidebar h-full w-64 bg-violet-600 text-white flex flex-col">
+        <div
+            className={`sidebar h-screen ${expanded ? "w-64" : "w-16"} bg-purple-600 text-white flex flex-col transition-all duration-300`}
+            style={{ minHeight: "100vh" }} // Ensures height remains the same
+        >
+            <button
+                className="p-4 focus:outline-none hover:bg-purple-700 flex items-center justify-center"
+                onClick={() => setExpanded((prev) => !prev)}
+                aria-label={expanded ? "Collapse sidebar" : "Expand sidebar"}
+            >
+                <FaBars />
+            </button>
             <ul className="flex-1 py-6 space-y-2">
-                <li key="Dashboard" className="px-6 py-2 hover:bg-violet-800 rounded cursor-pointer">Dashboard</li>
-                <li key="Products" className="px-6 py-2 hover:bg-violet-800 rounded cursor-pointer">Products</li>
-                <li key="Suppliers" className="px-6 py-2 hover:bg-violet-800 rounded cursor-pointer">Suppliers</li>
-                <li key="Orders" className="px-6 py-2 hover:bg-violet-800 rounded cursor-pointer"> Orders</li>
-                <li key="Customer" className="px-6 py-2 hover:bg-violet-800 rounded cursor-pointer">Customer</li>
-                <li key="Reports" className="px-6 py-2 hover:bg-violet-800 rounded cursor-pointer">Reports</li>
+                {menuItems.map((item) => (
+                    <li
+                        key={item.key}
+                        className="px-6 py-2 hover:bg-purple-800 rounded cursor-pointer flex items-center gap-3"
+                    >
+                        {item.icon}
+                        {expanded && <span>{item.label}</span>}
+                    </li>
+                ))}
             </ul>
         </div>
     );
