@@ -32,3 +32,13 @@ const TopProducts = () => {
 };
 
 export default TopProducts;
+
+
+
+// <div className="flex flex-col">
+//        {mockData.topSellingItems.slice(0, 3).map((item,index)=>(
+//         <div key={index}  className={`ml-[820px]  ${MarginTop[index]}`}>
+//           {item.name}
+//         </div>
+//        ))}
+//       </div>
