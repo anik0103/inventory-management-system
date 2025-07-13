@@ -3,7 +3,7 @@ import mockData from '../../asset/fakeApiResponce/mockData.json';
 const TopProducts = () => {
   return (
     <div>
-      <div className="bg-white border border-gray-300 p-4 rounded-3xl shadow-md mb-6 w-[500px] h-56 ml-[800px] mt-[-235px] ">
+      <div className="bg-white border border-gray-300 p-4 rounded-3xl shadow-md mb-6 w-[500px] h-56 ml-[700px] mt-[-235px] ">
 
         
         <div className="flex justify-between items-center border-b border-blue-300 pb-2 mb-2">

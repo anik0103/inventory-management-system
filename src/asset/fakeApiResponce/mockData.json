@@ -1,7 +1,7 @@
 {
   "salesActivity": {
     "title": "Sales Activity",
-    "quantity": 7,
+    "packages": 7,
     "status": "TO BE PACKED"
   },
   "toBeShipped": {
@@ -16,13 +16,13 @@
   },
   "toBeInvoiced": {
     "title": "To Be Invoiced",
-    "quantity": 5,
+    "packages": 5,
     "status": "TO BE INVOICED"
   },
   "inventorySummary": {
     "title": "Inventory Summary",
-    "quantityInHand": 350,
-    "quantityToBeReceived": 120
+    "packagesInHand": 350,
+    "packagesToBeReceived": 120
   },
   "itemDetails": {
     "title": "Item Details",
