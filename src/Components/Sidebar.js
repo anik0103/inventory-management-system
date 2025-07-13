@@ -16,15 +16,18 @@ const Sidebar = () => {
     return (
         <div
             className={`sidebar h-screen ${expanded ? "w-64" : "w-16"} bg-purple-600 text-white flex flex-col transition-all duration-300`}
-            style={{ minHeight: "100vh" }} // Ensures height remains the same
+            style={{ minHeight: "100vh" }}
         >
-            <button
-                className="p-4 focus:outline-none hover:bg-purple-700 flex items-center justify-center"
-                onClick={() => setExpanded((prev) => !prev)}
-                aria-label={expanded ? "Collapse sidebar" : "Expand sidebar"}
-            >
-                <FaBars />
-            </button>
+            <div className={`flex items-center ${expanded ? "justify-between" : "justify-center"}`}>
+                {expanded && <span className="px-6 py-4 font-bold text-lg">Menu</span>}
+                <button
+                    className={`p-4 focus:outline-none hover:bg-purple-700 flex items-center justify-center ${expanded ? "ml-auto" : ""}`}
+                    onClick={() => setExpanded((prev) => !prev)}
+                    aria-label={expanded ? "Collapse sidebar" : "Expand sidebar"}
+                >
+                    <FaBars />
+                </button>
+            </div>
             <ul className="flex-1 py-6 space-y-2">
                 {menuItems.map((item) => (
                     <li
