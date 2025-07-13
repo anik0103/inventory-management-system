@@ -6,6 +6,7 @@ import Sidebar from './Components/Sidebar';
 import Navbar from './Components/Navbar';
 import Head from './Components/Product/Head';
 import Filters from './Components/Product/Filters';
+import ProductTable from './Components/Product/ProductTable';
 
 function App() {
   return (
@@ -21,7 +22,11 @@ function App() {
 =======
       <Head/>
       <Filters/>
+<<<<<<< HEAD
 >>>>>>> 9bd833682ce904902ba0beaca4d9430179c71cf2
+=======
+      <ProductTable/>
+>>>>>>> 4969d1e55233729938c6e91923b22d5bdc822671
     </div>
   );
 }
