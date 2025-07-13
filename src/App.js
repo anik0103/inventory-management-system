@@ -14,19 +14,11 @@ function App() {
       <Navbar/>
       <SignIn/>
       <SignUp/>
-      <Sidebar />
-<<<<<<< HEAD
       <Dashboard />
-      
-      
-=======
+      <Sidebar />
       <Head/>
       <Filters/>
-<<<<<<< HEAD
->>>>>>> 9bd833682ce904902ba0beaca4d9430179c71cf2
-=======
       <ProductTable/>
->>>>>>> 4969d1e55233729938c6e91923b22d5bdc822671
     </div>
   );
 }
