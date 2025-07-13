@@ -40,7 +40,7 @@ const Navbar = () => {
           <select
             value={selectedLocation}
             onChange={handleChange}
-            className="p-1 border rounded-md w-24"
+            className="p-1 border rounded-md w-[102px]"
           >
             <option value="">Choose a location</option>
             {locations.map((location, index) => (
@@ -50,8 +50,8 @@ const Navbar = () => {
             ))}
           </select>
         </div>
-        <img src={plus} alt="plus" className="w-8" />
-        <img src={notifiaction} alt="notifiaction" className="w-8" />
+        <img src={plus} alt="plus" className="w-6" />
+        <img src={notifiaction} alt="notifiaction" className="w-6" />
         <img src={theme} alt="theme" className="w-8" />
         <img src={man} alt="man" className="w-8" />
       </div>
