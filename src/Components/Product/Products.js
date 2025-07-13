@@ -4,6 +4,7 @@ import ProductTable from "./ProductTable";
 const Products = () => {
     return(
         <div className="w-full">
+            {/* Add Components here */}
             <Head/>
             <Filters/>
             <ProductTable/>
