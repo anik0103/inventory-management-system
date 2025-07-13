@@ -1,6 +1,9 @@
+import Head from "./Head";
+import Filters from "./Filters";
+import ProductTable from "./ProductTable";
 const Products = () => {
     return(
-        <div>
+        <div className="w-full">
             <Head/>
             <Filters/>
             <ProductTable/>

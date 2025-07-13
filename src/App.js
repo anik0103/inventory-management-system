@@ -10,7 +10,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
   const appRouter = createBrowserRouter([
     {
-      path: "/dashboard",
+      path: "/",
       element: <Dashboard />,
     },
     {
