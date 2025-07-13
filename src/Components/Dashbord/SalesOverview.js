@@ -6,7 +6,7 @@ const SalesOverview = () => {
 
   return (
     <div>
-      <div className="bg-white border border-gray-300 p-4 rounded-3xl shadow-md mb-6 w-[500px] h-48 ml-[200px] mt-[40px] ">
+      <div className="bg-white border border-gray-300 p-4 rounded-3xl shadow-md mb-6 w-2/5 h-48 ml-[70px] mt-[23px] ">
         <h2 className="font-bold text-base pb-2 mb-2 border-b border-blue-300">
           {item.title}
         </h2>
