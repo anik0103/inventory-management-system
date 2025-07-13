@@ -12,7 +12,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
   const appRouter = createBrowserRouter([
     {
-      path: "/dashboard",
+      path: "/",
       element: <Dashboard />,
     },
     {
@@ -30,9 +30,11 @@ function App() {
   ]);
   return (
     <div className="App">
+      <div className="fixed top-0 left-0 w-full z-50">
       <Navbar />
-      <div className="flex">
-        <Sidebar />
+      </div>
+      <div className="flex pt-16">
+        <Sidebar/>
         <RouterProvider router={appRouter} />
       </div>
     </div>
