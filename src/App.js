@@ -1,12 +1,10 @@
 import "./App.css";
 import Dashboard from "./Components/Dashbord/Dashboard";
+import Products from "./Components/Product/Products";
 import SignIn from "./Components/Authentication/SignIn";
 import SignUp from "./Components/Authentication/SignUp";
 import Sidebar from "./Components/Sidebar";
 import Navbar from "./Components/Navbar";
-// import Head from "./Components/Product/Head";
-import Filters from "./Components/Product/Filters";
-// import ProductTable from "./Components/Product/ProductTable";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
@@ -17,7 +15,7 @@ function App() {
     },
     {
       path: "/products",
-      element: <Filters />,
+      element: <Products/>,
     },
     {
       path: "/signup",
@@ -30,9 +28,11 @@ function App() {
   ]);
   return (
     <div className="App">
+      <div className="fixed top-0 left-0 w-full z-50">
       <Navbar />
-      <div className="flex">
-        <Sidebar />
+      </div>
+      <div className="flex pt-16">
+        <Sidebar/>
         <RouterProvider router={appRouter} />
       </div>
     </div>

@@ -1,6 +1,6 @@
 const SignIn = () => {
   return (
-    <div className="sign-in border border-cyan-100 rounded-lg p-8 max-w-md mx-auto mt-10 shadow-md bg-white">
+    <div className="sign-in border border-cyan-100 rounded-lg p-8 max-w-md mx-auto mt-10 shadow-md bg-white w-full">
       <h2 className="font-bold text-2xl text-center mb-6 text-cyan-700">Sign In</h2>
       <form>
         <div className="mb-4">
