@@ -41,7 +41,7 @@ const Sidebar = () => {
               </li>
             ))}
           </ul>
-        </div>
+    </div>
     );
   };
 
