@@ -1,11 +1,22 @@
+import pic from "../../asset/Picture1.png";
 const SignUp = () => {
   return (
-    <div className={`flex items-center justify-center min-h-screen bg-gray-100 w-full `}>
-      <div className="w-full max-w-md p-8 space-y-6 bg-white rounded shadow">
-        <h2 className="text-2xl font-bold text-center text-gray-800">Sign Up</h2>
+    <div
+      className={`flex items-center justify-center min-h-screen bg-white w-full`}
+    >
+      <div>
+        <img src={pic} alt="Logo" className="w-auto h-[36rem] mx-auto mb-4" />
+      </div>
+      <div className="w-full max-w-md p-8 space-y-6 bg-white border shadow-2xl rounded-xl">
+        <h2 className="text-2xl font-bold text-center text-gray-800">
+          Sign Up
+        </h2>
         <form className="space-y-4">
           <div>
-            <label htmlFor="username" className="block mb-1 text-sm font-medium text-gray-700">
+            <label
+              htmlFor="username"
+              className="block mb-1 text-sm font-medium text-gray-700"
+            >
               Username
             </label>
             <input
@@ -13,11 +24,14 @@ const SignUp = () => {
               id="username"
               name="username"
               required
-              className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-xl"
             />
           </div>
           <div>
-            <label htmlFor="email" className="block mb-1 text-sm font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block mb-1 text-sm font-medium text-gray-700"
+            >
               Email
             </label>
             <input
@@ -25,11 +39,14 @@ const SignUp = () => {
               id="email"
               name="email"
               required
-              className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-xl"
             />
           </div>
           <div>
-            <label htmlFor="password" className="block mb-1 text-sm font-medium text-gray-700">
+            <label
+              htmlFor="password"
+              className="block mb-1 text-sm font-medium text-gray-700"
+            >
               Password
             </label>
             <input
@@ -37,15 +54,32 @@ const SignUp = () => {
               id="password"
               name="password"
               required
-              className="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border rounded-3xl shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          <button
-            type="submit"
-            className="w-full py-2 font-semibold text-white bg-blue-600 rounded hover:bg-blue-700"
-          >
-            Sign Up
-          </button>
+          <div>
+            <label
+              htmlFor="password"
+              className="block mb-1 text-sm font-medium text-gray-700 "
+            >
+              Confim Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              className="w-full px-3 py-2 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-xl"
+            />
+          </div>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="w-28 py-2 font-semibold text-slate-400 bg-white shadow-xl rounded-3xl hover:bg-slate-200 items-center"
+            >
+              Sign Up
+            </button>
+          </div>
         </form>
       </div>
     </div>
