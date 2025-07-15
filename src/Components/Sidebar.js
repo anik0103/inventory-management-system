@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState} from "react";
 import {FaHome,FaBox,FaTruck,FaClipboardList,FaUsers,FaChartBar,FaBars} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -41,7 +41,7 @@ const Sidebar = () => {
               </li>
             ))}
           </ul>
-        </div>
+    </div>
     );
   };
 
