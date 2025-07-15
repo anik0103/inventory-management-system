@@ -19,7 +19,7 @@ const Products = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gray-100">
+    <div className="bg-neutral-background min-h-screen p-6">
       <Head/>
       <Filters onSearch={handleSearch}/>
       <ProductTable products={filteredProducts}/>
