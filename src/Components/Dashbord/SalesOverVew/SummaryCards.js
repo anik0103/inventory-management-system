@@ -1,5 +1,5 @@
 // SummaryCards.jsx
-import Cards from "./SalesCards"; // Assuming SalesCards is the component you use for individual metrics
+import Cards from "./SalesCards"; 
 import mockData from "../../../asset/fakeApiResponce/mockData.json";
 
 const SummaryCards = () => {

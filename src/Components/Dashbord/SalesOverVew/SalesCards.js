@@ -1,6 +1,5 @@
-// Cards.jsx - NO CHANGES from the last version. It's the individual metric display.
 import React from 'react';
-import { FaRegCircle } from 'react-icons/fa'; // Assuming you have react-icons installed
+import { FaRegCircle } from 'react-icons/fa'; 
 
 const Cards = ({ value, label, status, valueColor, labelColor }) => {
   return (
