@@ -6,9 +6,12 @@ import SignUp from "./Components/Authentication/SignUp";
 import Sidebar from "./Components/Sidebar";
 import Navbar from "./Components/Navbar";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { useState } from "react";
 
-// ✅ Layout that wraps all pages WITH routing context
+// Layout that wraps all pages WITH routing context
 const AppLayout = () => {
+  const [expanded, setExpanded] = useState(true); // lifted state here
+
   return (
     <div className="App">
       {/* Fixed Navbar at top */}
@@ -18,20 +21,27 @@ const AppLayout = () => {
 
       {/* Sidebar + Main content */}
       <div className="flex pt-16">
-        <Sidebar /> {/* ✅ Now safe to use <Link> here */}
-        <div className="ml-16 flex-1 p-4">
-          <Outlet /> {/* ✅ This is where child routes render */}
+        {/* Pass state & setter to Sidebar */}
+        <Sidebar expanded={expanded} setExpanded={setExpanded} />
+
+        {/* Main content shifts based on sidebar */}
+        <div
+          className={`transition-all duration-300 p-4 flex-1 ${
+            expanded ? "ml-52" : "ml-16"
+          }`}
+        >
+          <Outlet />
         </div>
       </div>
     </div>
   );
 };
 
-// ✅ Define routing structure
+// Define routing structure
 const appRouter = createBrowserRouter([
   {
-    path: "/", // Base path
-    element: <AppLayout />, // Contains sidebar + navbar
+    path: "/",
+    element: <AppLayout />,
     children: [
       { index: true, element: <Dashboard /> },
       { path: "products", element: <Products /> },
@@ -51,7 +61,7 @@ const appRouter = createBrowserRouter([
   },
 ]);
 
-// ✅ Main App component
+// Main App component
 function App() {
   return <RouterProvider router={appRouter} />;
 }
