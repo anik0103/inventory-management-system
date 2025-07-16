@@ -1,11 +1,8 @@
-const SalesCards = ({ title, packages, status, titleColor, textColor }) => {
+const SalesCards = ({packages, status,textColor }) => {
   return (
-    <div className="rounded-xl border border-gray-200 shadow-md p-4 w-60 bg-white text-center">
-      <h2 className={`font-semibold ${titleColor} border-b border-blue-300 pb-1 mb-2 uppercase`}>
-        {title}
-      </h2>
+    <div className="rounded-lg border border-gray-200 shadow-md p-2 w-48 h-24 bg-white text-center">
       {packages !== undefined && (
-        <p className={`text-sm font-medium ${textColor}`}>{packages}</p>
+        <p className={`text-3xl font-medium ${textColor}`}>{packages}</p>
       )}
       {status !== undefined && (
         <p className={`text-sm font-semibold ${textColor}`}>{status}</p>
