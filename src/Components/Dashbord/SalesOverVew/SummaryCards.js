@@ -1,36 +1,57 @@
-import SalesCards from "./SalesCards";
+// SummaryCards.jsx
+import Cards from "./SalesCards"; // Assuming SalesCards is the component you use for individual metrics
 import mockData from "../../../asset/fakeApiResponce/mockData.json";
 
 const SummaryCards = () => {
   return (
-    <div className="w-3/6 ml-44 mb-6">
-      <h2 className="px-0 mb-2 ml-">
-        <span className="text-xl font-bold text-gray-800">Sales Summary</span>
-      </h2>
-      <div className="flex gap-4 p-4 rounded-xl shadow-md">
-        <SalesCards
-          packages={mockData.salesActivity.packages}
-          status={mockData.salesActivity.status}
-          titleColor="text-blue-700"
-          textColor="text-blue-500"
+    <div className="bg-white rounded-lg shadow-lg p-4 w-2/4 ml-[11rem]"> 
+      
+      {/* THIS IS THE SECTION FOR THE HEADING WITH THE BOTTOM BORDER */}
+      {/* - 'pb-4': Adds padding below the "Sales Activity" text, before the border.
+        - 'border-b': Creates the bottom border.
+        - 'border-gray-200': Sets the color of the border to a light gray, making it subtle.
+        - 'mb-4': Adds margin below this entire heading section (text + border),
+                  creating space between it and the metric cards below.
+      */}
+      <div className="pb-4 border-b border-gray-200 mb-4">
+         <h2 className="text-xl font-bold text-gray-800">Sales Activity</h2>
+      </div>
+
+      {/* The container for the individual metric cards */}
+      {/* Removed 'p-2' from here, as 'p-4' on the main div gives overall padding. */}
+      {/* Kept other styles as is for consistency with your request. */}
+      <div className="flex justify-around items-center divide-x divide-gray-300 gap-4">
+
+        <Cards
+          value={mockData.salesActivity.packages}
+          label="Qty"
+          status="TO BE PACKED"
+          valueColor="text-blue-700"
+          labelColor="text-gray-600"
         />
-        <SalesCards
-          packages={mockData.toBeShipped.packages}
-          status={mockData.toBeShipped.status}
-          titleColor="text-orange-600"
-          textColor="text-red-600"
+
+        <Cards
+          value={mockData.toBeShipped.packages}
+          label="Pkgs"
+          status="TO BE SHIPPED"
+          valueColor="text-red-500"
+          labelColor="text-gray-600"
         />
-        <SalesCards
-          packages={mockData.toBeDelivered.packages}
-          status={mockData.toBeDelivered.status}
-          titleColor="text-green-600"
-          textColor="text-blue-600"
+
+        <Cards
+          value={mockData.toBeDelivered.packages}
+          label="Pkgs"
+          status="TO BE DELIVERED"
+          valueColor="text-green-500"
+          labelColor="text-gray-600"
         />
-        <SalesCards
-          packages={mockData.toBeInvoiced.packages}
-          status={mockData.toBeInvoiced.status}
-          titleColor="text-red-600"
-          textColor="text-gray-700"
+
+        <Cards
+          value={mockData.toBeInvoiced.packages}
+          label="Qty"
+          status="TO BE INVOICED"
+          valueColor="text-yellow-600"
+          labelColor="text-gray-600"
         />
       </div>
     </div>

@@ -1,14 +1,30 @@
-const SalesCards = ({packages, status,textColor }) => {
+// Cards.jsx - NO CHANGES from the last version. It's the individual metric display.
+import React from 'react';
+import { FaRegCircle } from 'react-icons/fa'; // Assuming you have react-icons installed
+
+const Cards = ({ value, label, status, valueColor, labelColor }) => {
   return (
-    <div className="rounded-lg border border-gray-200 shadow-md p-2 w-48 h-24 bg-white text-center">
-      {packages !== undefined && (
-        <p className={`text-3xl font-medium ${textColor}`}>{packages}</p>
+    <div className="flex flex-col items-center py-4 px-2 flex-grow w-56">
+      {value !== undefined && (
+        <p className={`text-xl font-bold ${valueColor} mb-1`}>
+          {value}
+        </p>
       )}
+
+      {label && (
+        <p className={`text-lg font-semibold ${labelColor} mb-4`}>
+          {label}
+        </p>
+      )}
+
       {status !== undefined && (
-        <p className={`text-sm font-semibold ${textColor}`}>{status}</p>
+        <div className="flex items-center text-sm font-medium text-gray-600">
+          <FaRegCircle className="mr-2 text-gray-400" />
+          {status}
+        </div>
       )}
     </div>
   );
 };
 
-export default SalesCards;
+export default Cards;
