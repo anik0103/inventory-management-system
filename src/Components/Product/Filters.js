@@ -5,16 +5,16 @@ const Filters = ({ onSearch }) => {
   const[filters, setFilters] = useState("");
   const[productName, setProductName] = useState("");
   const[category, setCategory] = useState("");
-  const[quantity, setQuantity] = useState("");
-  const[price, setPrice] = useState("");
+  // const[quantity, setQuantity] = useState("");
+  // const[price, setPrice] = useState("");
 
   const handleSearch = () => {
     console.log("Filter values:", {
       filters,
       productName,
       category,
-      quantity,
-      price,
+      // quantity,
+      // price,
     });
   };
 
@@ -57,10 +57,10 @@ const Filters = ({ onSearch }) => {
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       />
-      <button className=" bg-primary px-4 py-2 rounded-lg hover:bg-primary-light transition" onClick={handleSearch}>
+      <button className=" bg-[#bd78b5] px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" onClick={handleSearch}>
         <IoSearchSharp />
       </button>
-      <button className="ml-auto bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-light transition">
+      <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition">
             + Add Product
       </button>
 
