@@ -11,6 +11,7 @@ const Dashboard = () => {
         Inventory Management Dashboard
       </h1>
       <SummaryCards />
+      <InventorySummary />
       <SalesOverview />
       <TopProducts />
       <PurchaseOrder />
