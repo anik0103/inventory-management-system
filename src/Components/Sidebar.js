@@ -18,7 +18,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className={`h-screen ${expanded ? "w-64" : "w-16"} bg-purple-600 text-white font-semibold flex flex-col transition-all duration-300 fixed t-0 l-0`}>
+    <div className={`h-screen ${expanded ? "w-64" : "w-16"} bg-[#bd78b5] text-white font-semibold flex flex-col transition-all duration-300 fixed t-0 l-0`}>
       {/* Header section with toggle */}
         <div className={`flex items-center ${expanded ? "justify-between px-6" : "justify-center"} py-4`}>
         {expanded && <span className="font-bold text-lg">Menu</span>}

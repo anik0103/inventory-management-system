@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full p-4 flex bg-[#9dc3e6]">
+    <nav className="w-full p-4 flex bg-[#d19fca]">
       <div className="container-fluid flex space-x-40 items-center">
         <div className="flex items-center space-x-2">
           <img src={Cart} alt="logo" className="w-6" />
