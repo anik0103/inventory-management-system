@@ -72,6 +72,12 @@ const SignUp = () => {
               className="w-full px-3 py-2 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-xl"
             />
           </div>
+          <div className="ml-2">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label
+              htmlFor="terms"
+              className="ml-2 text-sm font-medium text-gray-700">Accept the terms & Condition</label>
+          </div>
           <div className="flex justify-center">
             <button
               type="submit"
