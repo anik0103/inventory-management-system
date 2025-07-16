@@ -25,11 +25,7 @@ const AppLayout = () => {
         <Sidebar expanded={expanded} setExpanded={setExpanded} />
 
         {/* Main content shifts based on sidebar */}
-        <div
-          className={`transition-all duration-300 p-4 flex-1 ${
-            expanded ? "ml-52" : "ml-16"
-          }`}
-        >
+        <div className={`transition-all duration-300 p-4 flex-1 ${expanded ? "ml-52" : "ml-16"}`}>
           <Outlet />
         </div>
       </div>
