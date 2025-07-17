@@ -1,15 +1,14 @@
 // SummaryCards.jsx
-import Cards from "./SalesCards"; // Assuming this is your individual metric card component
+import Cards from "./SalesCards";
 import mockData from "../../../asset/fakeApiResponce/mockData.json";
 
 const SummaryCards = () => {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-2 w-2/4 ml-[11.5rem] h-[12rem]"> 
+    <div className="bg-gray-50 rounded-lg shadow-lg p-2 w-2/4 ml-[6rem] h-[10rem]">
       <div className="pb-1 border-b border-gray-200 mb-1">
-         <h2 className="text-xl font-bold text-gray-800">Sales Activity</h2>
+        <h2 className="text-xl font-bold text-gray-800">Sales Activity</h2>
       </div>
       <div className="flex justify-around items-center divide-x divide-gray-300 gap-4">
-
         <Cards
           value={mockData.salesActivity.packages}
           label="Qty"

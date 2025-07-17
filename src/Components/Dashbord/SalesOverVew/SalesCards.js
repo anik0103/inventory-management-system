@@ -1,19 +1,15 @@
-import React from 'react';
-import { FaRegCircle } from 'react-icons/fa'; 
+import React from "react";
+import { FaRegCircle } from "react-icons/fa";
 
 const Cards = ({ value, label, status, valueColor, labelColor }) => {
   return (
-    <div className="flex flex-col items-center py-4 px-2 flex-grow w-56">
+    <div className="flex flex-col items-center py-2 px-2 flex-grow w-80">
       {value !== undefined && (
-        <p className={`text-xl font-bold ${valueColor} mb-1`}>
-          {value}
-        </p>
+        <p className={`text-xl font-bold ${valueColor} mb-1`}>{value}</p>
       )}
 
       {label && (
-        <p className={`text-lg font-semibold ${labelColor} mb-4`}>
-          {label}
-        </p>
+        <p className={`text-lg font-semibold ${labelColor} mb-4`}>{label}</p>
       )}
 
       {status !== undefined && (
