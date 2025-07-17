@@ -69,3 +69,23 @@ const cards = [
     { title: 'New Orders', value: 15, bg: 'bg-green-100', text: 'text-green-700' },
     { title: 'Pending Deliveries', value: 5, bg: 'bg-yellow-100', text: 'text-yellow-700' }
   ];
+
+
+
+
+  sidebar context 
+
+  // import { createContext, useContext, useState } from "react";
+
+// const SidebarContext = createContext();
+
+// export const SidebarProvider = ({ children }) => {
+//   const [expanded, setExpanded] = useState(true); // Sidebar is expanded by default
+//   return (
+//     <SidebarContext.Provider value={{ expanded, setExpanded }}>
+//       {children}
+//     </SidebarContext.Provider>
+//   );
+// };
+
+// export const useSidebar = () => useContext(SidebarContext);

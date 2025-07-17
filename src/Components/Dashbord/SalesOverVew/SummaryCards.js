@@ -1,45 +1,46 @@
-import SalesCards from "./SalesCards";
+// SummaryCards.jsx
+import Cards from "./SalesCards";
 import mockData from "../../../asset/fakeApiResponce/mockData.json";
 
 const SummaryCards = () => {
   return (
-    <div className="flex gap-4 p-4">
-      <SalesCards
-        title="Sales Activity"
-        packages={mockData.salesActivity.packages}
-        status={mockData.salesActivity.status}
-        titleColor="text-blue-700"
-        textColor="text-blue-500"
-      />
-      <SalesCards
-        title="TO BE SHIPPED"
-        packages={mockData.toBeShipped.packages}
-        status={mockData.toBeShipped.status}
-        titleColor="text-orange-600"
-        textColor="text-red-600"
-      />
-      <SalesCards
-        title="TO BE DELIVERED"
-        packages={mockData.toBeDelivered.packages}
-        status={mockData.toBeDelivered.status}
-        titleColor="text-green-600"
-        textColor="text-blue-600"
-      />
-      <SalesCards
-        title="TO BE INVOICED"
-        packages={mockData.toBeInvoiced.packages}
-        status={mockData.toBeInvoiced.status}
-        titleColor="text-red-600"
-        textColor="text-gray-700"
-      />
+    <div className="bg-gray-50 rounded-lg shadow-lg p-2 w-2/4 ml-[6rem] h-[10rem]">
+      <div className="pb-1 border-b border-gray-200 mb-1">
+        <h2 className="text-xl font-bold text-gray-800">Sales Activity</h2>
+      </div>
+      <div className="flex justify-around items-center divide-x divide-gray-300 gap-4">
+        <Cards
+          value={mockData.salesActivity.packages}
+          label="Qty"
+          status="TO BE PACKED"
+          valueColor="text-blue-700"
+          labelColor="text-gray-600"
+        />
 
-      <SalesCards
-        title="Inventory Summary"
-        packages={`QUANTITY IN HAND ${mockData.inventorySummary.packagesInHand}`}
-        status={`QUANTITY TO BE RECEIVED ${mockData.inventorySummary.packagesToBeReceived}`}
-        titleColor="text-blue-800"
-        textColor="text-black"
-      />
+        <Cards
+          value={mockData.toBeShipped.packages}
+          label="Pkgs"
+          status="TO BE SHIPPED"
+          valueColor="text-red-500"
+          labelColor="text-gray-600"
+        />
+
+        <Cards
+          value={mockData.toBeDelivered.packages}
+          label="Pkgs"
+          status="TO BE DELIVERED"
+          valueColor="text-green-500"
+          labelColor="text-gray-600"
+        />
+
+        <Cards
+          value={mockData.toBeInvoiced.packages}
+          label="Qty"
+          status="TO BE INVOICED"
+          valueColor="text-yellow-600"
+          labelColor="text-gray-600"
+        />
+      </div>
     </div>
   );
 };
