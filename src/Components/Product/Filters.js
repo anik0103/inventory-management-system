@@ -32,28 +32,28 @@ const Filters = ({ onSearch }) => {
       <input
         type="text"
         placeholder="Product Name"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
         value={productName}
         onChange={(e) => setProductName(e.target.value)}
       />
       <input
         type="text"
         placeholder="Category"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       />
       <input
         type="text"
         placeholder="Quantity"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       />
       <input
         type="text"
         placeholder="Price"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       />
@@ -63,7 +63,7 @@ const Filters = ({ onSearch }) => {
       <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition">
             + Add Product
       </button>
-
+      
     </div>
   );
 };
