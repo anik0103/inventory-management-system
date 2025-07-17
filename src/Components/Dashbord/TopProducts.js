@@ -1,5 +1,4 @@
 import React from "react";
-import mockData from "../../asset/fakeApiResponce/mockData.json";
 
 const TopProducts = () => {
   return (

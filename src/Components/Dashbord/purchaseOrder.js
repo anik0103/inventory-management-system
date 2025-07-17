@@ -3,14 +3,14 @@ import mockData from "../../asset/fakeApiResponce/mockData.json";
 
 const PurchaseOrder = () => {
   return (
-    <div className="bg-gray-50 border-gray-300 p-4 rounded-lg shadow-md mb-6 w-[20.5rem] h-[9rem] ml-[30.625rem] mt-[-24.8rem]">
-      <div className="flex justify-between items-center border-b border-blue-300 pb-2 mb-4">
-        <h2 className="font-bold text-base text-blue-900">
+    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] shadow-[5px_5px_0px_#bd78b5] hover:shadow-[3px_3px_0px_#a1609f] transition-all duration-300 p-4 rounded-lg mb-6 w-[20.5rem] h-[10rem] mx-auto lg:ml-[32rem] mt-[-10rem]">
+      <div className="flex justify-between items-center border-b border-[#bd78b5] pb-2 mb-4">
+        <h2 className="font-bold text-base text-[#bd78b5]">
           {mockData.purchaseOrder.title}
         </h2>
-        <span className="font-semibold text-blue-900 flex items-center gap-1 text-sm">
+        <span className="font-semibold text-[#bd78b5] flex items-center gap-1 text-sm">
           {mockData.purchaseOrder.timePeriod}
-          <span className="text-blue-600 text-lg">↓</span>
+          <span className="text-[#bd78b5] text-lg">↓</span>
         </span>
       </div>
 
