@@ -1,9 +1,9 @@
 
 const Head =()=>{
     return(
-        <div className="font-bold text-2xl bg-yellow-100 text-black p-4">
-            <h1>PRODUCTS</h1>
-        </div>
+        <div className="bg-white shadow-md rounded-xl p-2 m-1">
+       <h2 className="text-2xl font-bold text-[#bd78b5] m-2">PRODUCTS</h2>
+      </div>
     )
 }
 export default Head;
