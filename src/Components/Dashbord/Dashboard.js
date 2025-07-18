@@ -14,13 +14,13 @@ const Dashboard = () => {
         <SummaryCards />
         <InventorySummary />
       </div>
-      <div>
-         <SalesOverview />
+      <div className="gap-9">
+      <SalesOverview />
       <PurchaseOrder />
       </div>
       
       <OrderStatus />
-      {/* <TopProducts /> */}
+      <TopProducts />
     </div>
   );
 };

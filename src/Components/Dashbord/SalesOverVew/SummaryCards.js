@@ -4,7 +4,7 @@ import mockData from "../../../asset/fakeApiResponce/mockData.json";
 const SummaryCards = () => {
   return (
     <div className="flex justify-start px-4 mt-6">
-      <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-[6px_6px_0px_#bd78b5] hover:shadow-[4px_4px_0px_#a1609f] transition-all duration-300 w-2/3 max-w-6xl p-4">
+      <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-[0_4px_12px_#bd78b5] hover:shadow-[0_6px_18px_#a1609f] transition-all duration-300 w-2/3 max-w-6xl p-4">
         <div className="border-b border-gray-300 pb-2 mb-4">
           <h2 className="text-xl font-bold text-center text-[#bd78b5]">
             Sales Activity
