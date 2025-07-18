@@ -5,16 +5,16 @@ const Filters = ({ onSearch }) => {
   const[filters, setFilters] = useState("");
   const[productName, setProductName] = useState("");
   const[category, setCategory] = useState("");
-  // const[quantity, setQuantity] = useState("");
-  // const[price, setPrice] = useState("");
+  const[quantity, setQuantity] = useState("");
+  const[price, setPrice] = useState("");
 
   const handleSearch = () => {
     console.log("Filter values:", {
       filters,
       productName,
       category,
-      // quantity,
-      // price,
+      quantity,
+      price,
     });
   };
 
@@ -32,38 +32,38 @@ const Filters = ({ onSearch }) => {
       <input
         type="text"
         placeholder="Product Name"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
         value={productName}
         onChange={(e) => setProductName(e.target.value)}
       />
       <input
         type="text"
         placeholder="Category"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm"
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       />
       <input
         type="text"
         placeholder="Quantity"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
+        value={quantity}
+        onChange={(e) => setQuantity(e.target.value)}
       />
       <input
         type="text"
         placeholder="Price"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-sm"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
       />
       <button className=" bg-[#bd78b5] px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" onClick={handleSearch}>
         <IoSearchSharp />
       </button>
-      <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition">
+      <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" >
             + Add Product
       </button>
-
+      
     </div>
   );
 };

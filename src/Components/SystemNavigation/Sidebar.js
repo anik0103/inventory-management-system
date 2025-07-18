@@ -1,20 +1,11 @@
-import {FaHome,FaBox,FaTruck,FaClipboardList,FaUsers,FaChartBar,FaBars,} from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { menuItems } from "./MenuItems";
 
-  const Sidebar = ({ expanded, setExpanded }) => {
+const Sidebar = ({ expanded, setExpanded }) => {
   const iconSize = 24;
 
-  const menuItems = [
-    { key: "Dashboard", icon: <FaHome size={iconSize} />, label: "Dashboard", to: "/" },
-    { key: "Products", icon: <FaBox size={iconSize} />, label: "Products", to: "/products" },
-    { key: "Suppliers", icon: <FaTruck size={iconSize} />, label: "Suppliers", to: "/suppliers" },
-    { key: "Orders", icon: <FaClipboardList size={iconSize} />, label: "Orders", to: "/orders" },
-    { key: "Customer", icon: <FaUsers size={iconSize} />, label: "Customer", to: "/customer" },
-    { key: "Reports", icon: <FaChartBar size={iconSize} />, label: "Reports", to: "/reports" },
-  ];
-
   return (
-
     <div className={`h-screen fixed top-0 left-0 z-40 bg-[#bd78b5] text-white font-semibold flex flex-col transition-all duration-300 ${expanded ? "w-52" : "w-16"} pt-16`}>
       {/* Header with toggle */}
       <div className={`flex items-center ${expanded ? "justify-between px-4" : "justify-center"} py-4`}>
