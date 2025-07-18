@@ -7,8 +7,8 @@ const InventorySummaryCard = () => {
     mockData.inventorySummary?.packagesToBeReceived || 0;
 
   return (
-    <div className="flex justify-end px-4 lg:mt-[-11.7rem] lg:mr-16">
-      <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-[6px_6px_0px_#bd78b5] hover:shadow-[4px_4px_0px_#a1609f] transition-all duration-300 p-4 w-80 h-[11.5rem]">
+    <div className="flex justify-end px-4 lg:-mt-48 lg:mr-16">
+      <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-[6px_6px_0px_#bd78b5] hover:shadow-[4px_4px_0px_#a1609f] transition-all duration-300 p-4 w-[17rem] h-[12rem]">
         <div className="pb-2 border-b border-gray-200 mb-3">
           <h2 className="text-xl font-bold text-[#bd78b5]">Inventory Summary</h2>
         </div>

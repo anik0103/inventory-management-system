@@ -3,7 +3,7 @@ import mockData from "../../asset/fakeApiResponce/mockData.json";
 
 const PurchaseOrder = () => {
   return (
-    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] shadow-[5px_5px_0px_#bd78b5] hover:shadow-[3px_3px_0px_#a1609f] transition-all duration-300 p-4 rounded-lg mb-6 w-[20.5rem] h-[10rem] mx-auto lg:ml-[32rem] mt-[-10rem]">
+    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] shadow-[5px_5px_0px_#bd78b5] hover:shadow-[3px_3px_0px_#a1609f] transition-all duration-300 p-4 rounded-lg mb-6 w-[20.5rem] h-[10rem] mx-auto lg:ml-[33rem] mt-[-10rem]">
       <div className="flex justify-between items-center border-b border-[#bd78b5] pb-2 mb-4">
         <h2 className="font-bold text-base text-[#bd78b5]">
           {mockData.purchaseOrder.title}
