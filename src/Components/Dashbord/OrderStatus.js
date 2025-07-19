@@ -5,12 +5,12 @@ const SalesOrderCard = () => {
   const sales = mockData.salesOrder;
 
   return (
-    <div className="bg-gray-50 border-gray-300 p-4 rounded-lg shadow-md w-[31.25rem] ml-[6rem] mt-[-0.998rem] h-56">
-      <div className="flex justify-between items-center border-b border-blue-300 pb-2 mb-4">
-        <h2 className="font-bold text-blue-900">{sales.title}</h2>
-        <span className="font-semibold text-blue-900 flex items-center gap-1">
+    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] transition-all duration-300 p-4 max-w-xl ml-14 mt-6 flex flex-col h-[14rem]">
+      <div className="flex justify-between items-center border-b border-[#bd78b5] pb-2 mb-4">
+        <h2 className="font-bold text-[#bd78b5]">{sales.title}</h2>
+        <span className="font-semibold text-[#bd78b5] flex items-center gap-1">
           {sales.month}
-          <span className="text-blue-600 text-lg">↓</span>
+          <span className="text-[#bd78b5] text-lg">↓</span>
         </span>
       </div>
 

@@ -5,12 +5,12 @@ const SalesOverview = () => {
   const item = mockData.itemDetails;
 
   return (
-    <div className="bg-gray-50 rounded-lg shadow-md p-2 w-[20rem] ml-[6.2rem] mt-[23px] h-[9rem] flex flex-col">
-      <h2 className="font-bold text-lg pb-1 mb-1 border-b border-gray-200">
+    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] transition-all duration-300 p-4 max-w-xl ml-14 mt-6 flex flex-col">
+      <h2 className="font-bold text-lg pb-1 mb-2 border-b border-[#bd78b5] text-[#bd78b5]">
         {item.title || "Item Details"}
       </h2>
-      <div className="flex flex-grow items-center">
-        <div className="w-1/2 pr-6 flex flex-col justify-evenly">
+      <div className="flex items-center">
+        <div className="w-1/2 pr-4 flex flex-col gap-2">
           <div className="flex items-center justify-between">
             <span className="text-xs text-red-500">Low Stock Items</span>
             <span className="font-semibold text-base text-red-500">
@@ -30,11 +30,11 @@ const SalesOverview = () => {
             </span>
           </div>
         </div>
-        <div className="w-1/2 border-l border-gray-200 pl-6 flex flex-col items-center justify-center">
-          <p className="font-semibold text-sm text-gray-800 mb-0.5">
+        <div className="w-1/2 border-l border-gray-200 pl-4 flex flex-col items-center justify-center">
+          <p className="font-semibold text-sm text-gray-800 mb-1">
             Active Items
           </p>
-          <div className="w-12 h-12 rounded-full bg-white border border-gray-300 flex items-center justify-center text-gray-500 text-[0.6rem] leading-none text-center p-0.5">
+          <div className="w-12 h-12 rounded-full bg-white border border-[#bd78b5] text-[#bd78b5] flex items-center justify-center text-[0.6rem] leading-tight text-center p-1">
             {item.activeItems > 0 ? item.activeItems : "No Active Items"}
           </div>
         </div>
