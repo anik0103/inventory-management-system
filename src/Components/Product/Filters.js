@@ -18,6 +18,10 @@ const Filters = ({ onSearch }) => {
     });
   };
 
+  const handleClick = () => {
+    alert("Add Product button clicked");
+  }
+
   return (
     <div className="flex flex-wrap gap-4 items-center m-3">
 
@@ -60,7 +64,7 @@ const Filters = ({ onSearch }) => {
       <button className=" bg-[#bd78b5] px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" onClick={handleSearch}>
         <IoSearchSharp />
       </button>
-      <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" >
+      <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" onClick={handleClick}>
             + Add Product
       </button>
       
