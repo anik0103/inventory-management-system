@@ -1,7 +1,4 @@
-import { SplDetails } from "./SplDetails";
-
-const SupplierTable = () => {
-  
+const SuppliersTable = ({ data }) => {
   return (
     <div className="px-6 py-4">
       <table className="w-full border-collapse text-left">
@@ -15,8 +12,8 @@ const SupplierTable = () => {
           </tr>
         </thead>
         <tbody>
-          {SplDetails.length > 0 ? (
-            SplDetails.map((item, index) => (
+          {data.length > 0 ? (
+            data.map((item, index) => (
               <tr key={index} className="border-b text-sm">
                 <td className="py-2">{item.name}</td>
                 <td className="py-2">{item.contact}</td>
@@ -27,8 +24,8 @@ const SupplierTable = () => {
             ))
           ) : (
             <tr>
-              <td colSpan="4" className="text-center text-gray-400 py-4">
-                No Suppliers
+              <td colSpan="5" className="text-center text-gray-500 py-4">
+                No Suppliers Found
               </td>
             </tr>
           )}
@@ -38,4 +35,4 @@ const SupplierTable = () => {
   );
 };
 
-export default SupplierTable;
+export default SuppliersTable;
