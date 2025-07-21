@@ -7,7 +7,7 @@ import InventorySummary from "./SalesOverVew/InventorySummary";
 const Dashboard = () => {
   return (
     <div className="dashboard w-auto position-absolute">
-      <h1 className="bg-[#bd78b5] text-white shadow-[4px_4px_0px_#a1609f] hover:shadow-[2px_2px_0px_#894d81] transition-all duration-300 font-bold text-2xl -mt-3 p-3 rounded w-full text-center">
+      <h1 className="bg-white text-black  shadow-md text-2xl -mt-3 p-3 rounded min-w-full text-left font-bold">
         Dashboard
       </h1>
       <div className="gap-4 ml-9">
@@ -26,3 +26,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+// "bg-white text-black font-bold text-2xl mb-4 p-3 rounded w-[72rem] text-center shadow-md flex justify-start ml-12
