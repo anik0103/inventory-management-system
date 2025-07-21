@@ -50,7 +50,7 @@ const SignIn = () => {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="w-28 py-2 font-semibold text-slate-400 bg-white shadow-xl rounded-3xl hover:bg-slate-200 items-center"
+              className="w-28 py-2 font-semibold text-slate-400 bg-white shadow-xl rounded-3xl hover:bg-slate-200 items-center mt-4"
             >
               Sign In
             </button>
