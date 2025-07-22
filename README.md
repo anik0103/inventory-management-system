@@ -71,9 +71,9 @@ const cards = [
   ];
 
 
+anik
 
-
-  sidebar context 
+  <!-- sidebar context 
 
   // import { createContext, useContext, useState } from "react";
 
@@ -86,6 +86,6 @@ const cards = [
 //       {children}
 //     </SidebarContext.Provider>
 //   );
-// };
+// }; -->
 
 // export const useSidebar = () => useContext(SidebarContext);
