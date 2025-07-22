@@ -18,5 +18,15 @@
       "name": "Bob Das",
       "role": "user"
     }
+  },
+  {
+    "email": "Anik@example.com",
+    "password": "user123",
+    "token": "user456token",
+    "user": {
+      "id": "205",
+      "name": "Bob Das",
+      "role": "user"
+    }
   }
 ]
