@@ -10,7 +10,7 @@ const SupplierSearch = ({ searchTerm, setSearchTerm }) => {
         <div className="flex flex-wrap gap-3 items-center m-3">
             <input
                 type="text"
-                placeholder="supplier name..."
+                placeholder="supplier name"
                 className="border border-neutral-200 w-52 px-3 py-2 rounded-md focus:outline-none text-sm"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
