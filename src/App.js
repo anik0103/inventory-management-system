@@ -1,6 +1,7 @@
 import "./App.css";
 import Dashboard from "./Components/Dashbord/Dashboard";
 import Products from "./Components/Product/Products";
+import AddProducts from "./Components/Product/AddProduct";
 import SignIn from "./Components/Authentication/SignIn";
 import SignUp from "./Components/Authentication/SignUp";
 import AppLayout from "./Components/Layout/AppLayout";
@@ -13,6 +14,7 @@ const appRouter = createBrowserRouter([
     children: [
       { index: true, element: <Dashboard /> },
       { path: "products", element: <Products /> },
+      {path: "add-product", element: <AddProducts />},
       { path: "suppliers", element: <div>Suppliers Page</div> },
       { path: "orders", element: <div>Orders Page</div> },
       { path: "customer", element: <div>Customer Page</div> },

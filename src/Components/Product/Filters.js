@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const Filters = ({ onSearch }) => {
   const[filters, setFilters] = useState("");
@@ -18,8 +19,9 @@ const Filters = ({ onSearch }) => {
     });
   };
 
-  const handleClick = () => {
-    alert("Add Product button clicked");
+  const navigate = useNavigate();
+  const handleAddClick = () => {
+    navigate("/add-product");
   }
 
   return (
@@ -64,7 +66,7 @@ const Filters = ({ onSearch }) => {
       <button className=" bg-[#bd78b5] px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" onClick={handleSearch}>
         <IoSearchSharp />
       </button>
-      <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" onClick={handleClick}>
+      <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" onClick={handleAddClick}>
             + Add Product
       </button>
       
