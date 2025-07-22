@@ -13,6 +13,7 @@ const Suppliers = () => {
 
   return (
     <div>
+      {/* //<h1>svd</h1> */}
       <SuppliersHead />
       <SupplierSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <SuppliersTable data={filteredSuppliers} />
