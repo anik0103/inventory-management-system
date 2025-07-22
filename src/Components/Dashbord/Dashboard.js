@@ -10,6 +10,7 @@ const Dashboard = () => {
       <h1 className="bg-white text-black  shadow-md text-2xl -mt-3 p-3 rounded min-w-full text-left font-bold">
         Dashboard
       </h1>
+      <h1>In Dashboard</h1>
       <div className="gap-4 ml-9">
         <SummaryCards />
         <InventorySummary />
