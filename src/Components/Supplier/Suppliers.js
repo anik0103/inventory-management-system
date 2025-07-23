@@ -3,8 +3,7 @@ import SuppliersHead from "./SuppliersHead";
 import SuppliersTable from "./SplTable";
 import { SplDetails } from "./SplDetails";
 import SupplierSearch from "./SupplierSearch";
-import SupplierForm from "./SupplierForm";
-import AddSupplier from "./AddSupplier";
+
 
 const Suppliers = () => {
   const [suppliers, setSuppliers] = useState(SplDetails);
@@ -19,10 +18,6 @@ const Suppliers = () => {
     supplier.country.toLowerCase().includes(countryTerm.toLowerCase())
   );
 
-  const handleAddSupplier = (newSupplier) => {
-    setSuppliers([...suppliers, newSupplier]);
-    setShowForm(false);
-  };
 
   return (
     <div>
@@ -36,10 +31,9 @@ const Suppliers = () => {
             countryTerm={countryTerm}setCountryTerm={setCountryTerm}
           />
         </div>
-        <AddSupplier showForm={showForm} setShowForm={setShowForm} />
+       
       </div>
 
-      {showForm && <SupplierForm onAdd={handleAddSupplier} />}
 
       <SuppliersTable data={filteredSuppliers} />
     </div>

@@ -1,12 +1,9 @@
 import { FaSearch } from "react-icons/fa";
 
 const SupplierSearch = ({
-  searchTerm,
-  setSearchTerm,
-  locationTerm,
-  setLocationTerm,
-  countryTerm,
-  setCountryTerm,
+  searchTerm,setSearchTerm,
+  locationTerm,setLocationTerm,
+  countryTerm,setCountryTerm,
 }) => {
   return (
     <div className="flex flex-wrap gap-2 items-center">
