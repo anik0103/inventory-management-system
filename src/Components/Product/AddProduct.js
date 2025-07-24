@@ -5,6 +5,8 @@ const AddProduct = () => {
   const navigate = useNavigate();
   const [productImage, setProductImage] = useState(null);
   const [productName, setProductName] = useState("");
+  const [category, setCategory] = useState("");
+  const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
 
   const handleImageChange = (e) => {
@@ -13,7 +15,7 @@ const AddProduct = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ productName, description });
+    console.log({ productName,category,price,description });
     navigate("/");
   };
 
@@ -34,7 +36,8 @@ const AddProduct = () => {
           )}
         </div>
 
-        <div>
+    <div className="flex gap-4 mb-4">
+        <div className="flex-1">
           <label className="block font-medium">Product Name</label>
           <input
             type="text"
@@ -45,6 +48,31 @@ const AddProduct = () => {
             required
           />
         </div>
+
+        <div className="flex-1">
+          <label className="block font-medium">Category</label>
+          <input
+            type="text"
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+            className="w-full border px-3 py-2 rounded"
+            placeholder="Enter category"
+            required
+          />
+        </div>
+
+        <div className="flex-1">
+          <label className="block font-medium">Price</label>
+          <input
+            type="text"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            className="w-full border px-3 py-2 rounded"
+            placeholder="Enter price"
+            required
+          />
+        </div>
+    </div>
 
         <div>
           <label className="block font-medium">Description</label>
