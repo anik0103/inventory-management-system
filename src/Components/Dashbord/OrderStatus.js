@@ -1,15 +1,17 @@
 import React from "react";
 import mockData from "../../asset/fakeApiResponce/mockData.json";
 
-const SalesOrderCard = () => {
+const OrderStatus = () => {
   const sales = mockData.salesOrder;
 
   return (
-    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] transition-all duration-300 p-4 max-w-xl ml-14 mt-6 flex flex-col h-[14rem]">
+    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] transition-all duration-300 p-4 w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-2xl ml-0 sm:ml-2 md:ml-8 lg:ml-4 mt-6 flex flex-col justify-start">
       <div className="flex justify-between items-center border-b border-[#bd78b5] pb-2 mb-4">
-        <h2 className="font-bold text-[#bd78b5]">{sales.title}</h2>
-        <span className="font-semibold text-[#bd78b5] flex items-center gap-1">
-          {sales.month}
+        <h2 className="font-bold text-lg text-[#bd78b5]">
+          {sales.title || "Order Status"}
+        </h2>
+        <span className="font-semibold text-[#bd78b5] flex items-center gap-1 text-sm">
+          {sales.month || "N/A"}
           <span className="text-[#bd78b5] text-lg">↓</span>
         </span>
       </div>
@@ -33,4 +35,4 @@ const SalesOrderCard = () => {
   );
 };
 
-export default SalesOrderCard;
+export default OrderStatus;

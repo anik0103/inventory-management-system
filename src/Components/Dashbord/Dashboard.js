@@ -10,18 +10,21 @@ const Dashboard = () => {
       <h1 className="bg-white text-black  shadow-md text-2xl -mt-3 p-3 rounded min-w-full text-left font-bold">
         Dashboard
       </h1>
-      <h1>In Dashboard</h1>
-      <div className="gap-4 ml-9">
+      <div className="flex flex-col lg:flex-row gap-6 ml-4 mr-4 mt-4">
         <SummaryCards />
         <InventorySummary />
       </div>
-      <div className="gap-9">
-      <SalesOverview />
-      <PurchaseOrder />
+
+      <div className="flex flex-col lg:flex-row gap-6 ml-4 mr-4 mt-4">
+        <SalesOverview />
+        <PurchaseOrder />
       </div>
+      <div className="flex flex-col lg:flex-row gap-1 ml-4 mr-4 mt-4">
+        <OrderStatus />
+        <TopProducts />
+      </div>
+ 
       
-      <OrderStatus />
-      <TopProducts />
     </div>
   );
 };
