@@ -4,7 +4,7 @@ const SuppliersTable = ({ data }) => {
       <table className="w-full border-collapse text-left">
         <thead>
           <tr className="text-gray-600 text-sm border-b">
-            <th className="py-2">NAME</th>
+            <th className="py-2">SUPPLIER NAME</th>
             <th className="py-2">CONTACT</th>
             <th className="py-2">E-MAIL</th>
             <th className="py-2">LOCATION</th>

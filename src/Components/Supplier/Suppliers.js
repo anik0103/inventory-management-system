@@ -10,7 +10,7 @@ const Suppliers = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [locationTerm, setLocationTerm] = useState("");
   const [countryTerm, setCountryTerm] = useState("");
-  const [showForm, setShowForm] = useState(false);
+
 
   const filteredSuppliers = suppliers.filter((supplier) =>
     supplier.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
