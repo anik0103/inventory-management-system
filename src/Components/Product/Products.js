@@ -20,10 +20,11 @@ const Products = () => {
 
   return (
     <div className="bg-neutral-background min-h-screen p-6">
-      <Head/>
-      <Filters onSearch={handleSearch}/>
-      <ProductTable products={filteredProducts}/>
+      <Head />
+      <Filters onSearch={handleSearch} />
+      <ProductTable products={filteredProducts} />
     </div>
   );
 };
+
 export default Products;
