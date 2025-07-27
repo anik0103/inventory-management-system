@@ -2,34 +2,38 @@ import React from "react";
 import mockData from "../../asset/fakeApiResponce/mockData.json";
 
 const OrderStatus = () => {
-  const sales = mockData.salesOrder;
+  const orderData = mockData.orderStatus || {};
+  const purchase = mockData.purchaseOrder || {};
 
   return (
-    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] transition-all duration-300 p-4 w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-2xl ml-0 sm:ml-2 md:ml-8 lg:ml-4 mt-6 flex flex-col justify-start">
-      <div className="flex justify-between items-center border-b border-[#bd78b5] pb-2 mb-4">
-        <h2 className="font-bold text-lg text-[#bd78b5]">
-          {sales.title || "Order Status"}
-        </h2>
-        <span className="font-semibold text-[#bd78b5] flex items-center gap-1 text-sm">
-          {sales.month || "N/A"}
-          <span className="text-[#bd78b5] text-lg">↓</span>
-        </span>
-      </div>
+    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5]
+      transition-all duration-300 px-5 py-4 w-full h-full flex flex-col gap-4">
 
-      <div className="grid grid-cols-6 gap-y-2 text-center text-sm font-semibold text-slate-800">
-        <div>Channel</div>
-        <div>Draft</div>
-        <div>Confirmed</div>
-        <div>Packed</div>
-        <div>Shipped</div>
-        <div>Invoiced</div>
+      {/* Heading */}
+      <h2 className="font-bold text-lg border-b border-[#bd78b5] text-[#bd78b5] pb-2">
+        {orderData.title || "Order Status"}
+      </h2>
 
-        <div className="text-gray-700 font-medium">{sales.channel}</div>
-        <div className="text-gray-700 font-medium">{sales.draft}</div>
-        <div className="text-gray-700 font-medium">{sales.confirmed}</div>
-        <div className="text-gray-700 font-medium">{sales.packed}</div>
-        <div className="text-gray-700 font-medium">{sales.shipped}</div>
-        <div className="text-gray-700 font-medium">{sales.invoiced}</div>
+      {/* Grid Content */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-gray-800">
+
+        {/* Qty Ordered */}
+        <div className="flex flex-col bg-white rounded-md p-3 shadow-sm border border-gray-200">
+          <span className="text-gray-500">Qty Ordered</span>
+          <span className="font-semibold text-base">{purchase.quantityOrdered ?? "N/A"}</span>
+        </div>
+
+        {/* Qty Pending */}
+        <div className="flex flex-col bg-white rounded-md p-3 shadow-sm border border-gray-200">
+          <span className="text-gray-500">Qty Pending</span>
+          <span className="font-semibold text-base">{purchase.quantityPending ?? "N/A"}</span>
+        </div>
+
+        {/* Time Period */}
+        <div className="flex flex-col bg-white rounded-md p-3 shadow-sm border border-gray-200">
+          <span className="text-gray-500">Time Period</span>
+          <span className="font-semibold text-base">{orderData.timePeriod ?? "N/A"}</span>
+        </div>
       </div>
     </div>
   );

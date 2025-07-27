@@ -1,34 +1,38 @@
 import SummaryCards from "./SalesOverVew/SummaryCards";
-import SalesOverview from "./SalesOverview";
+import ItemDetails from "./ItemDetails";
 import TopProducts from "./TopProducts";
+import SalesOrder from "./SalesOrder";
 import OrderStatus from "./OrderStatus";
-import PurchaseOrder from "./purchaseOrder";
 import InventorySummary from "./SalesOverVew/InventorySummary";
+
 const Dashboard = () => {
   return (
-    <div className="dashboard w-auto position-absolute">
-      <h1 className="bg-white text-black  shadow-md text-2xl -mt-3 p-3 rounded min-w-full text-left font-bold">
+    <div className="dashboard w-full px-4">
+      {/* Header */}
+      <h1 className="bg-white text-black shadow-md text-2xl -mt-3 p-3 rounded w-full text-left font-bold">
         Dashboard
       </h1>
-      <div className="flex flex-col lg:flex-row gap-6 ml-4 mr-4 mt-4">
-        <SummaryCards />
+
+      {/* First Section: Sales Overview + Inventory Summary */}
+      <div className="mt-4 grid grid-cols-1 lg:grid-cols-[2fr_0.7fr] gap-4 items-start">
+        <div className="flex flex-col gap-4">
+          <SummaryCards />
+
+          {/* Grouped Section: ItemDetails + OrderStatus */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <ItemDetails />
+            <OrderStatus />
+          </div>
+
+          {/* Top Products - its own row */}
+          <TopProducts />
+        </div>
+
         <InventorySummary />
       </div>
-
-      <div className="flex flex-col lg:flex-row gap-6 ml-4 mr-4 mt-4">
-        <SalesOverview />
-        <PurchaseOrder />
-      </div>
-      <div className="flex flex-col lg:flex-row gap-1 ml-4 mr-4 mt-4">
-        <OrderStatus />
-        <TopProducts />
-      </div>
- 
-      
+      <SalesOrder />
     </div>
   );
 };
 
 export default Dashboard;
-
-// "bg-white text-black font-bold text-2xl mb-4 p-3 rounded w-[72rem] text-center shadow-md flex justify-start ml-12

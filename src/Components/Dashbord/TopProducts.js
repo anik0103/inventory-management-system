@@ -1,37 +1,43 @@
 import React from "react";
-import mockData from "../../asset/fakeApiResponce/mockData.json";
 
-const OrderStatus = () => {
-  const orderData = mockData.orderStatus || {};
+const TopProductCard = () => {
+  // Mock product data
+  const topProduct = {
+    name: "Wireless Headphones",
+    category: "Electronics",
+    sold: 1540,
+    inStock: 320,
+    image: "https://via.placeholder.com/80", // Replace with actual product image URL
+  };
 
   return (
-    <div className="w-full flex justify-end px-4 sm:px-6 lg:px-14 mt-6  sm:ml-4 md:ml-8 lg:ml-9">
-      <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] transition-all duration-300 p-4 
-        w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl flex flex-col justify-start">
-        
-        {/* Header */}
-        <div className="flex justify-between items-center border-b border-[#bd78b5] pb-2 mb-4">
-          <h2 className="font-bold text-base text-[#bd78b5]">
-            {orderData.title || "Order Status"}
-          </h2>
-          <span className="font-semibold text-[#bd78b5] flex items-center gap-1 text-sm">
-            {orderData.timePeriod || "N/A"}
-            <span className="text-[#bd78b5] text-lg">↓</span>
-          </span>
-        </div>
+    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] transition-all duration-300 p-6 flex flex-col justify-between h-full">
+      <h2 className="font-bold text-lg text-[#bd78b5] border-b pb-2 mb-4">Top Product</h2>
 
-        {/* Body */}
-        <div>
-          <p className="font-semibold text-gray-700">
-            Quantity Ordered: {mockData.purchaseOrder.quantityOrdered ?? "N/A"}
-          </p>
-          <p className="font-semibold text-gray-700">
-            Quantity Pending: {mockData.purchaseOrder.quantityPending ?? "N/A"}
-          </p>
+      <div className="flex items-center space-x-4">
+        <img
+          src={topProduct.image}
+          alt={topProduct.name}
+          className="w-16 h-16 rounded-lg border border-[#bd78b5]"
+        />
+        <div className="flex flex-col">
+          <span className="font-semibold text-gray-800">{topProduct.name}</span>
+          <span className="text-xs text-gray-500">{topProduct.category}</span>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 mt-6 text-sm text-gray-800">
+        <div className="flex flex-col items-center">
+          <span className="text-xs">Sold</span>
+          <span className="font-bold">{topProduct.sold}</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <span className="text-xs">In Stock</span>
+          <span className="font-bold">{topProduct.inStock}</span>
         </div>
       </div>
     </div>
   );
 };
 
-export default OrderStatus;
+export default TopProductCard;
