@@ -14,7 +14,7 @@ const ProductTable = ({ products = [] }) => {
           {products.length > 0 ? (
             products.map((item, index) => (
               <tr key={index} className="border-b text-sm">
-                <td className="py-2">{item.name}</td>
+                <td className="py-2 pr-8">{item.name}</td>
                 <td className="py-2">{item.category}</td>
                 <td className="py-2">{item.quantity}</td>
                 <td className="py-2">${item.price}</td>
