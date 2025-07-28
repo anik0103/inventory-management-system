@@ -1,0 +1,32 @@
+[
+  {
+    "email": "admin@example.com",
+    "password": "admin123",
+    "token": "admin123token",
+    "user": {
+      "id": "101",
+      "name": "Alice Kapoor",
+      "role": "admin"
+    }
+  },
+  {
+    "email": "user@example.com",
+    "password": "user123",
+    "token": "user456token",
+    "user": {
+      "id": "205",
+      "name": "Bob Das",
+      "role": "user"
+    }
+  },
+  {
+    "email": "Anik@example.com",
+    "password": "user123",
+    "token": "user456token",
+    "user": {
+      "id": "205",
+      "name": "Bob Das",
+      "role": "user"
+    }
+  }
+]
