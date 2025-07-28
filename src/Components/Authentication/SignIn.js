@@ -8,28 +8,27 @@ const SignIn = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-const handleLogin = async () => {
-  try {
-    const match = mockData.find(
-      (entry) => entry.email === email && entry.password === password
-    );
 
-    if (!match) throw new Error("Invalid credentials");
+const handleLogin = (e) => {
+  e.preventDefault();
 
-    const { token, user } = match;
+  const match = mockData.find(
+    (entry) => entry.email === email && entry.password === password
+  );
 
-    localStorage.setItem("token", token);
-    localStorage.setItem("role", user.role);
+  if (!match) {
+    alert("Invalid credentials");
+    return;
+  }
 
-    if (user.role === "admin") {
-      navigate("/");
-    } else if (user.role === "user") {
-      navigate("/products");
-    } else {
-      alert("Unknown role");
-    }
-  } catch (err) {
-    alert("Login failed: " + err.message);
+  const { token, user } = match;
+  localStorage.setItem("token", token);
+  localStorage.setItem("role", user.role);
+
+  if (user.role === "admin") {
+    navigate("/");
+  } else if (user.role === "user") {
+    navigate("/products");
   }
 };
 
