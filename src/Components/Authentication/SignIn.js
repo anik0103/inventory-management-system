@@ -1,36 +1,104 @@
+import { Link } from "react-router-dom";
+import pic from "../../asset/pictures1.png";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import mockData from "../../asset/fakeApiResponce/mockdata2.json";
 const SignIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+
+const handleLogin = (e) => {
+  e.preventDefault();
+
+  const match = mockData.find(
+    (entry) => entry.email === email && entry.password === password
+  );
+
+  if (!match) {
+    alert("Invalid credentials");
+    return;
+  }
+
+  const { token, user } = match;
+  localStorage.setItem("token", token);
+  localStorage.setItem("role", user.role);
+
+  if (user.role === "admin") {
+    navigate("/");
+  } else if (user.role === "user") {
+    navigate("/products");
+  }
+};
+
   return (
-    <div className="sign-in border border-cyan-100 rounded-lg p-8 max-w-md mx-auto mt-10 shadow-md bg-white w-full">
-      <h2 className="font-bold text-2xl text-center mb-6 text-cyan-700">Sign In</h2>
-      <form>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 mb-2">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            className="w-full px-3 py-2 border border-cyan-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400"
-          />
-        </div>
-        <div className="mb-6">
-          <label htmlFor="password" className="block text-gray-700 mb-2">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            required
-            className="w-full px-3 py-2 border border-cyan-300 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400"
-          />
-        </div>
-        <button
-          type="submit"
-          className="w-full bg-cyan-600 text-white py-2 rounded hover:bg-cyan-700 transition-colors"
-        >
+    <div
+      className={`flex items-center justify-around min-h-screen bg-white w-full space-x-4`}
+    >
+      <div className="mt-16">
+        <h1 className="text-[#bd78b5] text-4xl font-bold text-center">
+          {" "}
+          Welcome To Alpha Inventory
+        </h1>
+        <img src={pic} alt="Logo" className="w-auto h-[30rem] mx-auto mb-4" />
+      </div>
+      <div className="w-2/4 h-2/3 max-w-md p-8 space-y-2 bg-white border shadow-2xl rounded-xl">
+        <h2 className="text-2xl font-bold text-center text-[#bd78b5]">
           Sign In
-        </button>
-        <h4 className="mt-2">Forget Password?</h4>
-      </form>
+        </h2>
+        <form className="space-y-2" method="POST">
+          <div>
+            <label
+              htmlFor="email"
+              className="block mb-1 text-sm font-medium text-gray-700"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              onChange={(e) => setEmail(e.target.value)} placeholder="Email"
+              required
+              className="w-full px-3 py-2 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-xl"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="password"
+              className="block mb-1 text-sm font-medium text-gray-700"
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              onChange={(e) => setPassword(e.target.value)} placeholder="Password"
+              className="w-full px-3 py-2 border rounded-3xl shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="w-28 py-2 font-semibold text-slate-400 bg-white shadow-xl rounded-3xl hover:bg-slate-200 items-center mt-4"
+              onClick={handleLogin}
+            >
+              Sign In
+            </button>
+          </div>
+          <div>
+            <p className="text-sm text-center">
+              Create an account?
+              <Link to="/signup" className="text-blue-600">
+                SignUp
+              </Link>
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
