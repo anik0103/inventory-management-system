@@ -48,7 +48,7 @@ const handleLogin = async () => {
         <h2 className="text-2xl font-bold text-center text-[#bd78b5]">
           Sign In
         </h2>
-        <form className="space-y-2">
+        <form className="space-y-2" method="POST">
           <div>
             <label
               htmlFor="email"

@@ -1,77 +1,565 @@
+[
 {
-  "salesActivity": {
-    "title": "Sales Activity",
-    "packages": 7,
-    "status": "TO BE PACKED"
-  },
-  "toBeShipped": {
-    "title": "To Be Shipped",
-    "packages": 4,
-    "status": "TO BE SHIPPED"
-  },
-  "toBeDelivered": {
-    "title": "To Be Delivered",
-    "packages": 3,
-    "status": "TO BE DELIVERED"
-  },
-  "toBeInvoiced": {
-    "title": "To Be Invoiced",
-    "packages": 5,
-    "status": "TO BE INVOICED"
-  },
-  "inventorySummary": {
-    "title": "Inventory Summary",
-    "packagesInHand": 350,
-    "packagesToBeReceived": 120
-  },
-  "itemDetails": {
-    "title": "Item Details",
-    "lowStockItems": 100,
-    "allItemGroups": 100,
-    "allItems": 300,
-    "activeItems": 0
-  },
-  "topSellingItems": [
-    {
-      "name": "Apple iPhone 14",
-      "quantitySold": 150,
-      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+  "region": "kolkata",
+  "regionWiseData": {
+    "salesActivity": {
+      "title": "Sales Activity",
+      "packages": 7,
+      "status": "TO BE PACKED"
     },
-    {
-      "name": "Samsung Galaxy S23",
-      "quantitySold": 135,
-      "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-s911bzadins/gallery/in-galaxy-s23-s911-447250-sm-s911bzadins-thumb-535222796?$344_344_PNG$"
+    "toBeShipped": {
+      "title": "To Be Shipped",
+      "packages": 4,
+      "status": "TO BE SHIPPED"
     },
-    {
-      "name": "OnePlus Nord CE 3",
-      "quantitySold": 98,
-      "image": "https://image01.oneplus.net/ebp/202307/10/1-m00-2e-cc-rb8bwmspzt6ar1_waacgktsz8ts131.png"
+    "toBeDelivered": {
+      "title": "To Be Delivered",
+      "packages": 3,
+      "status": "TO BE DELIVERED"
     },
-    {
-      "name": "Sony WH-1000XM5 Headphones",
-      "quantitySold": 65,
-      "image": "https://m.media-amazon.com/images/I/61o9tWR6D5L._AC_UF1000,1000_QL80_.jpg"
+    "toBeInvoiced": {
+      "title": "To Be Invoiced",
+      "packages": 5,
+      "status": "TO BE INVOICED"
     },
-    {
-      "name": "Logitech MX Master 3S Mouse",
-      "quantitySold": 60,
-      "image": "https://resource.logitech.com/w_800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-top-view-graphite-gallery.png?v=1"
+    "inventorySummary": {
+      "title": "Inventory Summary",
+      "packagesInHand": 350,
+      "packagesToBeReceived": 120
+    },
+    "itemDetails": {
+      "title": "Item Details",
+      "lowStockItems": 100,
+      "allItemGroups": 100,
+      "allItems": 300,
+      "activeItems": 0
+    },
+    "topSellingItems": [
+      {
+        "name": "Apple iPhone 14",
+        "quantitySold": 150,
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+      },
+      {
+        "name": "Samsung Galaxy S23",
+        "quantitySold": 135,
+        "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-s911bzadins/gallery/in-galaxy-s23-s911-447250-sm-s911bzadins-thumb-535222796?$344_344_PNG$"
+      },
+      {
+        "name": "OnePlus Nord CE 3",
+        "quantitySold": 98,
+        "image": "https://image01.oneplus.net/ebp/202307/10/1-m00-2e-cc-rb8bwmspzt6ar1_waacgktsz8ts131.png"
+      },
+      {
+        "name": "Sony WH-1000XM5 Headphones",
+        "quantitySold": 65,
+        "image": "https://m.media-amazon.com/images/I/61o9tWR6D5L._AC_UF1000,1000_QL80_.jpg"
+      },
+      {
+        "name": "Logitech MX Master 3S Mouse",
+        "quantitySold": 60,
+        "image": "https://resource.logitech.com/w_800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-top-view-graphite-gallery.png?v=1"
+      }
+    ],
+    "purchaseOrder": {
+      "title": "Purchase Order",
+      "timePeriod": "This Month",
+      "quantityOrdered": 95,
+      "quantityPending": 40
+    },
+    "salesOrder": {
+      "title": "Sales Order",
+      "month": "This Month",
+      "channel": "Online",
+      "draft": 9,
+      "confirmed": 17,
+      "packed": 11,
+      "shipped": 6,
+      "invoiced": 4
     }
-  ],
-  "purchaseOrder": {
-    "title": "Purchase Order",
-    "timePeriod": "This Month",
-    "quantityOrdered": 95,
-    "quantityPending": 40
-  },
-  "salesOrder": {
-    "title": "Sales Order",
-    "month": "This Month",
-    "channel": "Online",
-    "draft": 9,
-    "confirmed": 17,
-    "packed": 11,
-    "shipped": 6,
-    "invoiced": 4
+  }
+},
+{
+  "region": "Bangalore",
+  "regionWiseData": {
+    "salesActivity": {
+      "title": "Sales Activity",
+      "packages": 12,
+      "status": "PACKED"
+    },
+    "toBeShipped": {
+      "title": "To Be Shipped",
+      "packages": 8,
+      "status": "SHIPPED"
+    },
+    "toBeDelivered": {
+      "title": "To Be Delivered",
+      "packages": 5,
+      "status": "DELIVERED"
+    },
+    "toBeInvoiced": {
+      "title": "To Be Invoiced",
+      "packages": 7,
+      "status": "INVOICED"
+    },
+    "inventorySummary": {
+      "title": "Inventory Summary",
+      "packagesInHand": 420,
+      "packagesToBeReceived": 80
+    },
+    "itemDetails": {
+      "title": "Item Details",
+      "lowStockItems": 60,
+      "allItemGroups": 80,
+      "allItems": 250,
+      "activeItems": 10
+    },
+    "topSellingItems": [
+      {
+        "name": "Google Pixel 7",
+        "quantitySold": 120,
+        "image": "https://store.google.com/product/images/pixel_7.png"
+      },
+      {
+        "name": "Dell XPS 13 Laptop",
+        "quantitySold": 90,
+        "image": "https://i.dell.com/sites/imagecontent/products/PublishingImages/xps-13-9310-laptop/spi/ng/xps-13-9310-laptop-campaign-hero-504x350-ng.psd"
+      },
+      {
+        "name": "Sony PlayStation 5",
+        "quantitySold": 75,
+        "image": "https://m.media-amazon.com/images/I/619BkvKW35L._AC_UF1000,1000_QL80_.jpg"
+      },
+      {
+        "name": "Apple AirPods Pro",
+        "quantitySold": 60,
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+      },
+      {
+        "name": "HP LaserJet Printer",
+        "quantitySold": 55,
+        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+      }
+    ],
+    "purchaseOrder": {
+      "title": "Purchase Order",
+      "timePeriod": "Last Month",
+      "quantityOrdered": 110,
+      "quantityPending": 25
+    },
+    "salesOrder": {
+      "title": "Sales Order",
+      "month": "Last Month",
+      "channel": "Offline",
+      "draft": 5,
+      "confirmed": 13,
+      "packed": 8,
+      "shipped": 10,
+      "invoiced": 7
+    }
+  }
+},
+{
+  "region": "Delhi",
+  "regionWiseData": {
+    "salesActivity": {
+      "title": "Sales Activity",
+      "packages": 15,
+      "status": "IN PROGRESS"
+    },
+    "toBeShipped": {
+      "title": "To Be Shipped",
+      "packages": 10,
+      "status": "AWAITING PICKUP"
+    },
+    "toBeDelivered": {
+      "title": "To Be Delivered",
+      "packages": 7,
+      "status": "OUT FOR DELIVERY"
+    },
+    "toBeInvoiced": {
+      "title": "To Be Invoiced",
+      "packages": 9,
+      "status": "PENDING INVOICE"
+    },
+    "inventorySummary": {
+      "title": "Inventory Summary",
+      "packagesInHand": 500,
+      "packagesToBeReceived": 150
+    },
+    "itemDetails": {
+      "title": "Item Details",
+      "lowStockItems": 40,
+      "allItemGroups": 90,
+      "allItems": 320,
+      "activeItems": 20
+    },
+    "topSellingItems": [
+      {
+        "name": "Lenovo ThinkPad X1",
+        "quantitySold": 110,
+        "image": "https://www.lenovo.com/medias/thinkpad-x1-carbon-gen-9-hero.png"
+      },
+      {
+        "name": "Canon EOS 1500D",
+        "quantitySold": 85,
+        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_EOS-1500D.png"
+      },
+      {
+        "name": "Mi Smart Band 6",
+        "quantitySold": 70,
+        "image": "https://i01.appmifile.com/webfile/globalimg/in/cms/3B3A5B3A-6B3A-5B3A-3B3A-5B3A-3B3A.png"
+      },
+      {
+        "name": "JBL Flip 5 Speaker",
+        "quantitySold": 55,
+        "image": "https://in.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3e1e1e1e/FLIP5_HERO.png"
+      },
+      {
+        "name": "Asus ROG Mouse",
+        "quantitySold": 50,
+        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+      }
+    ],
+    "purchaseOrder": {
+      "title": "Purchase Order",
+      "timePeriod": "Last Month",
+      "quantityOrdered": 110,
+      "quantityPending": 25
+    },
+    "salesOrder": {
+      "title": "Sales Order",
+      "month": "Last Month",
+      "channel": "Offline",
+      "draft": 5,
+      "confirmed": 13,
+      "packed": 8,
+      "shipped": 10,
+      "invoiced": 7
+    }
+  }
+},
+{
+  "region": "Chennai",
+  "regionWiseData": {
+    "salesActivity": {
+      "title": "Sales Activity",
+      "packages": 9,
+      "status": "READY"
+    },
+    "toBeShipped": {
+      "title": "To Be Shipped",
+      "packages": 6,
+      "status": "IN TRANSIT"
+    },
+    "toBeDelivered": {
+      "title": "To Be Delivered",
+      "packages": 4,
+      "status": "DELIVERING"
+    },
+    "toBeInvoiced": {
+      "title": "To Be Invoiced",
+      "packages": 8,
+      "status": "AWAITING PAYMENT"
+    },
+    "inventorySummary": {
+      "title": "Inventory Summary",
+      "packagesInHand": 390,
+      "packagesToBeReceived": 100
+    },
+    "itemDetails": {
+      "title": "Item Details",
+      "lowStockItems": 45,
+      "allItemGroups": 70,
+      "allItems": 210,
+      "activeItems": 15
+    },
+    "topSellingItems": [
+      {
+        "name": "Samsung Galaxy Tab S8",
+        "quantitySold": 80,
+        "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-x700nzaainu/gallery/in-galaxy-tab-s8-x700-415978-sm-x700nzaainu-530253729?$650_519_PNG$"
+      },
+      {
+        "name": "Apple MacBook Air M2",
+        "quantitySold": 65,
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-m2-og-202206?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1653493200207"
+      },
+      {
+        "name": "Boat Rockerz 255 Pro",
+        "quantitySold": 55,
+        "image": "https://www.boat-lifestyle.com/cdn/shop/products/255pro-black_600x.png"
+      },
+      {
+        "name": "Canon PIXMA Printer",
+        "quantitySold": 40,
+        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_PIXMA.png"
+      },
+      {
+        "name": "HP Pavilion Laptop",
+        "quantitySold": 38,
+        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+      }
+    ],
+    "purchaseOrder": {
+      "title": "Purchase Order",
+      "timePeriod": "This Month",
+      "quantityOrdered": 70,
+      "quantityPending": 20
+    },
+    "salesOrder": {
+      "title": "Sales Order",
+      "month": "This Month",
+      "channel": "Online",
+      "draft": 7,
+      "confirmed": 10,
+      "packed": 6,
+      "shipped": 8,
+      "invoiced": 5
+    }
+  }
+},
+{
+  "region": "Mumbai",
+  "regionWiseData": {
+    "salesActivity": {
+      "title": "Sales Activity",
+      "packages": 18,
+      "status": "IN PROGRESS"
+    },
+    "toBeShipped": {
+      "title": "To Be Shipped",
+      "packages": 11,
+      "status": "AWAITING PICKUP"
+    },
+    "toBeDelivered": {
+      "title": "To Be Delivered",
+      "packages": 9,
+      "status": "OUT FOR DELIVERY"
+    },
+    "toBeInvoiced": {
+      "title": "To Be Invoiced",
+      "packages": 13,
+      "status": "PENDING INVOICE"
+    },
+    "inventorySummary": {
+      "title": "Inventory Summary",
+      "packagesInHand": 510,
+      "packagesToBeReceived": 140
+    },
+    "itemDetails": {
+      "title": "Item Details",
+      "lowStockItems": 35,
+      "allItemGroups": 95,
+      "allItems": 330,
+      "activeItems": 25
+    },
+    "topSellingItems": [
+      {
+        "name": "Realme GT Neo 3",
+        "quantitySold": 130,
+        "image": "https://image01.realme.net/general/20220407/1649318486843.png"
+      },
+      {
+        "name": "Acer Aspire 7",
+        "quantitySold": 100,
+        "image": "https://static.acer.com/up/Resource/Acer/Laptops/Aspire_7/images/20210318/Aspire7_A715-75G_Black_modelpreview.png"
+      },
+      {
+        "name": "Sony WF-1000XM4 Earbuds",
+        "quantitySold": 85,
+        "image": "https://m.media-amazon.com/images/I/61aA2zE9nKL._AC_UF1000,1000_QL80_.jpg"
+      },
+      {
+        "name": "Apple Watch SE",
+        "quantitySold": 70,
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-se-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+      },
+      {
+        "name": "Canon LBP2900B Printer",
+        "quantitySold": 60,
+        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_LBP2900B.png"
+      }
+    ],
+    "purchaseOrder": {
+      "title": "Purchase Order",
+      "timePeriod": "This Month",
+      "quantityOrdered": 120,
+      "quantityPending": 30
+    },
+    "salesOrder": {
+      "title": "Sales Order",
+      "month": "This Month",
+      "channel": "Online",
+      "draft": 8,
+      "confirmed": 15,
+      "packed": 12,
+      "shipped": 9,
+      "invoiced": 6
+    }
+  }
+},
+{
+  "region": "Ahmedabad",
+  "regionWiseData": {
+    "salesActivity": {
+      "title": "Sales Activity",
+      "packages": 20,
+      "status": "IN PROGRESS"
+    },
+    "toBeShipped": {
+      "title": "To Be Shipped",
+      "packages": 14,
+      "status": "AWAITING PICKUP"
+    },
+    "toBeDelivered": {
+      "title": "To Be Delivered",
+      "packages": 9,
+      "status": "OUT FOR DELIVERY"
+    },
+    "toBeInvoiced": {
+      "title": "To Be Invoiced",
+      "packages": 11,
+      "status": "PENDING INVOICE"
+    },
+    "inventorySummary": {
+      "title": "Inventory Summary",
+      "packagesInHand": 480,
+      "packagesToBeReceived": 95
+    },
+    "itemDetails": {
+      "title": "Item Details",
+      "lowStockItems": 30,
+      "allItemGroups": 85,
+      "allItems": 270,
+      "activeItems": 18
+    },
+    "topSellingItems": [
+      {
+        "name": "Vivo V27 Pro",
+        "quantitySold": 105,
+        "image": "https://www.vivo.com/vivo-v27-pro.png"
+      },
+      {
+        "name": "HP Envy x360",
+        "quantitySold": 80,
+        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+      },
+      {
+        "name": "JBL Tune 760NC",
+        "quantitySold": 65,
+        "image": "https://in.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3e1e1e1e/TUNE760NC_HERO.png"
+      },
+      {
+        "name": "Apple iPad 10th Gen",
+        "quantitySold": 50,
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-10th-gen-og-202210?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1664472289056"
+      },
+      {
+        "name": "Canon PIXMA G2020",
+        "quantitySold": 45,
+        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_PIXMA.png"
+      }
+    ],
+    "purchaseOrder": {
+      "title": "Purchase Order",
+      "timePeriod": "This Month",
+      "quantityOrdered": 130,
+      "quantityPending": 35
+    },
+    "salesOrder": {
+      "title": "Sales Order",
+      "month": "This Month",
+      "channel": "Online",
+      "draft": 10,
+      "confirmed": 18,
+      "packed": 12,
+      "shipped": 14,
+      "invoiced": 9
+    }
+  }
+},
+{
+  "region": "Noida",
+  "regionWiseData": {
+    "salesActivity": {
+      "title": "Sales Activity",
+      "packages": 12,
+      "status": "PACKED"
+    },
+    "toBeShipped": {
+      "title": "To Be Shipped",
+      "packages": 8,
+      "status": "SHIPPED"
+    },
+    "toBeDelivered": {
+      "title": "To Be Delivered",
+      "packages": 5,
+      "status": "DELIVERED"
+    },
+    "toBeInvoiced": {
+      "title": "To Be Invoiced",
+      "packages": 7,
+      "status": "INVOICED"
+    },
+    "inventorySummary": {
+      "title": "Inventory Summary",
+      "packagesInHand": 420,
+      "packagesToBeReceived": 80
+    },
+    "itemDetails": {
+      "title": "Item Details",
+      "lowStockItems": 60,
+      "allItemGroups": 80,
+      "allItems": 250,
+      "activeItems": 10
+    },
+    "topSellingItems": [
+      {
+        "name": "Google Pixel 7",
+        "quantitySold": 120,
+        "image": "https://store.google.com/product/images/pixel_7.png"
+      },
+      {
+        "name": "Dell XPS 13 Laptop",
+        "quantitySold": 90,
+        "image": "https://i.dell.com/sites/imagecontent/products/PublishingImages/xps-13-9310-laptop/spi/ng/xps-13-9310-laptop-campaign-hero-504x350-ng.psd"
+      },
+      {
+        "name": "Sony PlayStation 5",
+        "quantitySold": 75,
+        "image": "https://m.media-amazon.com/images/I/619BkvKW35L._AC_UF1000,1000_QL80_.jpg"
+      },
+      {
+        "name": "Apple AirPods Pro",
+        "quantitySold": 60,
+        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+      },
+      {
+        "name": "HP LaserJet Printer",
+        "quantitySold": 55,
+        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+      }
+    ],
+    "purchaseOrder": {
+      "title": "Purchase Order",
+      "timePeriod": "Last Month",
+      "quantityOrdered": 110,
+      "quantityPending": 25
+    },
+    "salesOrder": {
+      "title": "Sales Order",
+      "month": "Last Month",
+      "channel": "Offline",
+      "draft": 5,
+      "confirmed": 13,
+      "packed": 8,
+      "shipped": 10,
+      "invoiced": 7
+    }
   }
 }
+
+
+
+]
