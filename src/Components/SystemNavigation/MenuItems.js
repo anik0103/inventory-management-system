@@ -28,5 +28,3 @@ export const menuItems = [
       label: "Reports",
        to: "/reports" },
 ];
-
-export default menuItems;
