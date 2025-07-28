@@ -7,7 +7,7 @@ const TopProductCard = () => {
     category: "Electronics",
     sold: 1540,
     inStock: 320,
-    image: "https://via.placeholder.com/80", // Replace with actual product image URL
+    image: "https://cdns3.thecosmicbyte.com/wp-content/uploads/white-bg-2.jpg.webp", // Replace with actual product image URL
   };
 
   return (
