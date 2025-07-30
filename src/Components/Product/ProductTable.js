@@ -22,8 +22,6 @@ const ProductTable = ({ products = [] }) => {
         <tbody>
           {products.length > 0 ? (
             products.map((item, index) => (
-              <tr key={index} className="border-b text-sm">
-                <td className="py-2 pr-8">{item.name}</td>
               <tr
                 key={index}
                 className="border-b text-sm cursor-pointer hover:bg-gray-100"
