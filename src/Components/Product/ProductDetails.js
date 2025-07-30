@@ -5,20 +5,46 @@ const ProductDetails = () => {
   const { productName } = useParams();
   const product = PdtList.find((item) => item.name === productName);
 
-  if (!product) return <p>Product not found</p>;
+  if (!product) return <p className="text-center mt-10 text-lg text-red-500">Product not found</p>;
 
   return (
-    <div className="p-6 max-w-lg mx-auto bg-white rounded-lg shadow-md">
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-96 h-64 object-contain rounded-md mx-auto"
-      />
-      <h2 className="text-2xl font-semibold mt-4 mb-2">{product.name}</h2>
-      <p><strong>Category:</strong> {product.category}</p>
-      <p><strong>Price:</strong> ${product.price}</p>
-      <p><strong>Quantity:</strong> {product.quantity}</p>
-      <p className="mt-2"><strong>Description:</strong> {product.description}</p>
+    <div className="min-h-screen bg-gray-100 p-6">
+        <h2 className="text-3xl font-bold text-center mb-6 text-black">Product Details</h2>
+        
+        <div className="flex justify-center mb-6">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-96 h-64 object-contain"
+          />
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label className="text-gray-600 font-semibold">Product Name</label>
+            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.name}</div>
+          </div>
+
+          <div>
+            <label className="text-gray-600 font-semibold">Category</label>
+            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.category}</div>
+          </div>
+
+          <div>
+            <label className="text-gray-600 font-semibold">Price</label>
+            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">${product.price}</div>
+          </div>
+
+          <div>
+            <label className="text-gray-600 font-semibold">Quantity</label>
+            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.quantity}</div>
+          </div>
+
+          <div className="sm:col-span-2">
+            <label className="text-gray-600 font-semibold">Description</label>
+            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.description}</div>
+          </div>
+       </div>
     </div>
   );
 };
