@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const Filters = ({ onSearch }) => {
   const[filters, setFilters] = useState("");
@@ -17,6 +18,11 @@ const Filters = ({ onSearch }) => {
       price,
     });
   };
+
+  const navigate = useNavigate();
+  const handleAddClick = () => {
+    navigate("/add-product");
+  }
 
   return (
     <div className="flex flex-wrap gap-4 items-center m-3">
@@ -60,7 +66,7 @@ const Filters = ({ onSearch }) => {
       <button className=" bg-[#bd78b5] px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" onClick={handleSearch}>
         <IoSearchSharp />
       </button>
-      <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" >
+      <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" onClick={handleAddClick}>
             + Add Product
       </button>
       
