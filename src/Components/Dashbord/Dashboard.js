@@ -6,6 +6,7 @@ import OrderStatus from "./OrderStatus";
 import InventorySummary from "./SalesOverVew/InventorySummary";
 import mockData from "../../asset/fakeApiResponce/mockData.json";
 import { RegionContext } from "../Dashbord/RegionContext";
+import SalesOrder from "./SalesOrder";
 
 const Dashboard = () => {
   const { selectedRegion } = useContext(RegionContext);
@@ -30,6 +31,7 @@ const Dashboard = () => {
         </div>
         <div className="grid grid-cols-1 gap-6">
           <InventorySummary regionData={regionData} />
+          <SalesOrder regionData={regionData} />
         </div>
       </div>
     </div>

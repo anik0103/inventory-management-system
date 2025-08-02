@@ -1,10 +1,11 @@
 import React from "react";
-import mockData from "../../asset/fakeApiResponce/mockData.json";
 
-const SalesOrder = () => {
-  const { salesOrder, salesActivity } = mockData;
+const SalesOrder = ({ regionData }) => {
+  // Safely fetch data from the selected region
+  const salesOrder = regionData?.salesOrder || {};
+  const salesActivity = regionData?.salesActivity || {};
 
-  // Extract sales order status data into an array for easier mapping
+  // Prepare order statuses dynamically
   const orderStatuses = [
     { label: "Draft", value: salesOrder?.draft || 0 },
     { label: "Confirmed", value: salesOrder?.confirmed || 0 },
