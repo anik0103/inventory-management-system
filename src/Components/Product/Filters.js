@@ -25,7 +25,7 @@ const Filters = ({ onSearch , onSortFilterChange}) => {
   return (
     <div className="flex flex-wrap gap-4 items-center m-3">
 
-      <select className="border w-32 p-2 rounded-lg" value={Filters} onChange={(e) => onSortFilterChange(e.target.value)}>
+      <select className="border w-32 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#bd78b5]" value={Filters} onChange={(e) => onSortFilterChange(e.target.value)}>
         <option value="all">All filter</option>
         <option value="priceLowHigh">Price: Low to High</option>
         <option value="priceHighLow">Price: High to Low</option>

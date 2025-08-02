@@ -128,7 +128,7 @@ return (
           <img
             src={preview}
             alt="Preview"
-            className="mt-4 w-full h-48 object-cover rounded border"
+            className="mt-4 w-full h-72 object-contain rounded border"
           />
         )}
       </div>
