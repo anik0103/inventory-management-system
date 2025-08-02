@@ -5,24 +5,12 @@ import man from "../asset/man.png";
 import location from "../asset/location.png";
 import notifiaction from "../asset/notification.png";
 import plus from "../asset/add.png";
-import { useState } from "react";
+import { useContext } from "react";
 import mockData from "../asset/fakeApiResponce/mockData.json";
+import { RegionContext } from "../Components/Dashbord/RegionContext";
 
 const Navbar = () => {
-  const [selectedRegion, setSelectedRegion] = useState("");
-
-  // Extract region names directly from the mockData array
-  const regions = mockData.map((item) => item.region);
-
-  const handleRegionChange = (e) => {
-    const regionName = e.target.value;
-    setSelectedRegion(regionName);
-
-    // Find the region data from mockData
-    const selectedRegionData = mockData.find((item) => item.region === regionName);
-
-    // If you want to show a path (or some additional info), update it here
-  };
+  const { selectedRegion, setSelectedRegion } = useContext(RegionContext);
 
   return (
     <nav className="w-full p-4 flex bg-[#d19fca]">
@@ -49,26 +37,17 @@ const Navbar = () => {
           <img src={location} alt="location" className="w-8 cursor-pointer" />
           <select
             value={selectedRegion}
-            onChange={handleRegionChange}
-            className="p-1 border rounded-md w-[140px]"
+            onChange={(e) => setSelectedRegion(e.target.value)}
+            className="p-1 border rounded-md w-[102px]"
           >
             <option value="">Choose a location</option>
-            {regions.length > 0 ? (
-              regions.map((region, index) => (
-                <option key={index} value={region}>
-                  {region}
-                </option>
-              ))
-            ) : (
-              <option disabled>No regions found</option>
-            )}
+            {mockData.map((region, index) => (
+              <option key={index} value={region.region}>
+                {region.region}
+              </option>
+            ))}
           </select>
         </div>
-
-        {/* Display the selected path if needed */}
-        {/* {selectedPath && (
-          <span className="ml-2 text-sm text-gray-700">{selectedPath}</span>
-        )} */}
 
         <img src={plus} alt="plus" className="w-6" />
         <img src={notifiaction} alt="notifiaction" className="w-6" />
