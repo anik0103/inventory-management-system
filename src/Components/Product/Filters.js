@@ -36,7 +36,7 @@ const Filters = ({ onSearch , onSortFilterChange}) => {
       <input
         type="text"
         placeholder="Product Name"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
         value={productName}
         onChange={(e) => {
           setProductName(e.target.value);
@@ -46,7 +46,7 @@ const Filters = ({ onSearch , onSortFilterChange}) => {
       <input
         type="text"
         placeholder="Category"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
         value={category}
         onChange={(e) => {
           setCategory(e.target.value);
@@ -56,7 +56,7 @@ const Filters = ({ onSearch , onSortFilterChange}) => {
       <input
         type="text"
         placeholder="Quantity"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
         value={quantity}
         onChange={(e) => {
           setQuantity(e.target.value);
@@ -66,7 +66,7 @@ const Filters = ({ onSearch , onSortFilterChange}) => {
       <input
         type="text"
         placeholder="Price"
-        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none text-sm"
+        className="border border-neutral-200 w-32 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
         value={price}
         onChange={(e) => {
           setPrice(e.target.value);
