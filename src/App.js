@@ -7,6 +7,7 @@ import SignIn from "./Components/Authentication/SignIn";
 import SignUp from "./Components/Authentication/SignUp";
 import AppLayout from "./Components/Layout/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ProductDetails from "./Components/Product/ProductDetails";
 
 const appRouter = createBrowserRouter([
   {
@@ -15,8 +16,9 @@ const appRouter = createBrowserRouter([
     children: [
       { index: true, element: <Dashboard /> },
       { path: "products", element: <Products /> },
-      { path: "suppliers", element: <Suppliers /> },
-      { path: "add-product", element: <AddProducts /> },
+      { path: "suppliers", element: <Suppliers />},
+      {path: "add-product", element: <AddProducts />},
+      {path: "product/:productName", element: <ProductDetails />},
       { path: "suppliers", element: <div>Suppliers Page</div> },
       { path: "orders", element: <div>Orders Page</div> },
       { path: "customer", element: <div>Customer Page</div> },
