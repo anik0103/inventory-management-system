@@ -1,11 +1,10 @@
 import React from "react";
 
 const SalesOrder = ({ regionData }) => {
-  // Safely fetch data from the selected region
-  const salesOrder = regionData?.salesOrder || {};
-  const salesActivity = regionData?.salesActivity || {};
+  // Corrected path to match mockData structure
+  const salesOrder = regionData?.regionWiseData?.salesOrder || {};
+  const salesActivity = regionData?.regionWiseData?.salesActivity || {};
 
-  // Prepare order statuses dynamically
   const orderStatuses = [
     { label: "Draft", value: salesOrder?.draft || 0 },
     { label: "Confirmed", value: salesOrder?.confirmed || 0 },
@@ -45,7 +44,7 @@ const SalesOrder = ({ regionData }) => {
           {orderStatuses.map((item) => (
             <div
               key={item.label}
-              className="bg-white border border-purple-200 rounded-lg shadow p-4 flex flex-col items-center"
+              className="bg-white border border-purple-200 rounded-lg shadow p-4 flex flex-col items-center mb-4"
             >
               <h4 className="text-sm text-gray-600 font-medium">
                 {item.label}

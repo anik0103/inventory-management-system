@@ -4,13 +4,13 @@ const TopProducts = ({ regionData }) => {
   const topSellingItems = regionData?.regionWiseData?.topSellingItems || [];
 
   return (
-    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] p-4 transition-all duration-300 w-full">
+    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] p-4 transition-all duration-300 w-full h-full">
       <h2 className="text-lg font-bold text-[#bd78b5] border-b border-[#bd78b5] pb-2 mb-4">
         Top Selling Products
       </h2>
 
       {topSellingItems.length > 0 ? (
-        <div className="space-y-3">
+        <div className="space-y-1  grid grid-cols-2 gap-3 justify-around m-auto">
           {topSellingItems.map((item, index) => (
             <div
               key={index}

@@ -29,7 +29,7 @@ const Dashboard = () => {
           </div>
           <TopProducts regionData={regionData} />
         </div>
-        <div className="grid grid-cols-1 gap-6">
+        <div className="flex flex-col gap-8">
           <InventorySummary regionData={regionData} />
           <SalesOrder regionData={regionData} />
         </div>
