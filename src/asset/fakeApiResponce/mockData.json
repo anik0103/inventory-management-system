@@ -38,7 +38,7 @@
       {
         "name": "Apple iPhone 14",
         "quantitySold": 150,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+        "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-s911bzadins/gallery/in-galaxy-s23-s911-447250-sm-s911bzadins-thumb-535222796?$344_344_PNG$"
       },
       {
         "name": "Samsung Galaxy S23",
@@ -557,9 +557,7 @@
       "shipped": 10,
       "invoiced": 7
     }
+    }
   }
-}
-
-
 
 ]
