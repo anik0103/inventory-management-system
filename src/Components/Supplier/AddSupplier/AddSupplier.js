@@ -1,138 +1,99 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const AddProduct = () => {
+const AddSupplier = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    productName: "",
-    description: "",
-    category: "",
-    price: "",
-    supplier: "",
-    discount: "",
-    image: null,
+    vendorsName: "",
+    pointOfContact: "",
+    contact: "",
+    location: "",
+    country: "",
+    productType: "",
+    email: "",
   });
 
+  const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "image") {
-      setFormData({ ...formData, image: files[0] });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.vendorsName) newErrors.vendorsName = "Vendor name is required";
+    if (!formData.pointOfContact) newErrors.pointOfContact = "Point of contact is required";
+    if (!formData.contact) newErrors.contact = "Contact number is required";
+    if (!formData.location) newErrors.location = "Location is required";
+    if (!formData.country) newErrors.country = "Country is required";
+    if (!formData.productType) newErrors.productType = "Product type is required";
+    if (!formData.email) newErrors.email = "Email is required";
+    return newErrors;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    console.log("Supplier Data Submitted:", formData);
+    navigate("/suppliers");
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen p-10">
-      <div className="max-w-5xl mx-auto bg-white p-8 rounded shadow">
-        <h2 className="text-2xl font-bold mb-6">Add Product</h2>
+    <div className="bg-[#f5f5fa] min-h-screen py-10 px-4">
+      <div className="max-w-5xl mx-auto bg-white p-8 rounded-2xl shadow-md relative">
+        <button
+          onClick={() => navigate(-1)}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-3xl font-bold"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+
+        <h2 className="text-3xl font-bold text-[#bd78b5] mb-6 text-center">Add New Supplier</h2>
+
         <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-4">
-            <div>
-              <label className="block font-medium">Product Name</label>
+          {[
+            { label: "Vendor Name", name: "vendorsName", type: "text" },
+            { label: "Point of Contact", name: "pointOfContact", type: "text" },
+            { label: "Contact", name: "contact", type: "text" },
+            { label: "Location", name: "location", type: "text" },
+            { label: "Country", name: "country", type: "text" },
+            { label: "Product Type", name: "productType", type: "text" },
+            { label: "Email", name: "email", type: "email" },
+          ].map(({ label, name, type }) => (
+            <div key={name}>
+              <label className="block text-gray-700 font-medium mb-1">{label}</label>
               <input
-                type="text"
-                name="productName"
-                placeholder="Enter product name"
-                className="w-full border border-gray-300 p-2 rounded"
-                onChange={handleChange}
-                value={formData.productName}
-              />
-            </div>
-
-            <div>
-              <label className="block font-medium">Description</label>
-              <textarea
-                name="description"
-                rows="4"
-                placeholder="Write something about the product..."
-                className="w-full border border-gray-300 p-2 rounded"
-                onChange={handleChange}
-                value={formData.description}
-              />
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block font-medium">Category</label>
-                <input
-                  type="text"
-                  name="category"
-                  placeholder="Enter category"
-                  className="w-full border border-gray-300 p-2 rounded"
-                  onChange={handleChange}
-                  value={formData.category}
-                />
-              </div>
-              <div>
-                <label className="block font-medium">Price</label>
-                <input
-                  type="number"
-                  name="price"
-                  placeholder="Enter price"
-                  className="w-full border border-gray-300 p-2 rounded"
-                  onChange={handleChange}
-                  value={formData.price}
-                />
-              </div>
-              <h1>ok</h1>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block font-medium">Supplier</label>
-                <input
-                  type="text"
-                  name="supplier"
-                  placeholder="Enter supplier name"
-                  className="w-full border border-gray-300 p-2 rounded"
-                  onChange={handleChange}
-                  value={formData.supplier}
-                />
-              </div>
-              <div>
-                <label className="block font-medium">Discounts</label>
-                <input
-                  type="number"
-                  name="discount"
-                  placeholder="Enter % discount"
-                  className="w-full border border-gray-300 p-2 rounded"
-                  onChange={handleChange}
-                  value={formData.discount}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-between">
-            <div className="border p-4 rounded shadow bg-gray-50 mb-4">
-              <label className="block font-medium mb-2">Upload Image</label>
-              <input
-                type="file"
-                name="image"
-                className="w-full"
+                type={type}
+                name={name}
+                placeholder={`Enter ${label.toLowerCase()}`}
+                className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#bd78b5]"
+                value={formData[name]}
                 onChange={handleChange}
               />
-              {formData.image && (
-                <p className="text-sm text-gray-600 mt-2">{formData.image.name}</p>
-              )}
+              {errors[name] && <p className="text-red-500 text-sm mt-1">{errors[name]}</p>}
             </div>
-            <div className="text-right">
-              <button
-                type="submit"
-                className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded"
-              >
-                Add Product
-              </button>
-            </div>
-          </div>
+          ))}
         </form>
+
+        <div className="mt-8 flex justify-end">
+          <button
+            onClick={handleSubmit}
+            type="submit"
+            className="bg-[#bd78b5] hover:bg-[#a65fa0] text-white font-semibold px-6 py-2 rounded-lg shadow-md transition"
+          >
+            Add Supplier
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default AddProduct;
+export default AddSupplier;
