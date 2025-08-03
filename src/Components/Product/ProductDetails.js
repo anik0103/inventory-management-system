@@ -8,43 +8,46 @@ const ProductDetails = () => {
   if (!product) return <p className="text-center mt-10 text-lg text-red-500">Product not found</p>;
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-        <h2 className="text-3xl font-bold text-center mb-6 text-black">Product Details</h2>
-        {/* This will show the image */}
-        <div className="flex justify-center mb-6">
-          <img
+    <div className="min-h-screen bg-gray-100 p-10"> 
+        <h1 className="text-2xl font-bold">Product Details</h1>
+        <div className="flex flex-col md:flex-row-reverse items-center gap-8 mx-auto p-6 max-w-4xl"> 
+          <div className="flex-1">
+            <img
             src={product.image}
             alt={product.name}
-            className="w-96 h-64 object-contain"
-          />
-        </div>
+            className="w-full h-96 max-w-sm mx-auto object-contain"
+            />
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="flex-1 space-y-4 w-full">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+            <label className="block font-medium">Product Name</label>
+            <div className="bg-white w-full border px-3 py-2 rounded">{product.name}</div>
+            </div>
+
           <div>
-            <label className="text-gray-600 font-semibold">Product Name</label>
-            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.name}</div>
+            <label className="block font-medium">Category</label>
+            <div className="bg-white w-full border px-3 py-2 rounded">{product.category}</div>
           </div>
 
           <div>
-            <label className="text-gray-600 font-semibold">Category</label>
-            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.category}</div>
+            <label className="block font-medium">Price</label>
+            <div className="bg-white w-full border px-3 py-2 rounded">${product.price}</div>
           </div>
 
           <div>
-            <label className="text-gray-600 font-semibold">Price</label>
-            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">${product.price}</div>
+            <label className="block font-medium">Quantity</label>
+            <div className="bg-white w-full border px-3 py-2 rounded">{product.quantity}</div>
           </div>
-
-          <div>
-            <label className="text-gray-600 font-semibold">Quantity</label>
-            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.quantity}</div>
-          </div>
+        </div>  
 
           <div className="sm:col-span-2">
-            <label className="text-gray-600 font-semibold">Description</label>
-            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.description}</div>
+            <label className="block font-medium">Description</label>
+            <div className="bg-white w-full border px-3 py-2 rounded">{product.description}</div>
           </div>
        </div>
+      </div>
     </div>
   );
 };
