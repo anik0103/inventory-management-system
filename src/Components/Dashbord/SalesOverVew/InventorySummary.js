@@ -1,10 +1,8 @@
 import React from "react";
 import InventoryStatCard from "./InventoryStatCard";
-import mockData from "../../../asset/fakeApiResponce/mockData.json";
 
-const InventorySummary = () => {
-  const quantityInHand = mockData.inventorySummary?.packagesInHand || 0;
-  const quantityToBeReceived = mockData.inventorySummary?.packagesToBeReceived || 0;
+const InventorySummary = ({ regionData }) => {
+  const inventory = regionData?.regionWiseData?.inventorySummary || {};
 
   return (
     <div className="w-full lg:w-full mt-2">
@@ -15,14 +13,14 @@ const InventorySummary = () => {
 
         <div className="grid grid-cols-2 gap-3">
           <InventoryStatCard
-            value={quantityInHand}
+            value={inventory.packagesInHand || 0}
             label="Qty"
             status="IN HAND"
             valueColor="text-purple-800"
             labelColor="text-purple-600"
           />
           <InventoryStatCard
-            value={quantityToBeReceived}
+            value={inventory.packagesToBeReceived || 0}
             label="Qty"
             status="TO BE RECEIVED"
             valueColor="text-purple-800"
