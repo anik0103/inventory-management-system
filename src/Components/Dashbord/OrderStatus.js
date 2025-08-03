@@ -1,9 +1,8 @@
 import React from "react";
-import mockData from "../../asset/fakeApiResponce/mockData.json";
 
-const OrderStatus = () => {
-  const orderData = mockData.orderStatus || {};
-  const purchase = mockData.purchaseOrder || {};
+const OrderStatus = ({ regionData }) => {
+  const orderData = regionData?.regionWiseData?.orderStatus || {};
+  const purchase = regionData?.regionWiseData?.purchaseOrder || {};
 
   return (
     <div
@@ -18,21 +17,21 @@ const OrderStatus = () => {
         <div className="flex flex-col bg-white rounded-md p-3 shadow-sm border border-gray-200">
           <span className="text-gray-500">Qty Ordered</span>
           <span className="font-semibold text-base">
-            {purchase.quantityOrdered ?? "N/A"}
+            {purchase.quantityOrdered || 0}
           </span>
         </div>
 
         <div className="flex flex-col bg-white rounded-md p-3 shadow-sm border border-gray-200">
           <span className="text-gray-500">Qty Pending</span>
           <span className="font-semibold text-base">
-            {purchase.quantityPending ?? "N/A"}
+            {purchase.quantityPending || 0}
           </span>
         </div>
 
         <div className="flex flex-col bg-white rounded-md p-3 shadow-sm border border-gray-200">
           <span className="text-gray-500">Time Period</span>
           <span className="font-semibold text-base">
-            {orderData.timePeriod ?? "N/A"}
+            {orderData.timePeriod || "N/A"}
           </span>
         </div>
       </div>

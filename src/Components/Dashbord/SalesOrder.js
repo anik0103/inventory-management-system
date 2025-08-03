@@ -1,10 +1,10 @@
 import React from "react";
-import mockData from "../../asset/fakeApiResponce/mockData.json";
 
-const SalesOrder = () => {
-  const { salesOrder, salesActivity } = mockData;
+const SalesOrder = ({ regionData }) => {
+  // Corrected path to match mockData structure
+  const salesOrder = regionData?.regionWiseData?.salesOrder || {};
+  const salesActivity = regionData?.regionWiseData?.salesActivity || {};
 
-  // Extract sales order status data into an array for easier mapping
   const orderStatuses = [
     { label: "Draft", value: salesOrder?.draft || 0 },
     { label: "Confirmed", value: salesOrder?.confirmed || 0 },
@@ -44,7 +44,7 @@ const SalesOrder = () => {
           {orderStatuses.map((item) => (
             <div
               key={item.label}
-              className="bg-white border border-purple-200 rounded-lg shadow p-4 flex flex-col items-center"
+              className="bg-white border border-purple-200 rounded-lg shadow p-4 flex flex-col items-center mb-4"
             >
               <h4 className="text-sm text-gray-600 font-medium">
                 {item.label}
