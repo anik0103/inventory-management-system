@@ -78,6 +78,7 @@ const AddProduct = () => {
                   value={formData.price}
                 />
               </div>
+              <h1>ok</h1>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
