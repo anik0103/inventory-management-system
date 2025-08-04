@@ -27,13 +27,13 @@ const handleSubmit = (e) => {
 return ( 
       <div className="min-h-screen bg-gray-100 p-6"> 
         <div className="flex justify-between items-center mb-6"> 
-          <h2 className="text-2xl font-bold">Add Product</h2> 
+          <h1 className="text-2xl font-bold">Add Product</h1> 
         
         <div className="flex gap-4">  
           <button type="submit" form="addProductForm" className="px-4 py-2 bg-[#bd78b5] text-white rounded hover:bg-[#d19fca] transition"
             > Add Product </button> 
         </div>
-      </div>
+        </div>
 
       <div className="grid grid-cols-3 gap-6">
           <form
@@ -128,7 +128,7 @@ return (
           <img
             src={preview}
             alt="Preview"
-            className="mt-4 w-full h-48 object-cover rounded border"
+            className="mt-4 w-full h-72 object-contain rounded border"
           />
         )}
       </div>

@@ -5,46 +5,43 @@ const ProductDetails = () => {
   const { productName } = useParams();
   const product = PdtList.find((item) => item.name === productName);
 
-  if (!product) return <p className="text-center mt-10 text-lg text-red-500">Product not found</p>;
+  if (!product)
+    return (
+      <p className="text-center mt-10 text-lg text-red-500">
+        Product not found
+      </p>
+    );
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-        <h2 className="text-3xl font-bold text-center mb-6 text-black">Product Details</h2>
-        {/* This will show the image */}
-        <div className="flex justify-center mb-6">
+    <div className="min-h-screen bg-gray-100 flex justify-center items-center px-4 py-6">
+      <div className="w-4/5 h-[80vh] bg-white rounded-xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
+        
+        {/* Left Section */}
+        <div className="w-full md:w-1/2 h-full p-6 flex flex-col justify-center items-start text-left">
+          <h2 className="text-6xl font-bold mb-4">{product.name}</h2>
+          <p className="text-lg text-gray-700 font-bold mb-4">{product.category}</p>
+          <p className="text-3xl font-bold text-purple-600 mb-4">${product.price}</p>
+
+          <div className="mb-4">
+            <label className="text-gray-700 font-bold text-xl">Quantity</label>
+            <p className="text-md font-semibold">{product.quantity}</p>
+          </div>
+
+          <div>
+            <label className="text-gray-700 font-bold text-xl">Description</label>
+            <p className="text-lg">{product.description}</p>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className="w-full md:w-1/2 h-full flex items-center justify-center p-6 bg-white">
           <img
             src={product.image}
             alt={product.name}
-            className="w-96 h-64 object-contain"
+            className="max-h-[80%] object-contain rounded-lg"
           />
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label className="text-gray-600 font-semibold">Product Name</label>
-            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.name}</div>
-          </div>
-
-          <div>
-            <label className="text-gray-600 font-semibold">Category</label>
-            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.category}</div>
-          </div>
-
-          <div>
-            <label className="text-gray-600 font-semibold">Price</label>
-            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">${product.price}</div>
-          </div>
-
-          <div>
-            <label className="text-gray-600 font-semibold">Quantity</label>
-            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.quantity}</div>
-          </div>
-
-          <div className="sm:col-span-2">
-            <label className="text-gray-600 font-semibold">Description</label>
-            <div className="border rounded-lg px-3 py-2 text-gray-800 bg-gray-50">{product.description}</div>
-          </div>
-       </div>
+      </div>
     </div>
   );
 };
