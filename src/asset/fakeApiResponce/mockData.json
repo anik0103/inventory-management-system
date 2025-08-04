@@ -76,7 +76,49 @@
       "packed": 11,
       "shipped": 6,
       "invoiced": 4
-    }
+    },
+    "products": [
+        {
+          "name": "MOUSE",
+          "category": "ELECTRONIC",
+          "quantity": 18,
+          "price": 80,
+          "image": "/image/mouse.jpeg",
+          "description": "Wireless mouse with precision tracking."
+        },
+        {
+          "name": "EARING",
+          "category": "ACCESSORIES",
+          "quantity": 15,
+          "price": 10,
+          "image": "/image/earing.jpg",
+          "description": "Elegant stud earrings for all occasions."
+        },
+        {
+          "name": "SHIRT",
+          "category": "FASHION",
+          "quantity": 20,
+          "price": 30,
+          "image": "/image/shirt.jpg",
+          "description": "Stylish cotton shirt for all-day comfort."
+        },
+        {
+          "name": "HEADPHONE",
+          "category": "ELECTRONIC",
+          "quantity": 17,
+          "price": 100,
+          "image": "/image/headphone.jpeg",
+          "description": "Noise-cancelling headphones with crystal-clear sound."
+        },
+        {
+          "name": "WATCH",
+          "category": "ACCESSORIES",
+          "quantity": 24,
+          "price": 150,
+          "image": "/image/watch.jpg",
+          "description": "Sleek analog watch that combines fashion and function."
+        }
+      ]
   }
 },
 {
@@ -156,7 +198,25 @@
       "packed": 8,
       "shipped": 10,
       "invoiced": 7
-    }
+    },
+    "products": [
+        {
+          "name": "LAPTOP BAG",
+          "category": "ACCESSORIES",
+          "quantity": 10,
+          "price": 200,
+          "image": "/image/laptopbag.jpg",
+          "description": "Durable laptop bag with multiple compartments."
+        },
+        {
+          "name": "SPEAKER",
+          "category": "ELECTRONIC",
+          "quantity": 14,
+          "price": 120,
+          "image": "/image/speaker.jpg",
+          "description": "Bluetooth speaker with deep bass."
+        }
+      ]
   }
 },
 {
@@ -236,7 +296,25 @@
       "packed": 8,
       "shipped": 10,
       "invoiced": 7
-    }
+    },
+    "products": [
+        {
+          "name": "SHOES",
+          "category": "FASHION",
+          "quantity": 25,
+          "price": 60,
+          "image": "/image/shoes.jpg",
+          "description": "Comfortable running shoes for daily wear."
+        },
+        {
+          "name": "SMARTWATCH",
+          "category": "ELECTRONIC",
+          "quantity": 12,
+          "price": 180,
+          "image": "/image/smartwatch.jpg",
+          "description": "Fitness smartwatch with heart rate monitor."
+        }
+      ]
   }
 },
 {
@@ -316,7 +394,25 @@
       "packed": 6,
       "shipped": 8,
       "invoiced": 5
-    }
+    },
+    "products": [
+        {
+          "name": "KEYBOARD",
+          "category": "ELECTRONIC",
+          "quantity": 19,
+          "price": 70,
+          "image": "/image/keyboard.jpg",
+          "description": "Compact mechanical keyboard with RGB lights."
+        },
+        {
+          "name": "SUNGLASSES",
+          "category": "ACCESSORIES",
+          "quantity": 22,
+          "price": 40,
+          "image": "/image/sunglasses.jpg",
+          "description": "Stylish UV-protection sunglasses."
+        }
+      ]
   }
 },
 {
@@ -396,7 +492,25 @@
       "packed": 12,
       "shipped": 9,
       "invoiced": 6
-    }
+    },
+    "products": [
+        {
+          "name": "SHOES",
+          "category": "FASHION",
+          "quantity": 25,
+          "price": 60,
+          "image": "/image/shoes.jpg",
+          "description": "Comfortable running shoes for daily wear."
+        },
+        {
+          "name": "SMARTWATCH",
+          "category": "ELECTRONIC",
+          "quantity": 12,
+          "price": 180,
+          "image": "/image/smartwatch.jpg",
+          "description": "Fitness smartwatch with heart rate monitor."
+        }
+      ]
   }
 },
 {
@@ -476,7 +590,25 @@
       "packed": 12,
       "shipped": 14,
       "invoiced": 9
-    }
+    },
+    "products": [
+        {
+          "name": "BAG",
+          "category": "ACCESSORIES",
+          "quantity": 16,
+          "price": 90,
+          "image": "/image/bag.jpg",
+          "description": "Waterproof backpack with padded laptop section."
+        },
+        {
+          "name": "POWERBANK",
+          "category": "ELECTRONIC",
+          "quantity": 21,
+          "price": 65,
+          "image": "/image/powerbank.jpg",
+          "description": "10,000mAh fast-charging power bank."
+        }
+      ]
   }
 },
 {
@@ -556,7 +688,25 @@
       "packed": 8,
       "shipped": 10,
       "invoiced": 7
-    }
+    },
+    "products": [
+        {
+          "name": "BLAZER",
+          "category": "FASHION",
+          "quantity": 11,
+          "price": 140,
+          "image": "/image/blazer.jpg",
+          "description": "Formal blazer suitable for office and meetings."
+        },
+        {
+          "name": "BLUETOOTH SPEAKER",
+          "category": "ELECTRONIC",
+          "quantity": 14,
+          "price": 120,
+          "image": "/image/speaker.jpg",
+          "description": "Portable Bluetooth speaker with powerful sound."
+        }
+      ]
     }
   }
 
