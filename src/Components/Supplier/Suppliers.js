@@ -3,7 +3,6 @@ import SuppliersHead from "./SuppliersHead";
 import SupplierSearch from "./SupplierSearch";
 import SupplierTable from "./SupplierTable";
 import { SplDetails } from "./SplDetails";
-import AddSupplier from "./AddSupplier/AddSupplier";
 
 const Suppliers = () => {
   const [suppliers, setSuppliers] = useState(SplDetails);
@@ -41,7 +40,6 @@ const Suppliers = () => {
         onRowClick={toggleExpand}
         expandedIndex={expandedIndex}
       />
-      <AddSupplier/>
     </div>
   );
 };
