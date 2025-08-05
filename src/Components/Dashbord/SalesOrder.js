@@ -18,7 +18,7 @@ const SalesOrder = ({ regionData }) => {
       <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] transition-all duration-300 p-4 w-full">
         <div className="flex justify-between items-center border-b border-[#bd78b5] pb-2 mb-4">
           <h2 className="font-bold text-lg text-[#bd78b5]">
-            {salesActivity?.title || "Sales Activity"}
+            {salesOrder?.title || "Sales Order"}
           </h2>
           <span className="text-sm text-[#bd78b5] font-semibold">
             {salesOrder?.month || "N/A"}
