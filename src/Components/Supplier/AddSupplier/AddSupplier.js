@@ -57,7 +57,7 @@ const AddSupplier = () => {
 
         <h2 className="text-3xl font-bold text-[#bd78b5] mb-6 text-center">Add New Supplier</h2>
 
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 text-start">
           {[
             { label: "Vendor Name", name: "vendorsName", type: "text" },
             { label: "Point of Contact", name: "pointOfContact", type: "text" },
