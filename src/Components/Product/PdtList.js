@@ -15,14 +15,14 @@ const PdtList = [
     image: "/image/makeup.jpg",
     description: "Luxury makeup set for a flawless look.",
   },
-//   {
-//     name: "MOUSE",
-//     category: "ELECTRONIC",
-//     quantity: 18,
-//     price: 80,
-//     image: "/image/mouse.jpeg",
-//     description: "Wireless mouse with precision tracking.",
-//   },
+  {
+    name: "MOUSE",
+    category: "ELECTRONIC",
+    quantity: 18,
+    price: 80,
+    image: "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+    description: "Wireless mouse with precision tracking.",
+  },
 //   {
 //     name: "EARING",
 //     category: "ACCESSORIES",

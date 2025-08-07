@@ -38,27 +38,27 @@
       {
         "name": "Apple iPhone 14",
         "quantitySold": 150,
-        "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-s911bzadins/gallery/in-galaxy-s23-s911-447250-sm-s911bzadins-thumb-535222796?$344_344_PNG$"
+        "image": "https://m.media-amazon.com/images/I/71fVoqRC0wL._AC_UY327_FMwebp_QL65_.jpg"
       },
       {
         "name": "Samsung Galaxy S23",
         "quantitySold": 135,
-        "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-s911bzadins/gallery/in-galaxy-s23-s911-447250-sm-s911bzadins-thumb-535222796?$344_344_PNG$"
+        "image": "https://m.media-amazon.com/images/I/61RZDb2mQxL._AC_UF1000,1000_QL80_.jpg"
       },
       {
         "name": "OnePlus Nord CE 3",
         "quantitySold": 98,
-        "image": "https://image01.oneplus.net/ebp/202307/10/1-m00-2e-cc-rb8bwmspzt6ar1_waacgktsz8ts131.png"
+        "image": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-nord-3-5g-1.jpg"
       },
       {
         "name": "Sony WH-1000XM5 Headphones",
         "quantitySold": 65,
-        "image": "https://m.media-amazon.com/images/I/61o9tWR6D5L._AC_UF1000,1000_QL80_.jpg"
+        "image": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_UY327_FMwebp_QL65_.jpg"
       },
       {
         "name": "Logitech MX Master 3S Mouse",
         "quantitySold": 60,
-        "image": "https://resource.logitech.com/w_800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-top-view-graphite-gallery.png?v=1"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg"
       }
     ],
     "purchaseOrder": {
@@ -83,7 +83,7 @@
           "category": "ELECTRONIC",
           "quantity": 18,
           "price": 80,
-          "image": "/image/mouse.jpeg",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
           "description": "Wireless mouse with precision tracking."
         },
         {
@@ -107,7 +107,7 @@
           "category": "ELECTRONIC",
           "quantity": 17,
           "price": 100,
-          "image": "/image/headphone.jpeg",
+          "image": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_UY327_FMwebp_QL65_.jpg",
           "description": "Noise-cancelling headphones with crystal-clear sound."
         },
         {
@@ -160,12 +160,12 @@
       {
         "name": "Google Pixel 7",
         "quantitySold": 120,
-        "image": "https://store.google.com/product/images/pixel_7.png"
+        "image": "https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-and-Pixel-7-Pro-on-cream-background-ijwbqefjwe.jpg"
       },
       {
         "name": "Dell XPS 13 Laptop",
         "quantitySold": 90,
-        "image": "https://i.dell.com/sites/imagecontent/products/PublishingImages/xps-13-9310-laptop/spi/ng/xps-13-9310-laptop-campaign-hero-504x350-ng.psd"
+        "image": "https://www.pngkey.com/png/full/253-2531849_dell-xps-13-9370-i7-8550u.png"
       },
       {
         "name": "Sony PlayStation 5",
@@ -175,12 +175,12 @@
       {
         "name": "Apple AirPods Pro",
         "quantitySold": 60,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+        "image": "https://xyultra.com/wp-content/uploads/2025/07/Apple-AirPods-Pro-2-Review-2025.webp"
       },
       {
         "name": "HP LaserJet Printer",
         "quantitySold": 55,
-        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+        "image": "https://www.shutterstock.com/image-photo/singapore-may-10-2023-close-260nw-2512956521.jpg"
       }
     ],
     "purchaseOrder": {
@@ -258,27 +258,27 @@
       {
         "name": "Lenovo ThinkPad X1",
         "quantitySold": 110,
-        "image": "https://www.lenovo.com/medias/thinkpad-x1-carbon-gen-9-hero.png"
+        "image": "https://www.thatsoftwaredude.com/images/post/thumb_4ed778a6-2fb7-4d32-a1f8-379f06f47828.png"
       },
       {
         "name": "Canon EOS 1500D",
         "quantitySold": 85,
-        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_EOS-1500D.png"
+        "image": "https://cdn.media.amplience.net/i/canon/eos-5ds-frt-02_1c7842cc0361439e866b39fd2d86511b?$prod-gallery-1by1-jpg$"
       },
       {
         "name": "Mi Smart Band 6",
         "quantitySold": 70,
-        "image": "https://i01.appmifile.com/webfile/globalimg/in/cms/3B3A5B3A-6B3A-5B3A-3B3A-5B3A-3B3A.png"
+        "image": "https://i01.appmifile.com/webfile/globalimg/products/m/mi-smart-band-6/section19-2.png"
       },
       {
         "name": "JBL Flip 5 Speaker",
         "quantitySold": 55,
-        "image": "https://in.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3e1e1e1e/FLIP5_HERO.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8doOqpH6Xh8KwtrHDPXB9E4rvGOiiQuQjJg&s"
       },
       {
         "name": "Asus ROG Mouse",
         "quantitySold": 50,
-        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg"
       }
     ],
     "purchaseOrder": {
@@ -356,27 +356,27 @@
       {
         "name": "Samsung Galaxy Tab S8",
         "quantitySold": 80,
-        "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-x700nzaainu/gallery/in-galaxy-tab-s8-x700-415978-sm-x700nzaainu-530253729?$650_519_PNG$"
+        "image": "https://www.fonezone.ae/cdn/shop/products/Untitled_1_bcae404e-6e24-45c3-9802-494e6ba6883b.jpg?v=1735618225"
       },
       {
         "name": "Apple MacBook Air M2",
         "quantitySold": 65,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-m2-og-202206?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1653493200207"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8CN90Zn1rIwIVrh7cut0lsQPRPXhVJmA8Ng&s"
       },
       {
         "name": "Boat Rockerz 255 Pro",
         "quantitySold": 55,
-        "image": "https://www.boat-lifestyle.com/cdn/shop/products/255pro-black_600x.png"
+        "image": "https://m.media-amazon.com/images/I/61AAKReQ7RL._UF1000,1000_QL80_.jpg"
       },
       {
         "name": "Canon PIXMA Printer",
         "quantitySold": 40,
-        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_PIXMA.png"
+        "image": "https://m.media-amazon.com/images/I/711yJipUQVL._UF1000,1000_QL80_.jpg"
       },
       {
         "name": "HP Pavilion Laptop",
         "quantitySold": 38,
-        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+        "image": "https://pngfile.net/files/preview/1280x1231/21567004030eqj7zvpsguhtydm3naitz1ekhehaevhqrcehqkd8eil1fj5heplp74zldgirwlzfb7e82hfzycu6zu6rycgheonzxfedi0thd1sa.png"
       }
     ],
     "purchaseOrder": {
@@ -454,27 +454,27 @@
       {
         "name": "Realme GT Neo 3",
         "quantitySold": 130,
-        "image": "https://image01.realme.net/general/20220407/1649318486843.png"
+        "image": "https://m.media-amazon.com/images/I/81a+bD9Ts6L.jpg"
       },
       {
         "name": "Acer Aspire 7",
         "quantitySold": 100,
-        "image": "https://static.acer.com/up/Resource/Acer/Laptops/Aspire_7/images/20210318/Aspire7_A715-75G_Black_modelpreview.png"
+        "image": "https://rukminim2.flixcart.com/image/704/844/xif0q/computer/c/u/v/-original-imahcd9cqb2hnpus.jpeg?q=90&crop=false"
       },
       {
         "name": "Sony WF-1000XM4 Earbuds",
         "quantitySold": 85,
-        "image": "https://m.media-amazon.com/images/I/61aA2zE9nKL._AC_UF1000,1000_QL80_.jpg"
+        "image": "https://m.media-amazon.com/images/I/51GRBtNwt2L._UF1000,1000_QL80_.jpg"
       },
       {
         "name": "Apple Watch SE",
         "quantitySold": 70,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-se-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+        "image": "https://www.apple.com/newsroom/images/product/watch/lifestyle/Apple_watch-se-meridian-watch-face_09152020_carousel.jpg.large.jpg"
       },
       {
         "name": "Canon LBP2900B Printer",
         "quantitySold": 60,
-        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_LBP2900B.png"
+        "image": "https://hitechenterprises.in/wp-content/uploads/2020/05/lbp2900b-1.png"
       }
     ],
     "purchaseOrder": {
@@ -552,27 +552,27 @@
       {
         "name": "Vivo V27 Pro",
         "quantitySold": 105,
-        "image": "https://www.vivo.com/vivo-v27-pro.png"
+        "image": "https://www.jiomart.com/images/product/original/493665338/vivo-v27-pro-5g-256-gb-12-gb-ram-magic-blue-mobile-phone-digital-o493665338-p598966113-0-202303020514.jpeg?im=Resize=(420,420)"
       },
       {
         "name": "HP Envy x360",
         "quantitySold": 80,
-        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+        "image": "https://m.media-amazon.com/images/I/61mTFApcmeL._UF1000,1000_QL80_.jpg"
       },
       {
         "name": "JBL Tune 760NC",
         "quantitySold": 65,
-        "image": "https://in.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3e1e1e1e/TUNE760NC_HERO.png"
+        "image": "https://ntptechstore.com/wp-content/uploads/2024/08/JBL-Tune-760NC-Active-Noise-Cancelling-1.png.webp"
       },
       {
         "name": "Apple iPad 10th Gen",
         "quantitySold": 50,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-10th-gen-og-202210?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1664472289056"
+        "image": "https://www.apple.com/newsroom/images/product/ipad/standard/Apple-iPad-10th-gen-blue-2up-221018_big.jpg.large.jpg"
       },
       {
         "name": "Canon PIXMA G2020",
         "quantitySold": 45,
-        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_PIXMA.png"
+        "image": "https://images-eu.ssl-images-amazon.com/images/I/61XrhehhsRL._AC_UL495_SR435,495_.jpg"
       }
     ],
     "purchaseOrder": {
@@ -650,27 +650,27 @@
       {
         "name": "Google Pixel 7",
         "quantitySold": 120,
-        "image": "https://store.google.com/product/images/pixel_7.png"
+        "image": "https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-and-Pixel-7-Pro-on-cream-background-ijwbqefjwe.jpg"
       },
       {
         "name": "Dell XPS 13 Laptop",
         "quantitySold": 90,
-        "image": "https://i.dell.com/sites/imagecontent/products/PublishingImages/xps-13-9310-laptop/spi/ng/xps-13-9310-laptop-campaign-hero-504x350-ng.psd"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiZYGQTFog6PrXpEb8dRa6NXvNWTgmNs-z-g&s"
       },
       {
         "name": "Sony PlayStation 5",
         "quantitySold": 75,
-        "image": "https://m.media-amazon.com/images/I/619BkvKW35L._AC_UF1000,1000_QL80_.jpg"
+        "image": "https://www.mychoice.qa/cdn/shop/files/Untitled_design_-_2024-10-05T172209.181.png?v=1728138166"
       },
       {
         "name": "Apple AirPods Pro",
         "quantitySold": 60,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+        "image": "https://gizmodo.com/app/uploads/2025/06/apple-airpods-pro-2-deal.jpg"
       },
       {
         "name": "HP LaserJet Printer",
         "quantitySold": 55,
-        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+        "image": "https://www.shutterstock.com/image-photo/singapore-may-10-2023-close-260nw-2512956521.jpg"
       }
     ],
     "purchaseOrder": {

@@ -25,6 +25,9 @@ const TopProducts = ({ regionData }) => {
 
               {/* Product Info */}
               <div className="flex-1">
+                <h4 className="text-sm font-semibold text-black">
+                  {item.name}
+                </h4>
                 <p className="text-sm font-medium text-gray-700">{topSellingItems.name}</p>
               </div>
 
