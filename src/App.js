@@ -8,7 +8,7 @@ import SignUp from "./Components/Authentication/SignUp";
 import AppLayout from "./Components/Layout/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProductDetails from "./Components/Product/ProductDetails";
-
+import AddSupplier from "./Components/Supplier/AddSupplier/AddSupplier";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +17,7 @@ const appRouter = createBrowserRouter([
       { index: true, element: <Dashboard /> },
       { path: "products", element: <Products /> },
       { path: "suppliers", element: <Suppliers />},
+      { path: "AddSupplier", element: <AddSupplier /> }, 
       {path: "add-product", element: <AddProducts />},
       {path: "product/:productName", element: <ProductDetails />},
       { path: "suppliers", element: <div>Suppliers Page</div> },
