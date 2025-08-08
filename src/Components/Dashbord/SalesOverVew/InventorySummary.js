@@ -2,7 +2,11 @@ import React from "react";
 import InventoryStatCard from "./InventoryStatCard";
 
 const InventorySummary = ({ regionData }) => {
-  const inventory = regionData?.regionWiseData?.inventorySummary || {};
+  const inventory = regionData?.regionWiseData?.inventorySummary;
+
+  const hasInventory =
+    inventory &&
+    (inventory.packagesInHand !== undefined || inventory.packagesToBeReceived !== undefined);
 
   return (
     <div className="w-full lg:w-full mt-2">
@@ -11,22 +15,28 @@ const InventorySummary = ({ regionData }) => {
           Inventory Summary
         </h2>
 
-        <div className="grid grid-cols-2 gap-3">
-          <InventoryStatCard
-            value={inventory.packagesInHand || 0}
-            label="Qty"
-            status="IN HAND"
-            valueColor="text-purple-800"
-            labelColor="text-purple-600"
-          />
-          <InventoryStatCard
-            value={inventory.packagesToBeReceived || 0}
-            label="Qty"
-            status="TO BE RECEIVED"
-            valueColor="text-purple-800"
-            labelColor="text-purple-600"
-          />
-        </div>
+        {hasInventory ? (
+          <div className="grid grid-cols-2 gap-3">
+            <InventoryStatCard
+              value={inventory.packagesInHand}
+              label="Qty"
+              status="IN HAND"
+              valueColor="text-purple-800"
+              labelColor="text-purple-600"
+            />
+            <InventoryStatCard
+              value={inventory.packagesToBeReceived}
+              label="Qty"
+              status="TO BE RECEIVED"
+              valueColor="text-purple-800"
+              labelColor="text-purple-600"
+            />
+          </div>
+        ) : (
+          <div className="text-center text-gray-400 text-sm mt-4">
+            🚫 No inventory data available for this location.
+          </div>
+        )}
       </div>
     </div>
   );
