@@ -40,7 +40,7 @@ const TopProducts = ({ regionData }) => {
         </div>
       ) : (
         <p className="text-gray-500 text-sm text-center">
-          No top-selling items available
+           🚫 No top-selling items available
         </p>
       )}
     </div>
