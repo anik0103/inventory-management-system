@@ -307,6 +307,14 @@
           "description": "Comfortable running shoes for daily wear."
         },
         {
+          "name": "WATCH",
+          "category": "ACCESSORIES",
+          "quantity": 24,
+          "price": 150,
+          "image": "/image/watch.jpg",
+          "description": "Sleek analog watch that combines fashion and function."
+        },
+        {
           "name": "SMARTWATCH",
           "category": "ELECTRONIC",
           "quantity": 12,
@@ -411,6 +419,13 @@
           "price": 40,
           "image": "/image/sunglasses.jpg",
           "description": "Stylish UV-protection sunglasses."
+        },{
+          "name": "SHIRT",
+          "category": "FASHION",
+          "quantity": 20,
+          "price": 30,
+          "image": "/image/shirt.jpg",
+          "description": "Stylish cotton shirt for all-day comfort."
         }
       ]
   }
@@ -599,6 +614,14 @@
           "price": 90,
           "image": "/image/bag.jpg",
           "description": "Waterproof backpack with padded laptop section."
+        },
+        {
+          "name": "SHIRT",
+          "category": "FASHION",
+          "quantity": 20,
+          "price": 30,
+          "image": "/image/shirt.jpg",
+          "description": "Stylish cotton shirt for all-day comfort."
         },
         {
           "name": "POWERBANK",

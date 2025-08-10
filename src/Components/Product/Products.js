@@ -1,59 +1,89 @@
-import { useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Head from "./Head";
 import Filters from "./Filters";
 import ProductTable from "./ProductTable";
-import PdtList from "./PdtList";
+import { RegionContext } from "../Dashbord/RegionContext";
+import mockData from "../../asset/fakeApiResponce/mockData.json";
 
 const Products = () => {
-  const fullProductList = PdtList;
-  const [filteredProducts, setFilteredProducts] = useState(fullProductList);
+  const { selectedRegion } = useContext(RegionContext);
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState(mockData);
 
-  const handleSearch = ({ productName, category, quantity, price }) => {
-  const filtered = fullProductList.filter((product) => {
-    const nameMatch = productName
-      ? product.name.toLowerCase().includes(productName.toLowerCase())
-      : true;
+  useEffect(() => {
+      if (selectedRegion && Array.isArray(mockData)) {
+      const regionObj = mockData.find(
+        item => item.region.toLowerCase().trim() === selectedRegion.toLowerCase().trim()
+      );
 
-    const categoryMatch = category
-      ? product.category.toLowerCase().includes(category.toLowerCase())
-      : true;
+      if (regionObj) {
+        const productsList = regionObj.regionWiseData?.products || [];
+        setProducts(productsList);
+        setFilteredProducts(productsList);
+      } else {
+        console.warn("No matching products for", selectedRegion);
+        setProducts([]);
+        setFilteredProducts([]);
+      }
+    }
+  }, [selectedRegion]);
 
-    const quantityMatch = quantity
-      ? product.quantity.toString().includes(quantity)
-      : true;
+  // Handle filtering
+  const handleFilterChange = (filters) => {
+    let updatedList = [...products];
 
-    const priceMatch = price
-      ? product.price.toString().includes(price)
-      : true;
+    if (filters.name) {
+      updatedList = updatedList.filter((p) =>
+        p.name.toLowerCase().includes(filters.name.toLowerCase())
+      );
+    }
 
-    return nameMatch && categoryMatch && quantityMatch && priceMatch;
-  });
+    if (filters.category) {
+      updatedList = updatedList.filter((p) =>
+        p.category.toLowerCase().includes(filters.category.toLowerCase())
+      );
+    }
 
-  setFilteredProducts(filtered);
+    if (filters.minPrice) {
+      updatedList = updatedList.filter(
+        (p) => p.price >= parseFloat(filters.minPrice)
+      );
+    }
+
+    if (filters.maxPrice) {
+      updatedList = updatedList.filter(
+        (p) => p.price <= parseFloat(filters.maxPrice)
+      );
+    }
+
+    setFilteredProducts(updatedList);
   };
 
-  const handleSortFilterChange = (value) => {
-  let updatedList = [...fullProductList];
+  // Handle sorting
+  const handleSortFilterChange = (sortOption) => {
+    let sortedList = [...filteredProducts];
 
-  if (value === "priceLowHigh") {
-    updatedList.sort((a, b) => a.price - b.price);
-  } else if (value === "priceHighLow") {
-    updatedList.sort((a, b) => b.price - a.price);
-  } else if (value !== "all") {
-    updatedList = fullProductList.filter(
-      (pdt) => pdt.category.toLowerCase() === value.toLowerCase()
-    );
-  }
+    if (sortOption === "priceLowHigh") {
+      sortedList.sort((a, b) => a.price - b.price);
+    } else if (sortOption === "priceHighLow") {
+      sortedList.sort((a, b) => b.price - a.price);
+    } else if (sortOption === "nameAZ") {
+      sortedList.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortOption === "nameZA") {
+      sortedList.sort((a, b) => b.name.localeCompare(a.name));
+    }
 
-  setFilteredProducts(updatedList);
-};
+    setFilteredProducts(sortedList);
+  };
 
   return (
     <div className="bg-neutral-background min-h-screen p-6">
-      <Head/>
-      <Filters onSearch={handleSearch}
-      onSortFilterChange={handleSortFilterChange}/>
-      <ProductTable products={filteredProducts}/>
+      <Head />
+      <Filters
+        onFilterChange={handleFilterChange}
+        onSortFilterChange={handleSortFilterChange}
+      />
+      <ProductTable products={filteredProducts} />
     </div>
   );
 };

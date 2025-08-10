@@ -3,8 +3,7 @@ import React, { createContext, useState } from "react";
 export const RegionContext = createContext();
 
 export const RegionProvider = ({ children }) => {
-  const [selectedRegion, setSelectedRegion] = useState("kolkata"); // default region
-
+  const [selectedRegion, setSelectedRegion] = useState("kolkata") // Default region;
   return (
     <RegionContext.Provider value={{ selectedRegion, setSelectedRegion }}>
       {children}

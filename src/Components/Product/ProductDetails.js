@@ -1,16 +1,29 @@
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
-import PdtList from "./PdtList";
+import { RegionContext } from "../Dashbord/RegionContext";
+import mockData from "../../asset/fakeApiResponce/mockData.json";
 
 const ProductDetails = () => {
   const { productName } = useParams();
-  const product = PdtList.find((item) => item.name === productName);
+  const { selectedRegion } = useContext(RegionContext);
 
-  if (!product)
+  // Finding region data
+  const regionData = mockData.find(
+    (region) => region.region.toLowerCase() === selectedRegion.toLowerCase()
+  );
+
+  // Finding product inside that region
+  const product = regionData?.products.find(
+    (item) => item.name.toLowerCase() === productName.toLowerCase()
+  );
+
+  if (!product) {
     return (
       <p className="text-center mt-10 text-lg text-red-500">
         Product not found
       </p>
     );
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-center px-4 py-6">
@@ -20,7 +33,7 @@ const ProductDetails = () => {
         <div className="w-full md:w-1/2 h-full p-6 flex flex-col justify-center items-start text-left">
           <h2 className="text-6xl font-bold mb-4">{product.name}</h2>
           <p className="text-lg text-gray-700 font-bold mb-4">{product.category}</p>
-          <p className="text-3xl font-bold text-purple-600 mb-4">${product.price}</p>
+          <p className="text-3xl font-bold text-purple-600 mb-4">₹{product.price}</p>
 
           <div className="mb-4">
             <label className="text-gray-700 font-bold text-xl">Quantity</label>
@@ -47,3 +60,4 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
+
