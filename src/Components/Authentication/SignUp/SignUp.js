@@ -1,4 +1,3 @@
-// SignUp.jsx
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import pic from "../../../asset/pictures1.png";

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import SignUpInput from "./SignUpInput";
 
+
 const SignUpForm = ({ formData, handleChange, handleSubmit }) => {
   return (
     <div className="w-2/4 h-2/3 max-w-md p-8 space-y-2 bg-white border shadow-2xl rounded-xl">

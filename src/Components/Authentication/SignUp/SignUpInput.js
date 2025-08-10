@@ -1,4 +1,3 @@
-
 const SignUpInput = ({ label, type, name, value, onChange }) => (
   <div>
     <label htmlFor={name} className="block mb-1 text-sm font-medium text-gray-700">
