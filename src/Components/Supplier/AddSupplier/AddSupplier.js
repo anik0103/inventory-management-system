@@ -15,8 +15,8 @@ const AddSupplier = () => {
 
   const [errors, setErrors] = useState({});
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = (item) => {
+    const { name, value } = item.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -32,16 +32,23 @@ const AddSupplier = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (item) => {
+    item.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
-    console.log("Supplier Data Submitted:", formData);
-    navigate("/suppliers");
+    // Create a new supplier object with a structure that matches the existing data
+    const newSupplier = {
+      ...formData,
+      pocName: formData.pointOfContact, // Map pointOfContact to pocName
+      products: [], // Add an empty products array for future use
+    };
+
+    // Navigate back to the suppliers page and pass the new supplier in the state
+    navigate("/suppliers", { state: { newSupplier } });
   };
 
   return (
