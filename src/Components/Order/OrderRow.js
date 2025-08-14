@@ -1,4 +1,4 @@
-const OrderRow = ({ Order, index, onClick }) => {
+function OrderRow({ Order, index, onClick }) {
   return (
     // Ensure no whitespace immediately after <tr> and before first <td>
     <tr
@@ -14,6 +14,5 @@ const OrderRow = ({ Order, index, onClick }) => {
       <td className="py-3 px-4">{Order.Invoiced}</td>
     </tr>
   );
-};
-
+}
 export default OrderRow;

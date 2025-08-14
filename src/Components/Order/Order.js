@@ -1,4 +1,5 @@
 import Ordertable from "./Ordertable";
+import Orderdetails from "./Orderdetails"
 
  const Order = () => {
   return (
