@@ -8,10 +8,7 @@ import SignUp from "./Components/Authentication/SignUp/SignUp";
 import AppLayout from "./Components/Layout/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProductDetails from "./Components/Product/ProductDetails";
-import { RegionProvider } from "./Components/Dashbord/RegionContext";
-
-// Wrap the entire app in RegionProvider to provide context
-
+import AddSupplier from "./Components/Supplier/AddSupplier/AddSupplier";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -40,11 +37,7 @@ const appRouter = createBrowserRouter([
 ]);
 
 function App() {
-  return (
-    <RegionProvider>
-      <RouterProvider router={appRouter} />
-    </RegionProvider>
-  );
+  return <RouterProvider router={appRouter} />;
 }
 
 export default App;
