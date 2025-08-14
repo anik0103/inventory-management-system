@@ -7,14 +7,18 @@ const ProductDetails = () => {
   const { productName } = useParams();
   const { selectedRegion } = useContext(RegionContext);
 
-  // Finding region data
-  const regionData = mockData.find(
-    (region) => region.region.toLowerCase() === selectedRegion.toLowerCase()
-  );
+  const activeRegion = selectedRegion || localStorage.getItem("selectedRegion");
 
-  // Finding product inside that region
-  const product = regionData?.products.find(
-    (item) => item.name.toLowerCase() === productName.toLowerCase()
+  const regionData = Array.isArray(mockData)
+  ? mockData.find(
+      (region) =>
+        region?.region?.toLowerCase() === activeRegion?.toLowerCase()
+    )
+  : null;
+
+  // Products are inside regionWiseData
+  const product = regionData?.regionWiseData?.products?.find(
+    (item) => item?.name?.toLowerCase() === productName?.toLowerCase()
   );
 
   if (!product) {
@@ -60,4 +64,3 @@ const ProductDetails = () => {
 };
 
 export default ProductDetails;
-

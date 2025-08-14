@@ -11,24 +11,31 @@ const Products = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   
   useEffect(() => {
-    if (selectedRegion && Array.isArray(mockData)) {
-      const regionObj = mockData.find(
-        (item) =>
-          item.region.toLowerCase().trim() ===
-          selectedRegion.toLowerCase().trim()
-      );
+  // Check region from context OR localStorage
+  let regionToUse = selectedRegion;
+  if (!regionToUse) {
+    regionToUse = localStorage.getItem("selectedRegion");
+  }
 
-      if (regionObj) {
-        const productsList = regionObj.regionWiseData?.products || [];
-        setProducts(productsList);
-        setFilteredProducts(productsList);
-      } else {
-        console.warn("No matching products for", selectedRegion);
-        setProducts([]);
-        setFilteredProducts([]);
-      }
+  if (regionToUse && Array.isArray(mockData)) {
+    const regionObj = mockData.find(
+      (item) =>
+        item.region.toLowerCase().trim() ===
+        regionToUse.toLowerCase().trim()
+    );
+
+    if (regionObj) {
+      const productsList = regionObj.regionWiseData?.products || [];
+      setProducts(productsList);
+      setFilteredProducts(productsList);
+    } else {
+      console.warn("No matching products for", regionToUse);
+      setProducts([]);
+      setFilteredProducts([]);
     }
+  }
   }, [selectedRegion]);
+
 
   // Handle filtering
   const handleFilterChange = (filters) => {

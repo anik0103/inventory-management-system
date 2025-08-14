@@ -83,7 +83,7 @@
           "category": "ELECTRONIC",
           "quantity": 18,
           "price": 80,
-          "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg",
+          "image": "https://codingdeft-images.s3.amazonaws.com/public/img/posts/react-on-hover/on-hover-cover.jpg",
           "description": "Wireless mouse with precision tracking."
         },
         {
@@ -91,7 +91,7 @@
           "category": "ACCESSORIES",
           "quantity": 15,
           "price": 10,
-          "image": "/image/earing.jpg",
+          "image": "https://www.ross-simons.com/on/demandware.static/-/Sites-lbh-master/default/dw20240915/images/jewelry-semi-precious-earrings/947341.jpg?sw=2000",
           "description": "Elegant stud earrings for all occasions."
         },
         {
@@ -99,24 +99,24 @@
           "category": "FASHION",
           "quantity": 20,
           "price": 30,
-          "image": "/image/shirt.jpg",
+          "image": "https://static.vecteezy.com/system/resources/previews/012/705/555/non_2x/men-s-shirts-mockup-design-template-mockup-free-photo.jpg",
           "description": "Stylish cotton shirt for all-day comfort."
         },
         {
           "name": "HEADPHONE",
           "category": "ELECTRONIC",
           "quantity": 17,
-          "price": 100,
-          "image": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_UY327_FMwebp_QL65_.jpg",
+          "price": 30,
+          "image": "https://m.media-amazon.com/images/I/61m-qPp1iLL._UF1000,1000_QL80_.jpg",
           "description": "Noise-cancelling headphones with crystal-clear sound."
         },
         {
-          "name": "WATCH",
+          "name": "APPLE WATCH",
           "category": "ACCESSORIES",
           "quantity": 24,
           "price": 150,
-          "image": "/image/watch.jpg",
-          "description": "Sleek analog watch that combines fashion and function."
+          "image": "https://m.media-amazon.com/images/I/61ofBVHTbaL._UF894,1000_QL80_.jpg",
+          "description": "Sleek analog Apple Watch that combines fashion and function."
         }
       ]
   }
@@ -205,7 +205,7 @@
           "category": "ACCESSORIES",
           "quantity": 10,
           "price": 200,
-          "image": "/image/laptopbag.jpg",
+          "image": "https://m.media-amazon.com/images/I/71zthRu3v9L._UY1100_.jpg",
           "description": "Durable laptop bag with multiple compartments."
         },
         {
@@ -213,8 +213,24 @@
           "category": "ELECTRONIC",
           "quantity": 14,
           "price": 120,
-          "image": "/image/speaker.jpg",
+          "image": "https://m.media-amazon.com/images/I/71qLjkvb85L._UF1000,1000_QL80_.jpg",
           "description": "Bluetooth speaker with deep bass."
+        },
+        {
+          "name": "APPLE AIRPORDS",
+          "category": "ELECTRONIC",
+          "quantity": 10,
+          "price": 60,
+          "image": "https://cdn.neowin.com/news/images/uploaded/2024/06/1719388093_2nd_gen_airpods_pro.jpg",
+          "description": "Apple AirPods with high-quality sound, seamless Bluetooth pairing, and all-day battery life."
+        },
+        {
+          "name": "HP Pavilion 15",
+          "category": "ELECTRONIC",
+          "price": 90,
+          "quantity": 8,
+          "image": "https://m.media-amazon.com/images/I/71LOolGaCDL._UF1000,1000_QL80_.jpg",
+          "description": "HP Pavilion 15, Intel i7 12th Gen, 16GB RAM, 512GB SSD."
         }
       ]
   }
@@ -303,24 +319,40 @@
           "category": "FASHION",
           "quantity": 25,
           "price": 60,
-          "image": "/image/shoes.jpg",
+          "image": "https://rukminim2.flixcart.com/image/704/844/xif0q/shoe/o/f/b/-original-imah46pvsvdakjez.jpeg?q=90&crop=false",
           "description": "Comfortable running shoes for daily wear."
         },
         {
-          "name": "WATCH",
+          "name": "APPLE WATCH",
           "category": "ACCESSORIES",
           "quantity": 24,
           "price": 150,
-          "image": "/image/watch.jpg",
-          "description": "Sleek analog watch that combines fashion and function."
+          "image": "https://m.media-amazon.com/images/I/61ofBVHTbaL._UF894,1000_QL80_.jpg",
+          "description": "Sleek analog Apple Watch that combines fashion and function."
         },
         {
           "name": "SMARTWATCH",
           "category": "ELECTRONIC",
           "quantity": 12,
           "price": 180,
-          "image": "/image/smartwatch.jpg",
+          "image": "https://andreadams.com.br/wp-content/uploads/2024/01/WEAR-OS-3-1024x768.png",
           "description": "Fitness smartwatch with heart rate monitor."
+        },
+        {
+          "name": "MAYBELLINE LIPSTICK",
+          "category": "Makeup",
+          "quantity": 50,
+          "price": 29,
+          "image": "https://www.maybelline.co.in/-/media/project/loreal/brand-sites/mny/apac/in/products/lip-makeup/lip-color/superstay-matte-ink-liquid-lipstick-pink-edition/modules/product-info/savant/savant-01.jpg?rev=68f396cec1114b65989335c1dc74092b&cx=0&cy=0&cw=315&ch=472&hash=91A08E37071F162A848493EAAEDCEA17",
+          "description": "Maybelline Color Sensational Matte Lipstick - Nude Shade."
+        },
+        {
+          "name": "SAMSUNG GALAXY TAB S8",
+          "category": "ELECTRONIC",
+          "quantity": 15,
+          "price": 70,
+          "image": "https://www.techadvisor.com/wp-content/uploads/2023/10/Samsung-Galaxy-Tab-S8_review_1-1.jpg?quality=50&strip=all",
+          "description": "Samsung Galaxy Tab S8 with 11-inch display, Snapdragon 8 Gen 1."
         }
       ]
   }
@@ -409,7 +441,7 @@
           "category": "ELECTRONIC",
           "quantity": 19,
           "price": 70,
-          "image": "/image/keyboard.jpg",
+          "image": "https://i.pinimg.com/originals/7d/39/39/7d3939a449d49568723455058462e0c3.jpg?nii=t",
           "description": "Compact mechanical keyboard with RGB lights."
         },
         {
@@ -417,15 +449,40 @@
           "category": "ACCESSORIES",
           "quantity": 22,
           "price": 40,
-          "image": "/image/sunglasses.jpg",
+          "image": "https://i.pinimg.com/736x/78/b2/20/78b2201afd3138f3308f5f6f3dcea543.jpg",
           "description": "Stylish UV-protection sunglasses."
-        },{
-          "name": "SHIRT",
+        },
+        {
+          "name": "POLO T-SHIRT",
           "category": "FASHION",
           "quantity": 20,
           "price": 30,
-          "image": "/image/shirt.jpg",
-          "description": "Stylish cotton shirt for all-day comfort."
+          "image": "https://33000ft.com/cdn/shop/products/1_09e141fa-81eb-4133-af11-49a126e5a913.jpg",
+          "description": "Stylish Polo T-shirt for all-day comfort."
+        },
+        {
+          "name": "LAKME EYELINER",
+          "category": "Makeup",
+          "quantity": 40,
+          "price": 9,
+          "image": "https://www.lakmeindia.com/cdn/shop/files/24894_S1-8901030979552_1000x.jpg?v=1709807079",
+          "description": "Lakme Insta Eye Liner, long-lasting and waterproof."
+        },
+        {
+          "name": "LOGITECH MX MASTER 3S MOUSE",
+          "category": "ELECTRONIC",
+          "quantity": 15,
+          "price": 40,
+          "image": "https://m.media-amazon.com/images/I/51m4354BqaL._UF1000,1000_QL80_.jpg",
+          "description": "Advanced wireless mouse with ergonomic design."
+        },
+        {
+          "name": "LAKME SUNSCREEN",
+          "category": "Makeup",
+          "quantity": 20,
+          "price": 8,
+          "image": "https://www.lakmeindia.com/cdn/shop/files/19642_H-8901030978753.jpg",
+          "description": "Lakme Matte Sunscreen, long-lasting and waterproof."
         }
       ]
   }
@@ -514,16 +571,32 @@
           "category": "FASHION",
           "quantity": 25,
           "price": 60,
-          "image": "/image/shoes.jpg",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPwWyjvxWROH5oxVV0RuI5ruWbpplDLbcbMg&s",
           "description": "Comfortable running shoes for daily wear."
         },
         {
-          "name": "SMARTWATCH",
+          "name": "VINTAGE WATCH",
           "category": "ELECTRONIC",
           "quantity": 12,
           "price": 180,
-          "image": "/image/smartwatch.jpg",
-          "description": "Fitness smartwatch with heart rate monitor."
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlmRVXQk0H62rDk3AZmOAzk4Coofe4jUAduQ&s",
+          "description": "Aesthetic vintage watches with small dial and cool look."
+        },
+        {
+          "name": "APPLE MACBOOK AIR M2",
+          "category": "ELECTRONIC",
+          "quantity": 10,
+          "price": 150,
+          "image": "https://rukminid2.flixcart.com/image/720/864/xif0q/computer/x/h/o/-original-imagfdfppdgspafh.jpeg?q=60&crop=false",
+          "description": "Apple MacBook Air with M2 chip, 13.6-inch Liquid Retina display."
+        },
+        {
+          "name": "SILVER HOOP EARRINGS",
+          "category": "ACCESSORIES",
+          "quantity": 25,
+          "price": 12,
+          "image": "https://m.media-amazon.com/images/I/31QO51qxOpL._UY1100_.jpg",
+          "description": "Elegant sterling silver hoop earrings for all occasions."
         }
       ]
   }
@@ -612,24 +685,40 @@
           "category": "ACCESSORIES",
           "quantity": 16,
           "price": 90,
-          "image": "/image/bag.jpg",
-          "description": "Waterproof backpack with padded laptop section."
+          "image": "https://ih1.redbubble.net/image.2228522251.3518/tb,840x840,medium-c,1,198,600,600-bg,f8f8f8.jpg",
+          "description": "Waterproof tote bag for carrying laptop and small necessary items."
         },
         {
-          "name": "SHIRT",
+          "name": "T-SHIRT",
           "category": "FASHION",
-          "quantity": 20,
-          "price": 30,
-          "image": "/image/shirt.jpg",
-          "description": "Stylish cotton shirt for all-day comfort."
+          "quantity": 15,
+          "price": 20,
+          "image": "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C91WXrcTRPCL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_UY1000_.png",
+          "description": "Stylish cotton backprinted T-shirt for all-day comfort and stylish for fashion."
         },
         {
           "name": "POWERBANK",
           "category": "ELECTRONIC",
           "quantity": 21,
           "price": 65,
-          "image": "/image/powerbank.jpg",
+          "image": "https://m.media-amazon.com/images/I/51dxDHv4aQL._UF1000,1000_QL80_.jpg",
           "description": "10,000mAh fast-charging power bank."
+        },
+        {
+          "name": "WOMEN'S FLORAL TOP",
+          "category": "FASHION",
+          "quantity": 18,
+          "price": 12,
+          "image": "https://tiimg.tistatic.com/fp/1/007/230/floral-design-girls-tops-026.jpg",
+          "description": "Lightweight floral printed top for women."
+        },
+        {
+          "name": "SAMSUNG GALAXY S23",
+          "category": "ELECTRONIC",
+          "quantity": 14,
+          "price": 150,
+          "image": "https://m.media-amazon.com/images/I/51ygk8oviDL._UF894,1000_QL80_.jpg",
+          "description": "Samsung Galaxy S23 with Snapdragon 8 Gen 2, 6.1-inch AMOLED display."
         }
       ]
   }
@@ -714,20 +803,52 @@
     },
     "products": [
         {
+          "name": "FOSSIL CHRONOGRAPH WATCH",
+          "category": "ACCESSORIES",
+          "quantity": 7,
+          "price": 18,
+          "image": "https://m.media-amazon.com/images/I/71wwO-GcVqL._UY1000_.jpg",
+          "description": "Stainless steel chronograph watch with leather strap."
+        },
+        {
+          "name": "GUCCI SUNGLASSES",
+          "category": "ACCESSORIES",
+          "quantity": 22,
+          "price": 10,
+          "image": "https://woweye.in/cdn/shop/products/B3_858bdae8-a70e-4006-a23d-adc26b5362bd_1400x.png?v=1682085152",
+          "description": "Stylish UV-protection Gucci Sunglasses."
+        },
+        {
+          "name": "WIRELESS KEYBOARD",
+          "category": "ELECTRONIC",
+          "quantity": 19,
+          "price": 20,
+          "image": "https://i.pcmag.com/imagery/roundups/007y4PjTbtgMMDz5SnUq9Em-3.fit_lim.size_1050x.jpg",
+          "description": "Compact mechanical keyboard with RGB lights."
+        },
+        {
           "name": "BLAZER",
           "category": "FASHION",
           "quantity": 11,
-          "price": 140,
-          "image": "/image/blazer.jpg",
+          "price": 14,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNGpLnzR3T9ADd0GS_J_WkCTGCZ6s5sE5fxCO-glNIDIa_pK4EoPT76mvQBSaJCLMqfDc&usqp=CAU",
           "description": "Formal blazer suitable for office and meetings."
         },
         {
           "name": "BLUETOOTH SPEAKER",
           "category": "ELECTRONIC",
           "quantity": 14,
-          "price": 120,
-          "image": "/image/speaker.jpg",
+          "price": 12,
+          "image": "https://m.media-amazon.com/images/I/81M4wYkU3hL._UF1000,1000_QL80_.jpg",
           "description": "Portable Bluetooth speaker with powerful sound."
+        },
+        {
+          "name": "CASIO DIGITAL WATCH",
+          "category": "ACCESSORIES",
+          "quantity": 14,
+          "price": 24,
+          "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/A/ab/abl/abl-100we-1a/assets/ABL-100WE-1A.png",
+          "description": "Casio water-resistant digital sports watch."
         }
       ]
     }

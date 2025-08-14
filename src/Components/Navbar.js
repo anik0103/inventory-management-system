@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-2">
           <img src={location} alt="location" className="w-8 cursor-pointer" />
           <select
-            value={selectedRegion}
+            value={selectedRegion || ""}
             onChange={handleRegionChange}
             className="p-1 border rounded-md w-[102px]"
           >

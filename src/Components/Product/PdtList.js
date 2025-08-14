@@ -5,7 +5,6 @@ import Filters from "./Filters";
 
 const PdtList = () => {
   const { selectedRegion } = useContext(RegionContext);
-
   const [filters, setFilters] = useState({
     productName: "",
     category: "",
@@ -16,11 +15,23 @@ const PdtList = () => {
 
   const [filteredProducts, setFilteredProducts] = useState([]);
 
-  // Get products for the selected region
+  // Load saved region from localStorage if context is empty
+  useEffect(() => {
+    if (!selectedRegion) {
+      const savedRegion = localStorage.getItem("selectedRegion");
+      if (savedRegion) {
+        setSelectedRegion(savedRegion);
+      }
+    }
+  }, [selectedRegion, setSelectedRegion]);
+
+  // Get products for the active region
+  const activeRegion = selectedRegion || localStorage.getItem("selectedRegion");
   const regionData = mockData.find(
-    (region) => region.region.toLowerCase() === selectedRegion.toLowerCase()
+    (region) => region.region.toLowerCase() === activeRegion?.toLowerCase()
   );
-  const products = regionData ? regionData.products : [];
+
+  const products = regionData?.regionWiseData?.products || [];
 
   // Apply filtering + sorting whenever filters or products change
   useEffect(() => {
