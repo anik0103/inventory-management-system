@@ -3,7 +3,7 @@
 import React from "react";
 import OrderRow from "./OrderRow";
 
-const Ordertable = ({ data, onRowClick, expandedIndex }) => {
+const Ordertable = ({ data = [], onRowClick, expandedIndex }) => {
   return (
     <div className="px-6 py-6 overflow-x-auto">
       <table className="min-w-full border-collapse text-left bg-white shadow-md rounded-lg">
