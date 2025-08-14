@@ -8,12 +8,14 @@ import mockData from "../../asset/fakeApiResponce/mockData.json";
 const Products = () => {
   const { selectedRegion } = useContext(RegionContext);
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState(mockData);
-
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  
   useEffect(() => {
-      if (selectedRegion && Array.isArray(mockData)) {
+    if (selectedRegion && Array.isArray(mockData)) {
       const regionObj = mockData.find(
-        item => item.region.toLowerCase().trim() === selectedRegion.toLowerCase().trim()
+        (item) =>
+          item.region.toLowerCase().trim() ===
+          selectedRegion.toLowerCase().trim()
       );
 
       if (regionObj) {
@@ -32,9 +34,9 @@ const Products = () => {
   const handleFilterChange = (filters) => {
     let updatedList = [...products];
 
-    if (filters.name) {
+    if (filters.productName) {
       updatedList = updatedList.filter((p) =>
-        p.name.toLowerCase().includes(filters.name.toLowerCase())
+        p.name.toLowerCase().includes(filters.productName.toLowerCase())
       );
     }
 
@@ -44,15 +46,15 @@ const Products = () => {
       );
     }
 
-    if (filters.minPrice) {
+    if (filters.quantity) {
       updatedList = updatedList.filter(
-        (p) => p.price >= parseFloat(filters.minPrice)
+        (p) => p.quantity === parseFloat(filters.quantity)
       );
     }
 
-    if (filters.maxPrice) {
+    if (filters.price) {
       updatedList = updatedList.filter(
-        (p) => p.price <= parseFloat(filters.maxPrice)
+        (p) => p.price === parseFloat(filters.price)
       );
     }
 

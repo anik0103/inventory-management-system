@@ -1,37 +1,79 @@
-import React, { useContext, useState, useMemo } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { RegionContext } from "../Dashbord/RegionContext";
 import mockData from "../../asset/fakeApiResponce/mockData.json";
+import Filters from "./Filters";
 
 const PdtList = () => {
   const { selectedRegion } = useContext(RegionContext);
-  const [filterText, setFilterText] = useState("");
 
-  // Finding region data
+  const [filters, setFilters] = useState({
+    productName: "",
+    category: "",
+    quantity: "",
+    price: "",
+    sortOrder: "",
+  });
+
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  // Get products for the selected region
   const regionData = mockData.find(
     (region) => region.region.toLowerCase() === selectedRegion.toLowerCase()
   );
   const products = regionData ? regionData.products : [];
 
-   // Filter products
-  const filteredProducts = useMemo(() => {
-    return products.filter((product) =>
-      product.name.toLowerCase().includes(filterText.toLowerCase())
-    );
-  }, [products, filterText]);
+  // Apply filtering + sorting whenever filters or products change
+  useEffect(() => {
+    let updatedList = [...products];
 
-  if (!regionData || !regionData.products || regionData.products.length === 0) {
+    if (filters.productName) {
+      updatedList = updatedList.filter((p) =>
+        p.name.toLowerCase().includes(filters.productName.toLowerCase())
+      );
+    }
+
+    if (filters.category) {
+      updatedList = updatedList.filter((p) =>
+        p.category.toLowerCase().includes(filters.category.toLowerCase())
+      );
+    }
+
+    if (filters.quantity) {
+      updatedList = updatedList.filter(
+        (p) => String(p.quantity) === String(filters.quantity)
+      );
+    }
+
+    if (filters.price) {
+      updatedList = updatedList.filter(
+        (p) => parseFloat(p.price) <= parseFloat(filters.price)
+      );
+    }
+
+    if (filters.sortOrder === "priceLowHigh") {
+      updatedList.sort((a, b) => a.price - b.price);
+    } else if (filters.sortOrder === "priceHighLow") {
+      updatedList.sort((a, b) => b.price - a.price);
+    }
+
+    setFilteredProducts(updatedList);
+  }, [filters, products]);
+
+  // Handle filter changes
+  const handleFilterChange = (newFilters) => {
+    setFilters((prev) => ({ ...prev, ...newFilters }));
+  };
+
+  if (!regionData || products.length === 0) {
     return <p className="text-center mt-5 text-lg">No products found</p>;
   }
 
   return (
     <div>
-      {/* Search Box */}
-      <input
-        type="text"
-        placeholder="Search product..."
-        className="border border-neutral-300 px-3 py-2 rounded-md w-full mb-4"
-        value={filterText}
-        onChange={(e) => setFilterText(e.target.value)}
+      {/* Filters */}
+      <Filters
+        onFilterChange={handleFilterChange}
+        onSortFilterChange={handleFilterChange}
       />
 
       {/* Product List */}
