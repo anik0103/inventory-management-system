@@ -3,7 +3,15 @@
 import React from "react";
 import OrderRow from "./OrderRow";
 
-const Ordertable = ({ data = [], onRowClick, expandedIndex }) => {
+const Ordertable = ({ data = [], onRowClick }) => {
+  if (!data) {
+    return (
+      <div className="px-6 py-6">
+        <p className="text-center text-gray-500">Loading...</p>
+      </div>
+    );
+  }
+
   return (
     <div className="px-6 py-6 overflow-x-auto">
       <table className="min-w-full border-collapse text-left bg-white shadow-md rounded-lg">
@@ -12,7 +20,7 @@ const Ordertable = ({ data = [], onRowClick, expandedIndex }) => {
             <th className="py-3 px-4">Order No.</th>
             <th className="py-3 px-4">Invoice NO.</th>
             <th className="py-3 px-4">Customer Name</th>
-            <th className="py-3 px-4">OrderDate</th>
+            <th className="py-3 px-4">Order Date</th>
             <th className="py-3 px-4">LOcation</th>
             <th className="py-3 px-4">Status</th>
             <th className="py-3 px-4">Invoiced</th>
@@ -22,14 +30,7 @@ const Ordertable = ({ data = [], onRowClick, expandedIndex }) => {
           {data.length > 0 ? (
             data.map((item, index) => (
               <React.Fragment key={index}>
-                <OrderRow
-                  supplier={item}
-                  index={index}
-                  onClick={onRowClick}
-                />
-                {/* {expandedIndex === index && (
-                  <SplProductRow products={item.products} />
-                )} */}
+                <OrderRow Order={item} index={index} onClick={onRowClick} />
               </React.Fragment>
             ))
           ) : (
