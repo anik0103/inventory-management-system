@@ -16,10 +16,18 @@ const ProductDetails = () => {
     )
   : null;
 
-  // Products are inside regionWiseData
   const product = regionData?.regionWiseData?.products?.find(
     (item) => item?.name?.toLowerCase() === productName?.toLowerCase()
   );
+
+  // 🔹 Save region + products for back navigation
+  useEffect(() => {
+    if (product && activeRegion) {
+      localStorage.setItem("selectedRegion", activeRegion);
+      const productList = regionData?.regionWiseData?.products || [];
+      localStorage.setItem("products", JSON.stringify(productList));
+    }
+  }, [product, activeRegion, regionData]);
 
   if (!product) {
     return (
