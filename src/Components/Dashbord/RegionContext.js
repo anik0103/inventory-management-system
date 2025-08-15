@@ -3,13 +3,16 @@ import React, { createContext, useState, useEffect } from "react";
 export const RegionContext = createContext();
 
 export const RegionProvider = ({ children }) => {
-  const [selectedRegion, setSelectedRegion] = useState(null) // Default region;
-  
-    // Load from localStorage on mount
+  const [selectedRegion, setSelectedRegion] = useState("");
+
   useEffect(() => {
-    const saved = localStorage.getItem("selectedRegion");
-    if (saved) {
-      setSelectedRegion(saved);
+    // Load from localStorage when app starts
+    const savedRegion = localStorage.getItem("selectedRegion");
+    if (savedRegion) {
+      setSelectedRegion(savedRegion);
+    } else {
+      setSelectedRegion("kolkata"); // default
+      localStorage.setItem("selectedRegion", "kolkata");
     }
   }, []);
 
@@ -20,8 +23,13 @@ export const RegionProvider = ({ children }) => {
     }
   }, [selectedRegion]);
 
+  const updateRegion = (region) => {
+    setSelectedRegion(region);
+    localStorage.setItem("selectedRegion", region);
+  };
+
   return (
-    <RegionContext.Provider value={{ selectedRegion, setSelectedRegion }}>
+    <RegionContext.Provider value={{ selectedRegion, setSelectedRegion: updateRegion }}>
       {children}
     </RegionContext.Provider>
   );

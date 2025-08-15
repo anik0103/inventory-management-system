@@ -4,102 +4,67 @@ import mockData from "../../asset/fakeApiResponce/mockData.json";
 import Filters from "./Filters";
 
 const PdtList = () => {
-  const { selectedRegion } = useContext(RegionContext);
+  const { selectedRegion, setSelectedRegion } = useContext(RegionContext);
+  const [products, setProducts] = useState([]);
   const [filters, setFilters] = useState({
-    productName: "",
     category: "",
-    quantity: "",
-    price: "",
-    sortOrder: "",
+    priceRange: "",
+    sort: "",
   });
 
-  const [filteredProducts, setFilteredProducts] = useState([]);
-
-  // Load saved region from localStorage if context is empty
+  // 🔹 Load products based on region (from context or localStorage)
   useEffect(() => {
-    if (!selectedRegion) {
-      const savedRegion = localStorage.getItem("selectedRegion");
-      if (savedRegion) {
-        setSelectedRegion(savedRegion);
+    const regionToUse = selectedRegion || localStorage.getItem("selectedRegion");
+
+    if (regionToUse) {
+      const regionData = mockData.find(
+        (region) => region.region.toLowerCase() === regionToUse.toLowerCase()
+      );
+
+      if (regionData) {
+        const productList = regionData.regionWiseData.products || [];
+        setProducts(productList);
+
+        // Save for reload/back navigation
+        localStorage.setItem("selectedRegion", regionToUse);
+        localStorage.setItem("products", JSON.stringify(productList));
       }
     }
-  }, [selectedRegion, setSelectedRegion]);
+  }, [selectedRegion]);
 
-  // Get products for the active region
-  const activeRegion = selectedRegion || localStorage.getItem("selectedRegion");
-  const regionData = mockData.find(
-    (region) => region.region.toLowerCase() === activeRegion?.toLowerCase()
-  );
-
-  const products = regionData?.regionWiseData?.products || [];
-
-  // Apply filtering + sorting whenever filters or products change
-  useEffect(() => {
-    let updatedList = [...products];
-
-    if (filters.productName) {
-      updatedList = updatedList.filter((p) =>
-        p.name.toLowerCase().includes(filters.productName.toLowerCase())
-      );
-    }
-
-    if (filters.category) {
-      updatedList = updatedList.filter((p) =>
-        p.category.toLowerCase().includes(filters.category.toLowerCase())
-      );
-    }
-
-    if (filters.quantity) {
-      updatedList = updatedList.filter(
-        (p) => String(p.quantity) === String(filters.quantity)
-      );
-    }
-
-    if (filters.price) {
-      updatedList = updatedList.filter(
-        (p) => parseFloat(p.price) <= parseFloat(filters.price)
-      );
-    }
-
-    if (filters.sortOrder === "priceLowHigh") {
-      updatedList.sort((a, b) => a.price - b.price);
-    } else if (filters.sortOrder === "priceHighLow") {
-      updatedList.sort((a, b) => b.price - a.price);
-    }
-
-    setFilteredProducts(updatedList);
-  }, [filters, products]);
-
-  // Handle filter changes
-  const handleFilterChange = (newFilters) => {
-    setFilters((prev) => ({ ...prev, ...newFilters }));
-  };
-
-  if (!regionData || products.length === 0) {
-    return <p className="text-center mt-5 text-lg">No products found</p>;
-  }
+  // 🔹 Apply filters & sorting
+  const filteredProducts = products
+    .filter((p) => {
+      if (filters.category && p.category !== filters.category) return false;
+      if (filters.priceRange) {
+        const [min, max] = filters.priceRange.split("-").map(Number);
+        if (p.price < min || p.price > max) return false;
+      }
+      return true;
+    })
+    .sort((a, b) => {
+      if (filters.sort === "priceLowHigh") return a.price - b.price;
+      if (filters.sort === "priceHighLow") return b.price - a.price;
+      return 0;
+    });
 
   return (
     <div>
-      {/* Filters */}
-      <Filters
-        onFilterChange={handleFilterChange}
-        onSortFilterChange={handleFilterChange}
-      />
-
-      {/* Product List */}
-      {filteredProducts.length > 0 ? (
-        filteredProducts.map((product, idx) => (
-          <div key={idx} className="border p-2 mb-2">
-            <h3 className="font-semibold">{product.name}</h3>
-            <p>Category: {product.category}</p>
-            <p>Price: ₹{product.price}</p>
-            <p>Quantity: {product.quantity}</p>
+      <Filters filters={filters} setFilters={setFilters} />
+      <div className="grid grid-cols-3 gap-4">
+        {filteredProducts.map((p) => (
+          <div
+            key={p.name}
+            className="border p-4 rounded shadow hover:shadow-lg transition"
+          >
+            <a href={`/product/${p.name}`}>
+              <img src={p.image} alt={p.name} className="h-40 object-contain" />
+              <h3 className="font-bold">{p.name}</h3>
+              <p>₹{p.price}</p>
+            </a>
           </div>
-        ))
-      ) : (
-        <p className="text-gray-500">No matching products</p>
-      )}
+        ))}
+      </div>
     </div>
   );
 };

@@ -9,6 +9,8 @@ import AppLayout from "./Components/Layout/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProductDetails from "./Components/Product/ProductDetails";
 import AddSupplier from "./Components/Supplier/AddSupplier/AddSupplier";
+import { RegionProvider } from "./Components/Dashbord/RegionContext";
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -37,7 +39,11 @@ const appRouter = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={appRouter} />;
+  return (
+    <RegionProvider>
+      <RouterProvider router={appRouter} />
+    </RegionProvider>
+  )
 }
 
 export default App;

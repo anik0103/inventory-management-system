@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { RegionContext } from "../Dashbord/RegionContext";
 import mockData from "../../asset/fakeApiResponce/mockData.json";
@@ -10,11 +10,11 @@ const ProductDetails = () => {
   const activeRegion = selectedRegion || localStorage.getItem("selectedRegion");
 
   const regionData = Array.isArray(mockData)
-  ? mockData.find(
-      (region) =>
-        region?.region?.toLowerCase() === activeRegion?.toLowerCase()
-    )
-  : null;
+    ? mockData.find(
+        (region) =>
+          region?.region?.toLowerCase() === activeRegion?.toLowerCase()
+      )
+    : null;
 
   const product = regionData?.regionWiseData?.products?.find(
     (item) => item?.name?.toLowerCase() === productName?.toLowerCase()
@@ -40,7 +40,7 @@ const ProductDetails = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-center px-4 py-6">
       <div className="w-4/5 h-[80vh] bg-white rounded-xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
-        
+
         {/* Left Section */}
         <div className="w-full md:w-1/2 h-full p-6 flex flex-col justify-center items-start text-left">
           <h2 className="text-6xl font-bold mb-4">{product.name}</h2>
