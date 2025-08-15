@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import SuppliersHead from "./SuppliersHead";
 import SupplierSearch from "./SupplierSearch";
 import SupplierTable from "./SupplierTable";
@@ -11,6 +12,42 @@ const Suppliers = () => {
   const [locationTerm, setLocationTerm] = useState("");
   const [productTypeTerm, setProductTypeTerm] = useState("");
   const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.state?.newSupplier) {
+      const newSupplier = location.state.newSupplier;
+      setSuppliers((prevSuppliers) => {
+        const supplierExists = prevSuppliers.some(
+          (supplier) => supplier.vendorsName === newSupplier.vendorsName
+        );
+        if (!supplierExists) {
+          return [newSupplier, ...prevSuppliers];
+        }
+        return prevSuppliers;
+      });
+      navigate(location.pathname, { replace: true });
+    }
+  }, [location, navigate]);
+
+  const addProductToSupplier = (supplierIndex, newProduct) => {
+    if (!newProduct.trim()) return;
+
+    setSuppliers(currentSuppliers =>
+      currentSuppliers.map((supplier, index) => {
+        if (index === supplierIndex) {
+          // Create a new supplier object with the new product added
+          return {
+            ...supplier,
+            products: [...supplier.products, newProduct],
+          };
+        }
+        return supplier;
+      })
+    );
+  };
 
   const filteredSuppliers = suppliers.filter(
     (supplier) =>
@@ -43,6 +80,7 @@ const Suppliers = () => {
         data={filteredSuppliers}
         onRowClick={toggleExpand}
         expandedIndex={expandedIndex}
+        onAddProduct={addProductToSupplier} // ++ PASS THE FUNCTION AS A PROP ++
       />
     </div>
   );
