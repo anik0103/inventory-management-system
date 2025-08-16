@@ -2,7 +2,8 @@ import SupplierRow from "./SupplierRow";
 import SplProductRow from "./SplProductRow";
 import React from "react";
 
-const SupplierTable = ({ data, onRowClick, expandedIndex }) => {
+// ++ 1. RECEIVE onAddProduct PROP ++
+const SupplierTable = ({ data, onRowClick, expandedIndex, onAddProduct }) => {
   return (
     <div className="px-6 py-6 overflow-x-auto">
       <table className="min-w-full border-collapse text-left bg-white shadow-md rounded-lg">
@@ -27,7 +28,12 @@ const SupplierTable = ({ data, onRowClick, expandedIndex }) => {
                   onClick={onRowClick}
                 />
                 {expandedIndex === index && (
-                  <SplProductRow products={item.products} />
+                  // ++ 2. PASS PROPS TO SplProductRow ++
+                  <SplProductRow
+                    products={item.products}
+                    supplierIndex={index}
+                    onAddProduct={onAddProduct}
+                  />
                 )}
               </React.Fragment>
             ))
