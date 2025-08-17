@@ -6,7 +6,8 @@ export const OrderDetails = [
     "OrderDate": "2025-08-10",
     "Location": "New York",
     "Status": "Confirmed",
-    "Invoiced": true
+    "Invoiced": true,
+    "items": ["Laptop", "Mouse", "Keyboard"]
   },
   {
     "OrderNo": "ORD-1002",
@@ -15,7 +16,8 @@ export const OrderDetails = [
     "OrderDate": "2025-08-11",
     "Location": "Los Angeles",
     "Status": "Draft",
-    "Invoiced": false
+    "Invoiced": false,
+    "items": ["Monitor", "USB Cable"]
   },
   {
     "OrderNo": "ORD-1003",
@@ -24,7 +26,8 @@ export const OrderDetails = [
     "OrderDate": "2025-08-12",
     "Location": "Chicago",
     "Status": "Shipped",
-    "Invoiced": true
+    "Invoiced": true,
+    "items": ["Laptop","Headphones", "Mouse"]
   },
   {
     "OrderNo": "ORD-1004",
@@ -33,7 +36,8 @@ export const OrderDetails = [
     "OrderDate": "2025-08-08",
     "Location": "Houston",
     "Status": "Pending",
-    "Invoiced": false
+    "Invoiced": false,
+    "items": ["Printer", "Ink Cartridge"]
   },
   {
     "OrderNo": "ORD-1005",
@@ -42,6 +46,7 @@ export const OrderDetails = [
     "OrderDate": "2025-08-09",
     "Location": "Miami",
     "Status": "Delivered",
-    "Invoiced": true
+    "Invoiced": true,
+    "items": ["Tablet", "Charger", "Case"]
   }
 ]

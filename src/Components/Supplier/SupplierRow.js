@@ -1,6 +1,5 @@
 const SupplierRow = ({ supplier, index, onClick }) => {
   return (
-    // Ensure no whitespace immediately after <tr> and before first <td>
     <tr
       onClick={() => onClick(index)}
       className="border-b text-sm text-gray-800 hover:bg-gray-50 cursor-pointer transition-colors duration-150"

@@ -1,6 +1,5 @@
-function OrderRow({ Order, index, onClick }) {
+const OrderRow = ({ Order, index, onClick }) => {
   return (
-    // Ensure no whitespace immediately after <tr> and before first <td>
     <tr
       onClick={() => onClick(index)}
       className="border-b text-sm text-gray-800 hover:bg-gray-50 cursor-pointer transition-colors duration-150"
@@ -11,7 +10,8 @@ function OrderRow({ Order, index, onClick }) {
       <td className="py-3 px-4">{Order.OrderDate}</td>
       <td className="py-3 px-4">{Order.Location}</td>
       <td className="py-3 px-4">{Order.Status}</td>
-      <td className="py-3 px-4">{Order.Invoiced}</td>
+      
+      <td className="py-3 px-4">{Order.Invoiced ? "Yes" : "No"}</td>
     </tr>
   );
 }
