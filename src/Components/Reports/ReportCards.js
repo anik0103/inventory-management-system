@@ -1,11 +1,34 @@
-import Cards from './Cards'
-const reportCards =()=>{
-    return(
-     <div>
-        <Cards/>
-        <Cards/>
-        <Cards/>
-     </div>
-    )
-}
-export default reportCards ;
+import React from "react";
+import Cards from "./Cards";
+import mockDataReports from "../../asset/fakeApiResponce/mockDataReports.json";
+
+const ReportCards = () => {
+  const snapshot = mockDataReports.analyticsSnapshot;
+
+  return (
+    <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <Cards
+        title="Total Availability"
+        value={snapshot.items[0]}
+        percentageChange={snapshot.percentageChange[0]}
+        description="Current supply stock levels are constantly updated to ensure stock availability."
+      />
+
+      <Cards
+        title="New Added"
+        value={snapshot.items[1]}
+        percentageChange={snapshot.percentageChange[1]}
+        description="The latest supply stock levels that were recently added in the system."
+      />
+
+      <Cards
+        title="Sold Out"
+        value={snapshot.items[2]}
+        percentageChange={snapshot.percentageChange[2]}
+        description="The latest supply stock levels that recently sold or became unavailable in the system."
+      />
+    </div>
+  );
+};
+
+export default ReportCards;

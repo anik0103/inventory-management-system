@@ -9,7 +9,7 @@ import AppLayout from "./Components/Layout/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProductDetails from "./Components/Product/ProductDetails";
 import AddSupplier from "./Components/Supplier/AddSupplier/AddSupplier";
-
+import Reports from "./Components/Reports/Reports";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -24,7 +24,7 @@ const appRouter = createBrowserRouter([
       { path: "suppliers", element: <div>Suppliers Page</div> },
       { path: "orders", element: <div>Orders Page</div> },
       { path: "customer", element: <div>Customer Page</div> },
-      { path: "reports", element: <div>Reports Page</div> },
+      { path: "reports", element: <Reports /> },
     ],
   },
   {
