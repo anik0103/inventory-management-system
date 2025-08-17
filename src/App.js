@@ -9,6 +9,7 @@ import AppLayout from "./Components/Layout/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProductDetails from "./Components/Product/ProductDetails";
 import AddSupplier from "./Components/Supplier/AddSupplier/AddSupplier";
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
