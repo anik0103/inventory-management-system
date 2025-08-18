@@ -61,7 +61,7 @@ const Suppliers = () => {
   };
 
   return (
-    <div>
+    <div className="bg-neutral-background min-h-screen p-6">
       <SuppliersHead />
       <div className="px-6 py-4 flex flex-wrap justify-between items-end gap-4">
         <SupplierSearch
