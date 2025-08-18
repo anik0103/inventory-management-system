@@ -1,15 +1,26 @@
-import Ordertable from "./Ordertable";
-// import { OrderDetails } from "./Orderdetails";
+import { useState } from "react";
+import OrderHead from "./OrderHead";
+import OrderTable from "./OrderTable";
+import { OrderDetails } from "./Orderdetails";
 
- const Order = () => {
+const Orders = () => {
+  const [orders] = useState(OrderDetails);
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpand = (index) => {
+    setExpandedIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
-    <div className="container mx-auto px-4 py-6">
-      <h1 className="text-2xl font-bold mb-4">Order Management</h1>
-      <div>
-      <Ordertable/>
-      </div>
-      {/* Other components or content can be added here */}
+    <div className="bg-neutral-background min-h-screen p-6">
+      <OrderHead />
+      <OrderTable
+        data={orders}
+        onRowClick={toggleExpand}
+        expandedIndex={expandedIndex}
+      />
     </div>
   );
-}
-export default Order;
+};
+
+export default Orders;
