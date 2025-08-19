@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { RegionContext } from "../Dashbord/RegionContext";
 import mockData from "../../asset/fakeApiResponce/mockData.json";
 
 const ProductDetails = () => {
   const { productName } = useParams();
   const { selectedRegion } = useContext(RegionContext);
+  const navigate = useNavigate();
 
   const activeRegion = selectedRegion || localStorage.getItem("selectedRegion");
 
@@ -39,11 +40,19 @@ const ProductDetails = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-center px-4 py-6">
-      <div className="w-4/5 h-[80vh] bg-white rounded-xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
+      <div className="relative w-4/5 h-[80vh] bg-white rounded-xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
+
+        {/* ✅ Close Button */}
+        <button
+          onClick={() => navigate(-1)}
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold"
+        >
+          &times;
+        </button>
 
         {/* Left Section */}
         <div className="w-full md:w-1/2 h-full p-6 flex flex-col justify-center items-start text-left">
-          <h2 className="text-6xl font-bold mb-4">{product.name}</h2>
+          <h2 className="text-5xl font-bold mb-4">{product.name}</h2>
           <p className="text-lg text-gray-700 font-bold mb-4">{product.category}</p>
           <p className="text-3xl font-bold text-purple-600 mb-4">₹{product.price}</p>
 
