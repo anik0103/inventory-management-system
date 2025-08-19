@@ -1,6 +1,6 @@
 import { useState } from "react";
 import OrderHead from "./OrderHead";
-import OrderTable from "./OrderTable";
+import OrderTable from "./Ordertable";
 import { OrderDetails } from "./Orderdetails";
 
 const Orders = () => {

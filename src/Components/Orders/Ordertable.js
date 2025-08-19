@@ -1,6 +1,6 @@
 import React from "react";
 import OrderRow from "./OrderRow";
-import OrderItemsRow from "./OrderItemsRow"; // ✅ new
+import OrderItemsRow from "./OrderItemsRow";
 
 const OrderTable = ({ data, onRowClick, expandedIndex }) => {
   return (
