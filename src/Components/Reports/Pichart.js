@@ -1,7 +1,7 @@
 const Pichart = () => {
     return (
-        <div>
-            <h1>Pie Chart</h1>
+        <div className="bg-white rounded-2xl shadow-md border border-[#bd78b5] flex items-center justify-center">
+          <p className="text-[#bd78b5] font-semibold">Pie Chart</p>
         </div>
     )
 }

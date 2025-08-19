@@ -1,4 +1,3 @@
-import React from "react";
 import Cards from "./Cards";
 import mockDataReports from "../../asset/fakeApiResponce/mockDataReports.json";
 
@@ -6,7 +5,7 @@ const ReportCards = () => {
   const snapshot = mockDataReports.analyticsSnapshot;
 
   return (
-    <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-10">
       <Cards
         title="Total Availability"
         value={snapshot.items[0]}
