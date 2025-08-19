@@ -1,8 +1,11 @@
 import React, { useState } from "react"; 
 import { useNavigate } from "react-router-dom";
+import { useProducts } from "./PdtContext";
 
 const AddProduct = () => { 
   const navigate = useNavigate(); 
+  const { addProduct } = useProducts();
+  
   const [productImage, setProductImage] = useState(null); 
   const [preview, setPreview] = useState(null); 
   const [productName, setProductName] = useState(""); 
@@ -20,12 +23,22 @@ const handleImageChange = (e) => {
 
 const handleSubmit = (e) => { 
   e.preventDefault(); 
-  console.log({ productName, category, price, description, supplier, discount, productImage }); 
-  navigate("/"); 
+
+  const newProduct = {
+      name: productName,
+      category,
+      price,
+      description,
+      supplier,
+      discount,
+      image: preview,
+    };
+    addProduct(newProduct); 
+    navigate("/products"); 
 };
 
 return ( 
-      <div className="min-h-screen bg-gray-100 p-6"> 
+      <div className="px-6 py-6 overflow-x-auto"> 
         <div className="flex justify-between items-center mb-6"> 
           <h1 className="text-2xl font-bold">Add Product</h1> 
         

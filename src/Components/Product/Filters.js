@@ -1,128 +1,143 @@
-import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import React from "react";
 import { IoCloseCircle } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
-const Filters = ({ onSearch , onSortFilterChange}) => {
-  const[productName, setProductName] = useState("");
-  const[category, setCategory] = useState("");
-  const[quantity, setQuantity] = useState("");
-  const[price, setPrice] = useState("");
+const Filters = ({ filters = {}, setFilters }) => {
+  const navigate = useNavigate();
 
-  const handleSearch = () => {
-    onSearch({
-      productName,
-      category,
-      quantity,
-      price,
-    });
+  const clearField = (fieldName) => {
+    setFilters((prev) => ({ ...prev, [fieldName]: "" }));
   };
 
-  const navigate = useNavigate();
   const handleAddClick = () => {
     navigate("/add-product");
-  }
+  };
 
   return (
     <div className="flex flex-wrap gap-4 items-center m-3">
+      {/* Sort */}
+      <select
+        className="border w-28 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#bd78b5]"
+        value={filters.sortOrder || ""}
+        onChange={(e) => {
+          const value = e.target.value;
 
-      <select className="border w-28 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#bd78b5]" value={Filters} onChange={(e) => onSortFilterChange(e.target.value)}>
-        <option value="all">All filter</option>
+          // 🔹 if dropdown is a category, update category filter
+          if (["fashion", "electronic", "accessories"].includes(value.toLowerCase())) {
+            setFilters({
+              ...filters,
+              category: value,   // set category
+              sortOrder: ""      // clear sort order
+            });
+          } else {
+            // 🔹 otherwise update sorting
+            setFilters({
+              ...filters,
+              sortOrder: value,
+              category: ""       // clear category when sorting
+            });
+          }
+        }}
+      >
+        <option value="">All filter</option>
         <option value="priceLowHigh">Price: Low to High</option>
         <option value="priceHighLow">Price: High to Low</option>
-        <option value="Electronic">ELECTRONIC</option>
-        <option value="Fashion">FASHION</option>
-        <option value="Accessories">ACCESSORIES</option>
+        <option value="Electronic">Electronic</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Accessories">Accessories</option>
       </select>
+
+      {/* Product Name */}
       <div className="relative">
         <input
-        type="text"
-        placeholder="Product Name"
-        className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
-        value={productName}
-        onChange={(item) => {
-          setProductName(item.target.value);
-          onSearch({ productName: item.target.value, category, quantity, price});
-        }}
+          type="text"
+          placeholder="Product Name"
+          className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
+          value={filters.productName}
+          onChange={(e) => setFilters((prev) => ({ ...prev, productName: e.target.value }))
+          }
         />
-        {productName && ( 
+        {filters.productName && (
           <button
+            type="button"
             className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
-            onClick={() => setProductName("")}
+            onClick={() => clearField("productName")}
           >
             <IoCloseCircle size={20} />
           </button>
         )}
       </div>
+
+      {/* Category */}
       <div className="relative">
         <input
-        type="text"
-        placeholder="Category"
-        className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
-        value={category}
-        onChange={(item) => {
-          setCategory(item.target.value);
-          onSearch({ productName, category: item.target.value, quantity, price });
-        }} 
+          type="text"
+          placeholder="Category"
+          className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
+          value={filters.category}
+          onChange={(e) => setFilters((prev) => ({ ...prev, category: e.target.value }))
+          }
         />
-        {category && ( 
+        {filters.category && (
           <button
+            type="button"
             className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
-            onClick={() => setCategory("")}
+            onClick={() => clearField("category")}
           >
             <IoCloseCircle size={20} />
           </button>
         )}
       </div>
+
+      {/* Quantity */}
       <div className="relative">
         <input
-        type="text"
-        placeholder="Quantity"
-        className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
-        value={quantity}
-        onChange={(item) => {
-          setQuantity(item.target.value);
-          onSearch({ productName, category, quantity: item.target.value, price });
-        }}
+          type="text"
+          placeholder="Quantity"
+          className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
+          value={filters.quantity}
+          onChange={(e) => setFilters((prev) => ({ ...prev, quantity: e.target.value }))
+          }
         />
-        {quantity && ( 
+        {filters.quantity && (
           <button
+            type="button"
             className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
-            onClick={() => setQuantity("")}
+            onClick={() => clearField("quantity")}
           >
             <IoCloseCircle size={20} />
           </button>
         )}
       </div>
+
+      {/* Price */}
       <div className="relative">
         <input
-        type="text"
-        placeholder="Price"
-        className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
-        value={price}
-        onChange={(item) => {
-          setPrice(item.target.value);
-          onSearch({ productName, category, quantity, price: item.target.value });
-        }}
+          type="text"
+          placeholder="Price"
+          className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
+          value={filters.price}
+          onChange={(e) => setFilters((prev) => ({ ...prev, price: e.target.value }))
+          }
         />
-        {price && ( 
+        {filters.price && (
           <button
+            type="button"
             className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
-            onClick={() => setPrice("")}
+            onClick={() => clearField("price")}
           >
             <IoCloseCircle size={20} />
           </button>
         )}
       </div>
-      
+
+      {/* Add Product Button */}
       <button
-        className="bg-[#bd78b5] text-white px-4 py-2 rounded-md hover:bg-[#d19fca] transition-colors duration-200 flex items-center gap-1" onClick={handleSearch}>
-        <FaSearch /> Search
+        className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition"
+        onClick={handleAddClick}
+      >
+        + Add Product
       </button>
-      <button className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition" onClick={handleAddClick}>
-            + Add Product
-      </button>
-      
     </div>
   );
 };
