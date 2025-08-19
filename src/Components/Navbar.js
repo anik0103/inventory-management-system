@@ -5,12 +5,16 @@ import man from "../asset/man.png";
 import location from "../asset/location.png";
 import notifiaction from "../asset/notification.png";
 import plus from "../asset/add.png";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import mockData from "../asset/fakeApiResponce/mockData.json";
 import { RegionContext } from "../Components/Dashbord/RegionContext";
 
 const Navbar = () => {
   const { selectedRegion, setSelectedRegion } = useContext(RegionContext);
+
+  const handleRegionChange = (e) => {
+    setSelectedRegion(e.target.value);
+  };
 
   return (
     <nav className="w-full p-4 flex bg-[#d19fca]">
@@ -36,8 +40,8 @@ const Navbar = () => {
         <div className="flex items-center space-x-2">
           <img src={location} alt="location" className="w-8 cursor-pointer" />
           <select
-            value={selectedRegion}
-            onChange={(e) => setSelectedRegion(e.target.value)}
+            value={selectedRegion || ""}
+            onChange={handleRegionChange}
             className="p-1 border rounded-md w-[102px]"
           >
             <option value="">Choose a location</option>
