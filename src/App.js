@@ -9,6 +9,7 @@ import AppLayout from "./Components/Layout/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProductDetails from "./Components/Product/ProductDetails";
 import Order from "./Components/Orders/Order";
+import { ProductProvider } from "./Components/Product/PdtContext";  
 
 import AddSupplier from "./Components/Supplier/AddSupplier/AddSupplier";
 import { RegionProvider } from "./Components/Dashbord/RegionContext";
@@ -42,9 +43,11 @@ const appRouter = createBrowserRouter([
 
 function App() {
   return (
-    <RegionProvider>
-      <RouterProvider router={appRouter} />
-    </RegionProvider>
+    <ProductProvider>
+      <RegionProvider>
+        <RouterProvider router={appRouter} />
+      </RegionProvider>
+    </ProductProvider>
   )
 }
 
