@@ -42,7 +42,7 @@ const ProductDetails = () => {
     <div className="min-h-screen bg-gray-100 flex justify-center items-center px-4 py-6">
       <div className="relative w-4/5 h-[80vh] bg-white rounded-xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
 
-        {/* ✅ Close Button */}
+        {/* ✅ Cross Button */}
         <button
           onClick={() => navigate(-1)}
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold"
