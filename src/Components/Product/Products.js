@@ -20,19 +20,18 @@ const Products = () => {
   
   // Load products based on selected region
   useEffect(() => {
-    let regionToUse = selectedRegion || localStorage.getItem("selectedRegion");
 
-    if (regionToUse && Array.isArray(mockData)) {
+    if (selectedRegion && Array.isArray(mockData)) {
       const regionObj = mockData.find(
         (item) =>
-          item.region.toLowerCase().trim() === regionToUse.toLowerCase().trim()
+          item.region.toLowerCase().trim() === selectedRegion.toLowerCase().trim()
       );
 
       if (regionObj) {
         const productsList = regionObj.regionWiseData?.products || [];
         setRegionProducts(productsList);
       } else {
-        console.warn("No matching products for", regionToUse);
+        console.warn("No matching products for", selectedRegion);
         setRegionProducts([]);
       }
     }
@@ -77,7 +76,20 @@ const Products = () => {
     <div className="bg-neutral-background min-h-screen p-6">
       <Head />
       <Filters filters={filters} setFilters={setFilters} />
-      <ProductTable products={filteredProducts} />
+
+      {selectedRegion ? (
+      filteredProducts.length > 0 ? (
+        <ProductTable products={filteredProducts} />
+      ) : (
+        <p className="text-center mt-6 text-gray-500">
+          No products available for this region.
+        </p>
+      )
+    ) : (
+      <p className="text-center mt-6 text-gray-500">
+        Please select a region to view products.
+      </p>
+    )}
     </div>
   );
 };
