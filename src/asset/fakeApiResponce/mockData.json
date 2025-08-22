@@ -38,27 +38,27 @@
       {
         "name": "Apple iPhone 14",
         "quantitySold": 150,
-        "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-s911bzadins/gallery/in-galaxy-s23-s911-447250-sm-s911bzadins-thumb-535222796?$344_344_PNG$"
+        "image": "https://m.media-amazon.com/images/I/71fVoqRC0wL._AC_UY327_FMwebp_QL65_.jpg"
       },
       {
         "name": "Samsung Galaxy S23",
         "quantitySold": 135,
-        "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-s911bzadins/gallery/in-galaxy-s23-s911-447250-sm-s911bzadins-thumb-535222796?$344_344_PNG$"
+        "image": "https://m.media-amazon.com/images/I/61RZDb2mQxL._AC_UF1000,1000_QL80_.jpg"
       },
       {
         "name": "OnePlus Nord CE 3",
         "quantitySold": 98,
-        "image": "https://image01.oneplus.net/ebp/202307/10/1-m00-2e-cc-rb8bwmspzt6ar1_waacgktsz8ts131.png"
+        "image": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-nord-3-5g-1.jpg"
       },
       {
         "name": "Sony WH-1000XM5 Headphones",
         "quantitySold": 65,
-        "image": "https://m.media-amazon.com/images/I/61o9tWR6D5L._AC_UF1000,1000_QL80_.jpg"
+        "image": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_UY327_FMwebp_QL65_.jpg"
       },
       {
         "name": "Logitech MX Master 3S Mouse",
         "quantitySold": 60,
-        "image": "https://resource.logitech.com/w_800,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/gallery/mx-master-3s-top-view-graphite-gallery.png?v=1"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg"
       }
     ],
     "purchaseOrder": {
@@ -76,7 +76,49 @@
       "packed": 11,
       "shipped": 6,
       "invoiced": 4
-    }
+    },
+    "products": [
+        {
+          "name": "MOUSE",
+          "category": "ELECTRONIC",
+          "quantity": 18,
+          "price": 80,
+          "image": "https://codingdeft-images.s3.amazonaws.com/public/img/posts/react-on-hover/on-hover-cover.jpg",
+          "description": "Wireless mouse with precision tracking."
+        },
+        {
+          "name": "EARING",
+          "category": "ACCESSORIES",
+          "quantity": 15,
+          "price": 10,
+          "image": "https://www.ross-simons.com/on/demandware.static/-/Sites-lbh-master/default/dw20240915/images/jewelry-semi-precious-earrings/947341.jpg?sw=2000",
+          "description": "Elegant stud earrings for all occasions."
+        },
+        {
+          "name": "SHIRT",
+          "category": "FASHION",
+          "quantity": 20,
+          "price": 30,
+          "image": "https://static.vecteezy.com/system/resources/previews/012/705/555/non_2x/men-s-shirts-mockup-design-template-mockup-free-photo.jpg",
+          "description": "Stylish cotton shirt for all-day comfort."
+        },
+        {
+          "name": "HEADPHONE",
+          "category": "ELECTRONIC",
+          "quantity": 17,
+          "price": 30,
+          "image": "https://m.media-amazon.com/images/I/61m-qPp1iLL._UF1000,1000_QL80_.jpg",
+          "description": "Noise-cancelling headphones with crystal-clear sound."
+        },
+        {
+          "name": "APPLE WATCH",
+          "category": "ACCESSORIES",
+          "quantity": 24,
+          "price": 150,
+          "image": "https://m.media-amazon.com/images/I/61ofBVHTbaL._UF894,1000_QL80_.jpg",
+          "description": "Sleek analog Apple Watch that combines fashion and function."
+        }
+      ]
   }
 },
 {
@@ -118,12 +160,12 @@
       {
         "name": "Google Pixel 7",
         "quantitySold": 120,
-        "image": "https://store.google.com/product/images/pixel_7.png"
+        "image": "https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-and-Pixel-7-Pro-on-cream-background-ijwbqefjwe.jpg"
       },
       {
         "name": "Dell XPS 13 Laptop",
         "quantitySold": 90,
-        "image": "https://i.dell.com/sites/imagecontent/products/PublishingImages/xps-13-9310-laptop/spi/ng/xps-13-9310-laptop-campaign-hero-504x350-ng.psd"
+        "image": "https://www.pngkey.com/png/full/253-2531849_dell-xps-13-9370-i7-8550u.png"
       },
       {
         "name": "Sony PlayStation 5",
@@ -133,12 +175,12 @@
       {
         "name": "Apple AirPods Pro",
         "quantitySold": 60,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+        "image": "https://xyultra.com/wp-content/uploads/2025/07/Apple-AirPods-Pro-2-Review-2025.webp"
       },
       {
         "name": "HP LaserJet Printer",
         "quantitySold": 55,
-        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+        "image": "https://www.shutterstock.com/image-photo/singapore-may-10-2023-close-260nw-2512956521.jpg"
       }
     ],
     "purchaseOrder": {
@@ -156,7 +198,41 @@
       "packed": 8,
       "shipped": 10,
       "invoiced": 7
-    }
+    },
+    "products": [
+        {
+          "name": "LAPTOP BAG",
+          "category": "ACCESSORIES",
+          "quantity": 10,
+          "price": 200,
+          "image": "https://m.media-amazon.com/images/I/71zthRu3v9L._UY1100_.jpg",
+          "description": "Durable laptop bag with multiple compartments."
+        },
+        {
+          "name": "SPEAKER",
+          "category": "ELECTRONIC",
+          "quantity": 14,
+          "price": 120,
+          "image": "https://m.media-amazon.com/images/I/71qLjkvb85L._UF1000,1000_QL80_.jpg",
+          "description": "Bluetooth speaker with deep bass."
+        },
+        {
+          "name": "APPLE AIRPORDS",
+          "category": "ELECTRONIC",
+          "quantity": 10,
+          "price": 60,
+          "image": "https://cdn.neowin.com/news/images/uploaded/2024/06/1719388093_2nd_gen_airpods_pro.jpg",
+          "description": "Apple AirPods with high-quality sound, seamless Bluetooth pairing, and all-day battery life."
+        },
+        {
+          "name": "HP Pavilion 15",
+          "category": "ELECTRONIC",
+          "price": 90,
+          "quantity": 8,
+          "image": "https://m.media-amazon.com/images/I/71LOolGaCDL._UF1000,1000_QL80_.jpg",
+          "description": "HP Pavilion 15, Intel i7 12th Gen, 16GB RAM, 512GB SSD."
+        }
+      ]
   }
 },
 {
@@ -198,27 +274,27 @@
       {
         "name": "Lenovo ThinkPad X1",
         "quantitySold": 110,
-        "image": "https://www.lenovo.com/medias/thinkpad-x1-carbon-gen-9-hero.png"
+        "image": "https://www.thatsoftwaredude.com/images/post/thumb_4ed778a6-2fb7-4d32-a1f8-379f06f47828.png"
       },
       {
         "name": "Canon EOS 1500D",
         "quantitySold": 85,
-        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_EOS-1500D.png"
+        "image": "https://cdn.media.amplience.net/i/canon/eos-5ds-frt-02_1c7842cc0361439e866b39fd2d86511b?$prod-gallery-1by1-jpg$"
       },
       {
         "name": "Mi Smart Band 6",
         "quantitySold": 70,
-        "image": "https://i01.appmifile.com/webfile/globalimg/in/cms/3B3A5B3A-6B3A-5B3A-3B3A-5B3A-3B3A.png"
+        "image": "https://i01.appmifile.com/webfile/globalimg/products/m/mi-smart-band-6/section19-2.png"
       },
       {
         "name": "JBL Flip 5 Speaker",
         "quantitySold": 55,
-        "image": "https://in.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3e1e1e1e/FLIP5_HERO.png"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8doOqpH6Xh8KwtrHDPXB9E4rvGOiiQuQjJg&s"
       },
       {
         "name": "Asus ROG Mouse",
         "quantitySold": 50,
-        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg"
       }
     ],
     "purchaseOrder": {
@@ -236,7 +312,49 @@
       "packed": 8,
       "shipped": 10,
       "invoiced": 7
-    }
+    },
+    "products": [
+        {
+          "name": "SHOES",
+          "category": "FASHION",
+          "quantity": 25,
+          "price": 60,
+          "image": "https://rukminim2.flixcart.com/image/704/844/xif0q/shoe/o/f/b/-original-imah46pvsvdakjez.jpeg?q=90&crop=false",
+          "description": "Comfortable running shoes for daily wear."
+        },
+        {
+          "name": "APPLE WATCH",
+          "category": "ACCESSORIES",
+          "quantity": 24,
+          "price": 150,
+          "image": "https://m.media-amazon.com/images/I/61ofBVHTbaL._UF894,1000_QL80_.jpg",
+          "description": "Sleek analog Apple Watch that combines fashion and function."
+        },
+        {
+          "name": "SMARTWATCH",
+          "category": "ELECTRONIC",
+          "quantity": 12,
+          "price": 180,
+          "image": "https://andreadams.com.br/wp-content/uploads/2024/01/WEAR-OS-3-1024x768.png",
+          "description": "Fitness smartwatch with heart rate monitor."
+        },
+        {
+          "name": "MAYBELLINE LIPSTICK",
+          "category": "Makeup",
+          "quantity": 50,
+          "price": 29,
+          "image": "https://www.maybelline.co.in/-/media/project/loreal/brand-sites/mny/apac/in/products/lip-makeup/lip-color/superstay-matte-ink-liquid-lipstick-pink-edition/modules/product-info/savant/savant-01.jpg?rev=68f396cec1114b65989335c1dc74092b&cx=0&cy=0&cw=315&ch=472&hash=91A08E37071F162A848493EAAEDCEA17",
+          "description": "Maybelline Color Sensational Matte Lipstick - Nude Shade."
+        },
+        {
+          "name": "SAMSUNG GALAXY TAB S8",
+          "category": "ELECTRONIC",
+          "quantity": 15,
+          "price": 70,
+          "image": "https://www.techadvisor.com/wp-content/uploads/2023/10/Samsung-Galaxy-Tab-S8_review_1-1.jpg?quality=50&strip=all",
+          "description": "Samsung Galaxy Tab S8 with 11-inch display, Snapdragon 8 Gen 1."
+        }
+      ]
   }
 },
 {
@@ -278,27 +396,27 @@
       {
         "name": "Samsung Galaxy Tab S8",
         "quantitySold": 80,
-        "image": "https://images.samsung.com/is/image/samsung/p6pim/in/sm-x700nzaainu/gallery/in-galaxy-tab-s8-x700-415978-sm-x700nzaainu-530253729?$650_519_PNG$"
+        "image": "https://www.fonezone.ae/cdn/shop/products/Untitled_1_bcae404e-6e24-45c3-9802-494e6ba6883b.jpg?v=1735618225"
       },
       {
         "name": "Apple MacBook Air M2",
         "quantitySold": 65,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-m2-og-202206?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1653493200207"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8CN90Zn1rIwIVrh7cut0lsQPRPXhVJmA8Ng&s"
       },
       {
         "name": "Boat Rockerz 255 Pro",
         "quantitySold": 55,
-        "image": "https://www.boat-lifestyle.com/cdn/shop/products/255pro-black_600x.png"
+        "image": "https://m.media-amazon.com/images/I/61AAKReQ7RL._UF1000,1000_QL80_.jpg"
       },
       {
         "name": "Canon PIXMA Printer",
         "quantitySold": 40,
-        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_PIXMA.png"
+        "image": "https://m.media-amazon.com/images/I/711yJipUQVL._UF1000,1000_QL80_.jpg"
       },
       {
         "name": "HP Pavilion Laptop",
         "quantitySold": 38,
-        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+        "image": "https://pngfile.net/files/preview/1280x1231/21567004030eqj7zvpsguhtydm3naitz1ekhehaevhqrcehqkd8eil1fj5heplp74zldgirwlzfb7e82hfzycu6zu6rycgheonzxfedi0thd1sa.png"
       }
     ],
     "purchaseOrder": {
@@ -316,7 +434,57 @@
       "packed": 6,
       "shipped": 8,
       "invoiced": 5
-    }
+    },
+    "products": [
+        {
+          "name": "KEYBOARD",
+          "category": "ELECTRONIC",
+          "quantity": 19,
+          "price": 70,
+          "image": "https://i.pinimg.com/originals/7d/39/39/7d3939a449d49568723455058462e0c3.jpg?nii=t",
+          "description": "Compact mechanical keyboard with RGB lights."
+        },
+        {
+          "name": "SUNGLASSES",
+          "category": "ACCESSORIES",
+          "quantity": 22,
+          "price": 40,
+          "image": "https://i.pinimg.com/736x/78/b2/20/78b2201afd3138f3308f5f6f3dcea543.jpg",
+          "description": "Stylish UV-protection sunglasses."
+        },
+        {
+          "name": "POLO T-SHIRT",
+          "category": "FASHION",
+          "quantity": 20,
+          "price": 30,
+          "image": "https://33000ft.com/cdn/shop/products/1_09e141fa-81eb-4133-af11-49a126e5a913.jpg",
+          "description": "Stylish Polo T-shirt for all-day comfort."
+        },
+        {
+          "name": "LAKME EYELINER",
+          "category": "Makeup",
+          "quantity": 40,
+          "price": 9,
+          "image": "https://www.lakmeindia.com/cdn/shop/files/24894_S1-8901030979552_1000x.jpg?v=1709807079",
+          "description": "Lakme Insta Eye Liner, long-lasting and waterproof."
+        },
+        {
+          "name": "LOGITECH MX MASTER 3S MOUSE",
+          "category": "ELECTRONIC",
+          "quantity": 15,
+          "price": 40,
+          "image": "https://m.media-amazon.com/images/I/51m4354BqaL._UF1000,1000_QL80_.jpg",
+          "description": "Advanced wireless mouse with ergonomic design."
+        },
+        {
+          "name": "LAKME SUNSCREEN",
+          "category": "Makeup",
+          "quantity": 20,
+          "price": 8,
+          "image": "https://www.lakmeindia.com/cdn/shop/files/19642_H-8901030978753.jpg",
+          "description": "Lakme Matte Sunscreen, long-lasting and waterproof."
+        }
+      ]
   }
 },
 {
@@ -358,27 +526,27 @@
       {
         "name": "Realme GT Neo 3",
         "quantitySold": 130,
-        "image": "https://image01.realme.net/general/20220407/1649318486843.png"
+        "image": "https://m.media-amazon.com/images/I/81a+bD9Ts6L.jpg"
       },
       {
         "name": "Acer Aspire 7",
         "quantitySold": 100,
-        "image": "https://static.acer.com/up/Resource/Acer/Laptops/Aspire_7/images/20210318/Aspire7_A715-75G_Black_modelpreview.png"
+        "image": "https://rukminim2.flixcart.com/image/704/844/xif0q/computer/c/u/v/-original-imahcd9cqb2hnpus.jpeg?q=90&crop=false"
       },
       {
         "name": "Sony WF-1000XM4 Earbuds",
         "quantitySold": 85,
-        "image": "https://m.media-amazon.com/images/I/61aA2zE9nKL._AC_UF1000,1000_QL80_.jpg"
+        "image": "https://m.media-amazon.com/images/I/51GRBtNwt2L._UF1000,1000_QL80_.jpg"
       },
       {
         "name": "Apple Watch SE",
         "quantitySold": 70,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-se-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+        "image": "https://www.apple.com/newsroom/images/product/watch/lifestyle/Apple_watch-se-meridian-watch-face_09152020_carousel.jpg.large.jpg"
       },
       {
         "name": "Canon LBP2900B Printer",
         "quantitySold": 60,
-        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_LBP2900B.png"
+        "image": "https://hitechenterprises.in/wp-content/uploads/2020/05/lbp2900b-1.png"
       }
     ],
     "purchaseOrder": {
@@ -396,7 +564,41 @@
       "packed": 12,
       "shipped": 9,
       "invoiced": 6
-    }
+    },
+    "products": [
+        {
+          "name": "SHOES",
+          "category": "FASHION",
+          "quantity": 25,
+          "price": 60,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPwWyjvxWROH5oxVV0RuI5ruWbpplDLbcbMg&s",
+          "description": "Comfortable running shoes for daily wear."
+        },
+        {
+          "name": "VINTAGE WATCH",
+          "category": "ELECTRONIC",
+          "quantity": 12,
+          "price": 180,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlmRVXQk0H62rDk3AZmOAzk4Coofe4jUAduQ&s",
+          "description": "Aesthetic vintage watches with small dial and cool look."
+        },
+        {
+          "name": "APPLE MACBOOK AIR M2",
+          "category": "ELECTRONIC",
+          "quantity": 10,
+          "price": 150,
+          "image": "https://rukminid2.flixcart.com/image/720/864/xif0q/computer/x/h/o/-original-imagfdfppdgspafh.jpeg?q=60&crop=false",
+          "description": "Apple MacBook Air with M2 chip, 13.6-inch Liquid Retina display."
+        },
+        {
+          "name": "SILVER HOOP EARRINGS",
+          "category": "ACCESSORIES",
+          "quantity": 25,
+          "price": 12,
+          "image": "https://m.media-amazon.com/images/I/31QO51qxOpL._UY1100_.jpg",
+          "description": "Elegant sterling silver hoop earrings for all occasions."
+        }
+      ]
   }
 },
 {
@@ -438,27 +640,27 @@
       {
         "name": "Vivo V27 Pro",
         "quantitySold": 105,
-        "image": "https://www.vivo.com/vivo-v27-pro.png"
+        "image": "https://www.jiomart.com/images/product/original/493665338/vivo-v27-pro-5g-256-gb-12-gb-ram-magic-blue-mobile-phone-digital-o493665338-p598966113-0-202303020514.jpeg?im=Resize=(420,420)"
       },
       {
         "name": "HP Envy x360",
         "quantitySold": 80,
-        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+        "image": "https://m.media-amazon.com/images/I/61mTFApcmeL._UF1000,1000_QL80_.jpg"
       },
       {
         "name": "JBL Tune 760NC",
         "quantitySold": 65,
-        "image": "https://in.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3e1e1e1e/TUNE760NC_HERO.png"
+        "image": "https://ntptechstore.com/wp-content/uploads/2024/08/JBL-Tune-760NC-Active-Noise-Cancelling-1.png.webp"
       },
       {
         "name": "Apple iPad 10th Gen",
         "quantitySold": 50,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-10th-gen-og-202210?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1664472289056"
+        "image": "https://www.apple.com/newsroom/images/product/ipad/standard/Apple-iPad-10th-gen-blue-2up-221018_big.jpg.large.jpg"
       },
       {
         "name": "Canon PIXMA G2020",
         "quantitySold": 45,
-        "image": "https://in.canon/media/image/2021/03/17/6e7e1e6e6e7e4e7e8e7e7e7e7e7e7e7e_PIXMA.png"
+        "image": "https://images-eu.ssl-images-amazon.com/images/I/61XrhehhsRL._AC_UL495_SR435,495_.jpg"
       }
     ],
     "purchaseOrder": {
@@ -476,7 +678,49 @@
       "packed": 12,
       "shipped": 14,
       "invoiced": 9
-    }
+    },
+    "products": [
+        {
+          "name": "BAG",
+          "category": "ACCESSORIES",
+          "quantity": 16,
+          "price": 90,
+          "image": "https://ih1.redbubble.net/image.2228522251.3518/tb,840x840,medium-c,1,198,600,600-bg,f8f8f8.jpg",
+          "description": "Waterproof tote bag for carrying laptop and small necessary items."
+        },
+        {
+          "name": "T-SHIRT",
+          "category": "FASHION",
+          "quantity": 15,
+          "price": 20,
+          "image": "https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C91WXrcTRPCL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_UY1000_.png",
+          "description": "Stylish cotton backprinted T-shirt for all-day comfort and stylish for fashion."
+        },
+        {
+          "name": "POWERBANK",
+          "category": "ELECTRONIC",
+          "quantity": 21,
+          "price": 65,
+          "image": "https://m.media-amazon.com/images/I/51dxDHv4aQL._UF1000,1000_QL80_.jpg",
+          "description": "10,000mAh fast-charging power bank."
+        },
+        {
+          "name": "WOMEN'S FLORAL TOP",
+          "category": "FASHION",
+          "quantity": 18,
+          "price": 12,
+          "image": "https://tiimg.tistatic.com/fp/1/007/230/floral-design-girls-tops-026.jpg",
+          "description": "Lightweight floral printed top for women."
+        },
+        {
+          "name": "SAMSUNG GALAXY S23",
+          "category": "ELECTRONIC",
+          "quantity": 14,
+          "price": 150,
+          "image": "https://m.media-amazon.com/images/I/51ygk8oviDL._UF894,1000_QL80_.jpg",
+          "description": "Samsung Galaxy S23 with Snapdragon 8 Gen 2, 6.1-inch AMOLED display."
+        }
+      ]
   }
 },
 {
@@ -518,27 +762,27 @@
       {
         "name": "Google Pixel 7",
         "quantitySold": 120,
-        "image": "https://store.google.com/product/images/pixel_7.png"
+        "image": "https://static1.xdaimages.com/wordpress/wp-content/uploads/2022/10/Google-Pixel-7-and-Pixel-7-Pro-on-cream-background-ijwbqefjwe.jpg"
       },
       {
         "name": "Dell XPS 13 Laptop",
         "quantitySold": 90,
-        "image": "https://i.dell.com/sites/imagecontent/products/PublishingImages/xps-13-9310-laptop/spi/ng/xps-13-9310-laptop-campaign-hero-504x350-ng.psd"
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiZYGQTFog6PrXpEb8dRa6NXvNWTgmNs-z-g&s"
       },
       {
         "name": "Sony PlayStation 5",
         "quantitySold": 75,
-        "image": "https://m.media-amazon.com/images/I/619BkvKW35L._AC_UF1000,1000_QL80_.jpg"
+        "image": "https://www.mychoice.qa/cdn/shop/files/Untitled_design_-_2024-10-05T172209.181.png?v=1728138166"
       },
       {
         "name": "Apple AirPods Pro",
         "quantitySold": 60,
-        "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/airpods-pro-og-202209?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1661026279490"
+        "image": "https://gizmodo.com/app/uploads/2025/06/apple-airpods-pro-2-deal.jpg"
       },
       {
         "name": "HP LaserJet Printer",
         "quantitySold": 55,
-        "image": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c06574920.png"
+        "image": "https://www.shutterstock.com/image-photo/singapore-may-10-2023-close-260nw-2512956521.jpg"
       }
     ],
     "purchaseOrder": {
@@ -556,7 +800,57 @@
       "packed": 8,
       "shipped": 10,
       "invoiced": 7
-    }
+    },
+    "products": [
+        {
+          "name": "FOSSIL CHRONOGRAPH WATCH",
+          "category": "ACCESSORIES",
+          "quantity": 7,
+          "price": 18,
+          "image": "https://m.media-amazon.com/images/I/71wwO-GcVqL._UY1000_.jpg",
+          "description": "Stainless steel chronograph watch with leather strap."
+        },
+        {
+          "name": "GUCCI SUNGLASSES",
+          "category": "ACCESSORIES",
+          "quantity": 22,
+          "price": 10,
+          "image": "https://woweye.in/cdn/shop/products/B3_858bdae8-a70e-4006-a23d-adc26b5362bd_1400x.png?v=1682085152",
+          "description": "Stylish UV-protection Gucci Sunglasses."
+        },
+        {
+          "name": "WIRELESS KEYBOARD",
+          "category": "ELECTRONIC",
+          "quantity": 19,
+          "price": 20,
+          "image": "https://i.pcmag.com/imagery/roundups/007y4PjTbtgMMDz5SnUq9Em-3.fit_lim.size_1050x.jpg",
+          "description": "Compact mechanical keyboard with RGB lights."
+        },
+        {
+          "name": "BLAZER",
+          "category": "FASHION",
+          "quantity": 11,
+          "price": 14,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNGpLnzR3T9ADd0GS_J_WkCTGCZ6s5sE5fxCO-glNIDIa_pK4EoPT76mvQBSaJCLMqfDc&usqp=CAU",
+          "description": "Formal blazer suitable for office and meetings."
+        },
+        {
+          "name": "BLUETOOTH SPEAKER",
+          "category": "ELECTRONIC",
+          "quantity": 14,
+          "price": 12,
+          "image": "https://m.media-amazon.com/images/I/81M4wYkU3hL._UF1000,1000_QL80_.jpg",
+          "description": "Portable Bluetooth speaker with powerful sound."
+        },
+        {
+          "name": "CASIO DIGITAL WATCH",
+          "category": "ACCESSORIES",
+          "quantity": 14,
+          "price": 24,
+          "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/A/ab/abl/abl-100we-1a/assets/ABL-100WE-1A.png",
+          "description": "Casio water-resistant digital sports watch."
+        }
+      ]
     }
   }
 
