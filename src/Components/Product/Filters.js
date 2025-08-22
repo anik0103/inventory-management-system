@@ -14,7 +14,7 @@ const Filters = ({ filters = {}, setFilters }) => {
   };
 
   return (
-    <div className="flex flex-wrap gap-4 items-center m-3">
+    <div className="flex flex-wrap gap-3 items-center m-3">
       {/* Sort */}
       <select
         className="border w-28 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#bd78b5]"
