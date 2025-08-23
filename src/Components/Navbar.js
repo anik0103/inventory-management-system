@@ -100,3 +100,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+{/* <responsive nav>---------------------------</responsive> */}

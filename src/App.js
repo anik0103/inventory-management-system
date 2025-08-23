@@ -14,6 +14,7 @@ import { ProductProvider } from "./Components/Product/PdtContext";
 import AddSupplier from "./Components/Supplier/AddSupplier/AddSupplier";
 import { RegionProvider } from "./Components/Dashbord/RegionContext";
 
+import Reports from "./Components/Reports/Reports";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -28,7 +29,7 @@ const appRouter = createBrowserRouter([
       { path: "suppliers", element: <div>Suppliers Page</div> },
       { path: "orders", element: <Order/> },
       { path: "customer", element: <div>Customer Page</div> },
-      { path: "reports", element: <div>Reports Page</div> },
+      { path: "reports", element: <Reports /> },
     ],
   },
   {
