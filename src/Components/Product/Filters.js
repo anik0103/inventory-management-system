@@ -131,13 +131,14 @@ const Filters = ({ filters = {}, setFilters }) => {
         )}
       </div>
 
-      {/* Add Product Button */}
-      <button
-        className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition"
-        onClick={handleAddClick}
-      >
-        + Add Product
-      </button>
+        {/* Add Product Button */}
+          <button
+            className="lg:ml-auto bg-[#bd78b5] text-white w-28 px-2 py-2 rounded-lg hover:bg-[#d19fca] transition text-sm"
+            onClick={handleAddClick}
+          >
+            + Add Product
+          </button>
+      
     </div>
   );
 };
