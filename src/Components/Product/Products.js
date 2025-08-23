@@ -76,7 +76,6 @@ const Products = () => {
     <div className="bg-neutral-background min-h-screen p-6">
       <Head />
       <Filters filters={filters} setFilters={setFilters} />
-
       {selectedRegion ? (
       filteredProducts.length > 0 ? (
         <ProductTable products={filteredProducts} />

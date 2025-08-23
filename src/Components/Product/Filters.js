@@ -14,7 +14,7 @@ const Filters = ({ filters = {}, setFilters }) => {
   };
 
   return (
-    <div className="flex flex-wrap gap-4 items-center m-3">
+    <div className="flex flex-wrap gap-3 items-center m-3">
       {/* Sort */}
       <select
         className="border w-28 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#bd78b5]"
@@ -131,13 +131,14 @@ const Filters = ({ filters = {}, setFilters }) => {
         )}
       </div>
 
-      {/* Add Product Button */}
-      <button
-        className="ml-auto bg-[#bd78b5] text-white px-4 py-2 rounded-lg hover:bg-[#d19fca] transition"
-        onClick={handleAddClick}
-      >
-        + Add Product
-      </button>
+        {/* Add Product Button */}
+          <button
+            className="lg:ml-auto bg-[#bd78b5] text-white w-28 px-2 py-2 rounded-lg hover:bg-[#d19fca] transition text-sm"
+            onClick={handleAddClick}
+          >
+            + Add Product
+          </button>
+      
     </div>
   );
 };
