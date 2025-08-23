@@ -8,9 +8,8 @@ import plus from "../asset/add.png";
 import React, { useContext } from "react";
 import mockData from "../asset/fakeApiResponce/mockData.json";
 import { RegionContext } from "../Components/Dashbord/RegionContext";
-import { FaBars } from "react-icons/fa"; // Import the hamburger icon
 
-const Navbar = ({ expanded, setExpanded }) => {
+const Navbar = () => {
   const { selectedRegion, setSelectedRegion } = useContext(RegionContext);
 
   const handleRegionChange = (e) => {
@@ -18,30 +17,15 @@ const Navbar = ({ expanded, setExpanded }) => {
   };
 
   return (
-    <nav className="w-full p-4 flex bg-[#d19fca] items-center">
-      {/* Container for Hamburger, Logo, and Title */}
-      <div className="flex items-center space-x-4">
-        {/* Hamburger Button */}
-        <button
-          onClick={() => setExpanded((prev) => !prev)}
-          className="p-2 hover:bg-[#bd78b5] rounded-full text-white"
-          aria-label={expanded ? "Collapse sidebar" : "Expand sidebar"}
-        >
-          <FaBars size={24} />
-        </button>
-
-        {/* Logo and Title */}
+    <nav className="w-full p-4 flex bg-[#d19fca]">
+      <div className="container-fluid flex space-x-40 items-center">
         <div className="flex items-center space-x-2">
           <img src={Cart} alt="logo" className="w-6" />
-          <h3 className="font-semibold text-lg whitespace-nowrap">Athena Inventory</h3>
+          <h3 className="font-semibold text-lg">Athena Inventory</h3>
         </div>
-      </div>
-
-      {/* Search Bar - pushed to the center */}
-      <div className="flex-1 flex justify-center px-8">
-        <div className="flex items-center space-x-2 w-full max-w-md">
+        <div className="flex items-center space-x-2">
           <input
-            className="form-control w-full rounded-2xl px-3 py-1 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="form-control w-60 rounded-2xl px-2 py-1 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
             type="search"
             placeholder="Search"
             aria-label="Search"
@@ -52,8 +36,7 @@ const Navbar = ({ expanded, setExpanded }) => {
         </div>
       </div>
 
-      {/* Right side icons and dropdown */}
-      <div className="flex space-x-12 items-center">
+      <div className="flex space-x-12 ml-auto items-center relative">
         <div className="flex items-center space-x-2">
           <img src={location} alt="location" className="w-8 cursor-pointer" />
           <select
@@ -69,6 +52,7 @@ const Navbar = ({ expanded, setExpanded }) => {
             ))}
           </select>
         </div>
+
         <img src={plus} alt="plus" className="w-6" />
         <img src={notifiaction} alt="notifiaction" className="w-6" />
         <img src={theme} alt="theme" className="w-8" />
