@@ -12,12 +12,12 @@ const AppLayout = () => {
       <RegionProvider>
       {/* Fixed Navbar */}
       <div className="fixed top-0 left-0 w-full z-50">
-        <Navbar />
+        <Navbar expanded={expanded} setExpanded={setExpanded} />
       </div>
 
       {/* Sidebar and Main content */}
       <div className="flex pt-16">
-        <Sidebar expanded={expanded} setExpanded={setExpanded} />
+        <Sidebar expanded={expanded} />
         <div className={`transition-all duration-300 p-4 flex-1 ${expanded ? "ml-52" : "ml-16"}`}>
           <Outlet />
         </div>

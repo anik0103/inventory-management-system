@@ -8,8 +8,9 @@ import notifiaction from "../asset/notification.png";
 import plus from "../asset/add.png";
 import mockData from "../asset/fakeApiResponce/mockData.json";
 import { RegionContext } from "../Components/Dashbord/RegionContext";
+import { FaBars } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ expanded, setExpanded }) => {
   const { selectedRegion, setSelectedRegion } = useContext(RegionContext);
   const [showSearch, setShowSearch] = useState(false);
 
@@ -19,13 +20,25 @@ const Navbar = () => {
 
   return (
     <nav className="w-full p-4 flex items-center justify-between bg-[#d19fca]">
-      {/* Left - Logo */}
+      {/* Container for Hamburger and Logo */}
       <div className="flex items-center space-x-2">
-        <img src={Cart} alt="logo" className="w-6" />
-        <h3 className="font-semibold text-lg">Athena Inventory</h3>
+        {/* Hamburger Button */}
+        <button
+          onClick={() => setExpanded((prev) => !prev)}
+          className="p-2 hover:bg-[#bd78b5] rounded-full text-white"
+          aria-label={expanded ? "Collapse sidebar" : "Expand sidebar"}
+        >
+          <FaBars size={24} />
+        </button>
+
+        {/* Logo and Title */}
+        <div className="flex items-center space-x-2">
+          <img src={Cart} alt="logo" className="w-6" />
+          <h3 className="font-semibold text-lg">Athena Inventory</h3>
+        </div>
       </div>
 
-      {/* Middle - Search (hidden on mobile unless toggled) */}
+      {/* Middle - Search */}
       <div className="hidden md:flex items-center space-x-2">
         <input
           className="w-60 rounded-2xl px-2 py-1 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -100,4 +113,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-{/* <responsive nav>---------------------------</responsive> */}
