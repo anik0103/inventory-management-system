@@ -118,6 +118,58 @@
           "image": "https://m.media-amazon.com/images/I/61ofBVHTbaL._UF894,1000_QL80_.jpg",
           "description": "Sleek analog Apple Watch that combines fashion and function."
         }
+      ],
+      "suppliers" : [
+        {
+          "vendorsName": "Balaji Vendors",
+          "pocName":"Sunil Tripathy",
+          "contact":"629873254",
+          "email":"abs@gmail.com",
+          "location":"kolkata",
+          "country":"India",
+          "productType":"Electronics",
+          "products": ["TV", "Speaker", "Cables", "Refrigerator", "Washing Machine", "Microwave", "Air Conditioner", "Laptop", "Mobile Phone", "Tablet"]
+        },
+        {
+          "vendorsName": "Joy Maa Traders",
+          "pocName":"Anik Adhikary",
+          "contact":"8420625731",
+          "email":"anik@gmail.com",
+          "location":"kolkata",
+          "country":"India",
+          "productType":"Clothes",
+          "products": ["Shirt", "Jeans", "T-Shirt", "Jacket", "Sweater", "Socks", "Belt", "Scarf", "Hat", "Gloves"]
+        },
+        {
+          "vendorsName": "Cosmo",
+          "pocName":"Briti Singh",
+          "contact":"6254379516",
+          "email":"briti@gmail.com",
+          "location":"kolkata",
+          "country":"India",
+          "productType":"Cosmetics",
+          "products": ["Lipstick", "Foundation", "Mascara", "Eyeshadow", "Blush", "Nail Polish", "Perfume", "Moisturizer", "Sunscreen", "Hair Spray"]
+        },
+        {
+          "vendorsName": "Azura Traders",
+          "pocName":"Taslim Khan",
+          "contact":"8546213872",
+          "email":"taslimkh94325@gmail.com",
+          "location":"kolkata",
+          "country":"India",
+          "productType":"Furniture",
+          "products": ["Sofa", "Table", "Chair", "Bed", "Cabinet", "Desk", "Bookshelf", "Dresser", "Nightstand", "Recliner"]
+        },
+        {
+          "vendorsName": "Elite Trader",
+          "pocName":"Rina Mukherjee",
+          "contact":"7894561230",
+          "email":"rina@gmail.com",
+          "location":"Kolkata",
+          "country":"India",
+          "productType":"Electronics",
+          "products": ["Smartphone", "Laptop", "Tablet", "Smartwatch", "Headphones", "Camera", "Printer", "Monitor", "Router", "External Hard Drive"]
+        }
       ]
   }
 },
@@ -231,6 +283,58 @@
           "quantity": 8,
           "image": "https://m.media-amazon.com/images/I/71LOolGaCDL._UF1000,1000_QL80_.jpg",
           "description": "HP Pavilion 15, Intel i7 12th Gen, 16GB RAM, 512GB SSD."
+        }
+      ],
+      "suppliers": [
+        {
+          "vendorsName": "Das Traders",
+          "pocName":"Priyabrata Das",
+          "contact":"9217655321",
+          "email":"priyabrata@gmail.com",
+          "location":"Bangalore",
+          "country":"India",
+          "productType":"Footwear",
+          "products": ["Sneakers", "Boots", "Sandals", "Loafers", "Flip Flops", "Heels", "Ballet Flats", "Running Shoes", "Hiking Boots", "Dress Shoes"]
+        },
+        {
+          "vendorsName": "Fashion Hub",
+          "pocName":"Ankita Sharma",
+          "contact":"9876543210",
+          "email":"sharma@gmail.com",
+          "location":"Bangalore",
+          "country":"India",
+          "productType":"Clothes",
+          "products": ["Dresses", "Tops", "Jeans", "Skirts", "Jumpsuits", "Shorts", "Cardigans", "Coats", "Blazers", "Suits"]
+        },
+        {
+          "vendorsName": "Gadget World",
+          "pocName":"Rohit Verma",
+          "contact":"8765432109",
+          "email":"rohit@gmail.com",
+          "location":"Bangalore",
+          "country":"India",
+          "productType":"Electronics",
+          "products": ["Smartphones", "Laptops", "Tablets", "Smartwatches", "Headphones", "Cameras", "Drones", "Printers", "Monitors", "Routers"]
+        },
+        {
+          "vendorsName": "Home Essentials",
+          "pocName":"Sneha Patel",
+          "contact":"7654321098",
+          "email":"spatel@gmail.com",
+          "location":"Bangalore",
+          "country":"India",
+          "productType":"Furniture",
+          "products": ["Sofa", "Table", "Chair", "Bed", "Cabinet", "Desk", "Bookshelf", "Dresser", "Nightstand", "Recliner"]
+        },
+        {
+          "vendorsName": "Beauty Bliss",
+          "pocName":"Meera Iyer",
+          "contact":"6543210987",
+          "email":"meeraiyer@gmail.com",
+          "location":"Bangalore",
+          "country":"India",
+          "productType":"Cosmetics",
+          "products": ["Foundation", "Mascara", "Eyeshadow", "Blush", "Nail Polish", "Moisturizer", "Sunscreen", "Hair Spray"]
         }
       ]
   }
@@ -353,6 +457,48 @@
           "price": 70,
           "image": "https://www.techadvisor.com/wp-content/uploads/2023/10/Samsung-Galaxy-Tab-S8_review_1-1.jpg?quality=50&strip=all",
           "description": "Samsung Galaxy Tab S8 with 11-inch display, Snapdragon 8 Gen 1."
+        }
+      ],
+      "suppliers": [
+        {
+          "vendorsName": "Delhi Electronics",
+          "pocName":"Rajesh Kumar",
+          "contact":"9123456780",
+          "email":"rajesh@gmail.com",
+          "location":"Delhi",
+          "country":"India",
+          "productType":"Electronics",
+          "products": ["Smartphones", "Laptops", "Tablets", "Cameras", "Drones", "Printers", "Monitors", "Routers"]
+        },
+        {
+          "vendorsName": "Global Supplies",
+          "pocName":"Abhay Das Gupta",
+          "contact":"9632587410",
+          "email":"abhay@gmail.com",
+          "location":"Delhi",
+          "country":"India",
+          "productType":"Groceries",
+          "products": ["Rice", "Wheat", "Pulses", "Vegetables", "Fruits", "Dairy Products", "Meat", "Fish", "Spices", "Snacks"]
+        },
+        {
+          "vendorsName": "Urban Fashion",
+          "pocName":"Sneha Kapoor",
+          "contact":"9988776655",
+          "email":"snehak@gmail.com",
+          "location":"Delhi",
+          "country":"India",
+          "productType":"Clothes",
+          "products": ["Dresses", "Skirts", "Jumpsuits", "Shorts", "Cardigans", "Coats", "Blazers", "Suits"] 
+        },
+        {
+          "vendorsName": "Home Comforts",
+          "pocName":"Vikram Singh",
+          "contact":"8877665544",
+          "email":"vikram@gmail.com",
+          "location":"Delhi",
+          "country":"India",
+          "productType":"Furniture",
+          "products": ["Sofa","Chair", "Bed", "Cabinet","Dresser", "Nightstand", "Recliner"]
         }
       ]
   }
@@ -484,6 +630,68 @@
           "image": "https://www.lakmeindia.com/cdn/shop/files/19642_H-8901030978753.jpg",
           "description": "Lakme Matte Sunscreen, long-lasting and waterproof."
         }
+      ],
+      "suppliers": [
+        {
+          "vendorsName": "Chennai Textiles",
+          "pocName":"Arun Venkatesh",
+          "contact":"9234567890",
+          "email":"arun@gmail.com",
+          "location":"Chennai",
+          "country":"India",
+          "productType":"Clothes",
+          "products": ["Shirts", "Trousers", "Shorts", "Cardigans", "Coats", "Blazers", "Suits"]
+        },
+        {
+          "vendorsName": "Tech Solutions",
+          "pocName":"Lakshmi Narayanan",
+          "contact":"9345678901",
+          "email":"narayanan@gmail.com",
+          "location":"Chennai",
+          "country":"India",
+          "productType":"Electronics",
+          "products": ["Laptops", "Tablets", "Cameras", "Printers", "Monitors", "Routers"]
+        },
+        {
+          "vendorsName": "Home Decor",
+          "pocName":"Priya Ramesh",
+          "contact":"9456789012",
+          "email":"priyaramesh@gmail.com",
+          "location":"Chennai",
+          "country":"India",
+          "productType":"Furniture",
+          "products": ["Sofa", "Bed", "Cabinet", "Dresser", "Nightstand"]
+        },
+        {
+          "vendorsName": "Beauty Touch",
+          "pocName":"Anjali Menon",
+          "contact":"9567890123",
+          "email":"anjali@gmail.com",
+          "location":"Chennai",
+          "country":"India",
+          "productType":"Cosmetics",
+          "products": ["Mascara", "Eyeshadow", "Moisturizer", "Sunscreen", "Hair Spray"]
+        },
+        {
+          "vendorsName": "Fitness Gear",
+          "pocName":"Vijay Kumar",
+          "contact":"9678901234",
+          "email":"vijay@gmail.com",
+          "location":"Chennai",
+          "country":"India",
+          "productType":"Sportswear",
+          "products": ["Running Shoes", "Hiking Boots", "Dress Shoes"]
+        },
+        {
+          "vendorsName": "Gadget Hub",
+          "pocName":"Suresh Reddy",
+          "contact":"9789012345",
+          "email":"sureh@gmail.com",
+          "location":"Chennai",
+          "country":"India",
+          "productType":"Electronics",
+          "products": ["Smartphones", "Smartwatches", "Headphones", "Drones"]
+        }
       ]
   }
 },
@@ -598,6 +806,58 @@
           "image": "https://m.media-amazon.com/images/I/31QO51qxOpL._UY1100_.jpg",
           "description": "Elegant sterling silver hoop earrings for all occasions."
         }
+      ],
+      "suppliers": [
+        {
+          "vendorsName": "Mumbai Gadgets",
+          "pocName":"Karan Mehta",
+          "contact":"9345678902",
+          "email":"karanm@gmail.com",
+          "location":"Mumbai",
+          "country":"India",
+          "productType":"Electronics",
+          "products": ["Smartphones", "Laptops", "Tablets", "Cameras", "Drones", "Printers", "Monitors", "Routers"]
+        },
+        {
+          "vendorsName": "City Fashion",
+          "pocName":"Rhea Kapoor",
+          "contact":"9456789013",
+          "email":"rheak@gmail.com",
+          "location":"Mumbai",
+          "country":"India",
+          "productType":"Clothes",
+          "products": ["Dresses", "Tops", "Jeans", "Skirts", "Jumpsuits", "Shorts", "Cardigans", "Coats", "Blazers", "Suits"]
+        },
+        {
+          "vendorsName": "Home Living",
+          "pocName":"Amitabh Singh",
+          "contact":"9567890124",
+          "email":"singh@gmail.com",
+          "location":"Mumbai",
+          "country":"India",
+          "productType":"Furniture",
+          "products": ["Sofa", "Bed", "Cabinet", "Desk", "Bookshelf", "Dresser", "Nightstand"]
+        },
+        {
+          "vendorsName": "Beauty Essentials",
+          "pocName":"Pooja Sharma",
+          "contact":"9678901235",
+          "email":"pooja@gmail.com",
+          "location":"Mumbai",
+          "country":"India",
+          "productType":"Makeup",
+          "products": ["Foundation", "Mascara", "Eyeshadow", "Blush", "Sunscreen", "Hair Spray"]
+        },
+        {
+          "vendorsName": "Sports Arena",
+          "pocName":"Rahul Dravid",
+          "contact":"9789012346",
+          "email":"dravid@gmail.com",
+          "location":"Mumbai",
+          "country":"India",
+          "productType":"Sportswear",
+          "products": ["Running Shoes", "Hiking Boots", "Dress Shoes", "Fitness Gear", "Yoga Mats"]
+        } 
       ]
   }
 },
@@ -719,6 +979,48 @@
           "price": 150,
           "image": "https://m.media-amazon.com/images/I/51ygk8oviDL._UF894,1000_QL80_.jpg",
           "description": "Samsung Galaxy S23 with Snapdragon 8 Gen 2, 6.1-inch AMOLED display."
+        }
+      ],
+      "suppliers": [
+        {
+          "vendorsName": "Ahmedabad Traders",
+          "pocName":"Manish Shah",
+          "contact":"9456789014",
+          "email":"manish@gmail.com",
+          "location":"Ahmedabad",
+          "country":"India",
+          "productType":"Electronics",
+          "products": ["Smartphones", "Laptops", "Tablets", "Cameras", "Monitors", "Routers"]
+        },
+        {
+          "vendorsName": "Fashion Hub",
+          "pocName":"Nisha Patel",
+          "contact":"9567890125",
+          "email":"patel@gmail.com",
+          "location":"Ahmedabad",
+          "country":"India",
+          "productType":"Clothes",
+          "products": ["Jumpsuits", "Shorts", "Cardigans", "Coats", "Blazers", "Suits"]
+        },
+        {
+          "vendorsName": "Comfort Living",
+          "pocName":"Rakesh Mehta",
+          "contact":"9678901236",
+          "email":"mehta@gmail.com",
+          "location":"Ahmedabad",
+          "country":"India",
+          "productType":"Furniture",
+          "products": ["Sofa", "Chair", "Bed", "Cabinet", "Table"]
+        },
+        {
+          "vendorsName": "Glamour Beauty",
+          "pocName":"Sneha Joshi",
+          "contact":"9789012347",
+          "email":"joshi@gmail.com",
+          "location":"Ahmedabad",
+          "country":"India",
+          "productType":"Cosmetics",
+          "products": ["Mascara", "Eyeshadow", "Blush", "Sunscreen", "Hair Spray", "Foundation"]
         }
       ]
   }
@@ -849,6 +1151,58 @@
           "price": 24,
           "image": "https://www.casio.com/content/dam/casio/product-info/locales/in/en/timepiece/product/watch/A/ab/abl/abl-100we-1a/assets/ABL-100WE-1A.png",
           "description": "Casio water-resistant digital sports watch."
+        }
+      ],
+      "suppliers": [
+        {
+          "vendorsName": "Noida Electronics",
+          "pocName":"Amit Kumar",
+          "contact":"9123456781",
+          "email":"amit@gmail.com",
+          "location":"Noida",
+          "country":"India",
+          "productType":"Electronics",
+          "products": ["Smartphones", "Laptops", "Tablets", "Cameras", "Drones", "Printers", "Monitors", "Routers"]
+        },
+        {
+          "vendorsName": "Fashion Point",
+          "pocName":"Ritu Singh",
+          "contact":"9632587411",
+          "email":"ritusingh@gmail.com",
+          "location":"Noida",
+          "country":"India",
+          "productType":"Clothes",
+          "products": ["Dresses", "Skirts", "Jumpsuits", "Shorts", "Cardigans", "Coats", "Blazers", "Suits"]
+        },
+        {
+          "vendorsName": "Home Essentials",
+          "pocName":"Vikram Patel",
+          "contact":"9988776656",
+          "email":"patel@gmail.com",
+          "location":"Noida",
+          "country":"India",
+          "productType":"Furniture",
+          "products": ["Sofa", "Chair", "Bed", "Cabinet", "Dresser", "Nightstand"]
+        },
+        {
+          "vendorsName": "Beauty World",
+          "pocName":"Anita Desai",
+          "contact":"8877665545",
+          "email":"desai@gmail.com",
+          "location":"Noida",
+          "country":"India",
+          "productType":"Cosmetics",
+          "products": ["Foundation", "Mascara", "Eyeshadow", "Blush", "Sunscreen", "Hair Spray", "Moisturizer", "Lipstick"]
+        },
+        {
+          "vendorsName": "Sports Hub",
+          "pocName":"Rahul Sharma",
+          "contact":"8877665546",
+          "email":"rahul@gmail.com",
+          "location":"Noida",
+          "country":"India",
+          "productType":"Sportswear",
+          "products": ["Running Shoes", "Hiking Boots", "Dress Shoes", "Fitness Gear", "Yoga Mats", "Cycling Helmets"]
         }
       ]
     }
