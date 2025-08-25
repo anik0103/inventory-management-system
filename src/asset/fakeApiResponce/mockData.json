@@ -165,10 +165,62 @@
           "pocName":"Rina Mukherjee",
           "contact":"7894561230",
           "email":"rina@gmail.com",
-          "location":"Kolkata",
+          "location":"kolkata",
           "country":"India",
           "productType":"Electronics",
           "products": ["Smartphone", "Laptop", "Tablet", "Smartwatch", "Headphones", "Camera", "Printer", "Monitor", "Router", "External Hard Drive"]
+        }
+      ],
+      "orders" : [
+        {
+          "OrderNo": "ORD-1001",
+          "InvoiceNo": "INV-5001",
+          "CustomerName": "John Doe",
+          "OrderDate": "2025-08-10",
+          "Location": "kolkata",
+          "Status": "Confirmed",
+          "Invoiced": true,
+          "items": ["Laptop", "Mouse", "Keyboard"]
+        },
+        {
+          "OrderNo": "ORD-1002",
+          "InvoiceNo": "INV-5002",
+          "CustomerName": "Jane Smith",
+          "OrderDate": "2025-08-11",
+          "Location": "kolkata",
+          "Status": "Draft",
+          "Invoiced": false,
+          "items": ["Monitor", "USB Cable"]
+        },
+        {
+          "OrderNo": "ORD-1003",
+          "InvoiceNo": "INV-5003",
+          "CustomerName": "Alice Johnson",
+          "OrderDate": "2025-08-12",
+          "Location": "kolkata",
+          "Status": "Packed",
+          "Invoiced": true,
+          "items": ["Smartphone", "Headphones"]
+        },
+        {
+          "OrderNo": "ORD-1004",
+          "InvoiceNo": "INV-5004",
+          "CustomerName": "Bob Brown",
+          "OrderDate": "2025-08-13",
+          "Location": "kolkata",
+          "Status": "Shipped",
+          "Invoiced": true,
+          "items": ["Tablet", "Charger"]
+        },
+        {
+          "OrderNo": "ORD-1005",
+          "InvoiceNo": "INV-5005",
+          "CustomerName": "Charlie Davis",
+          "OrderDate": "2025-08-14",
+          "Location": "kolkata",
+          "Status": "Invoiced",
+          "Invoiced": true,
+          "items": ["Camera", "Tripod"]
         }
       ]
   }
@@ -336,6 +388,58 @@
           "productType":"Cosmetics",
           "products": ["Foundation", "Mascara", "Eyeshadow", "Blush", "Nail Polish", "Moisturizer", "Sunscreen", "Hair Spray"]
         }
+      ],
+      "orders" : [
+        {
+          "OrderNo": "ORD-2001",
+          "InvoiceNo": "INV-6001",
+          "CustomerName": "David Wilson",
+          "OrderDate": "2025-07-15",
+          "Location": "Bangalore",
+          "Status": "Shipped",
+          "Invoiced": true,
+          "items": ["Smartphone", "Charger"]
+        },
+        {
+          "OrderNo": "ORD-2002",
+          "InvoiceNo": "INV-6002",
+          "CustomerName": "Emma Thomas",
+          "OrderDate": "2025-07-16",
+          "Location": "Bangalore",
+          "Status": "Invoiced",
+          "Invoiced": true,
+          "items": ["Laptop", "Mouse"]
+        },
+        {
+          "OrderNo": "ORD-2003",
+          "InvoiceNo": "INV-6003",
+          "CustomerName": "Frank Harris",
+          "OrderDate": "2025-07-17",
+          "Location": "Bangalore",
+          "Status": "Confirmed",
+          "Invoiced": false,
+          "items": ["Tablet", "Headphones"]
+        },
+        {
+          "OrderNo": "ORD-2004",
+          "InvoiceNo": "INV-6004",
+          "CustomerName": "Grace Lee",
+          "OrderDate": "2025-07-18",
+          "Location": "Bangalore",
+          "Status": "Draft",
+          "Invoiced": false,
+          "items": ["Camera", "Tripod"]
+        },
+        {
+          "OrderNo": "ORD-2005",
+          "InvoiceNo": "INV-6005",
+          "CustomerName": "Henry Martin",
+          "OrderDate": "2025-07-19",
+          "Location": "Bangalore",
+          "Status": "Packed",
+          "Invoiced": true,
+          "items": ["Monitor", "USB Cable"]
+        }
       ]
   }
 },
@@ -499,6 +603,68 @@
           "country":"India",
           "productType":"Furniture",
           "products": ["Sofa","Chair", "Bed", "Cabinet","Dresser", "Nightstand", "Recliner"]
+        }
+      ],
+      "orders" : [
+        {
+          "OrderNo": "ORD-1004",
+          "InvoiceNo": "INV-5004",
+          "CustomerName": "Emily Davis",
+          "OrderDate": "2025-08-08",
+          "Location": "Delhi",
+          "Status": "Pending",
+          "Invoiced": false,
+          "items": ["Printer", "Ink Cartridge"]
+        },
+        {
+          "OrderNo": "ORD-1005",
+          "InvoiceNo": "INV-5005",
+          "CustomerName": "William Brown",
+          "OrderDate": "2025-08-09",
+          "Location": "Delhi",
+          "Status": "Delivered",
+          "Invoiced": true,
+          "items": ["Tablet", "Charger", "Case"]
+        },
+        {
+          "OrderNo": "ORD-1006",
+          "InvoiceNo": "INV-5006",
+          "CustomerName": "Olivia Wilson",
+          "OrderDate": "2025-08-10",
+          "Location": "Delhi",
+          "Status": "Shipped",
+          "Invoiced": true,
+          "items": ["Smartwatch", "Screen Protector"]
+        },
+        {
+          "OrderNo": "ORD-1007",
+          "InvoiceNo": "INV-5007",
+          "CustomerName": "James Taylor",
+          "OrderDate": "2025-08-11",
+          "Location": "Delhi",
+          "Status": "Confirmed",
+          "Invoiced": false,
+          "items": ["Camera", "Memory Card"]
+        },
+        {
+          "OrderNo": "ORD-1008",
+          "InvoiceNo": "INV-5008",
+          "CustomerName": "Sophia Martinez",
+          "OrderDate": "2025-08-12",
+          "Location": "Delhi",
+          "Status": "Draft",
+          "Invoiced": false,
+          "items": ["Headphones", "Bluetooth Speaker"]
+        },
+        {
+          "OrderNo": "ORD-1009",
+          "InvoiceNo": "INV-5009",
+          "CustomerName": "Michael Anderson",
+          "OrderDate": "2025-08-13",
+          "Location": "Delhi",
+          "Status": "Packed",
+          "Invoiced": true,
+          "items": ["Laptop", "Mouse", "Keyboard"]
         }
       ]
   }
@@ -692,6 +858,58 @@
           "productType":"Electronics",
           "products": ["Smartphones", "Smartwatches", "Headphones", "Drones"]
         }
+      ],
+      "orders" : [
+        {
+          "OrderNo": "ORD-3001",
+          "InvoiceNo": "INV-7001",
+          "CustomerName": "Isabella Garcia",
+          "OrderDate": "2025-06-20",
+          "Location": "Chennai",
+          "Status": "Delivered",
+          "Invoiced": true,
+          "items": ["Smartphone", "Headphones"]
+        },
+        {
+          "OrderNo": "ORD-3002",
+          "InvoiceNo": "INV-7002",
+          "CustomerName": "Liam Martinez",
+          "OrderDate": "2025-06-21",
+          "Location": "Chennai",
+          "Status": "Pending",
+          "Invoiced": false,
+          "items": ["Laptop", "Mouse"]
+        },
+        {
+          "OrderNo": "ORD-3003",
+          "InvoiceNo": "INV-7003",
+          "CustomerName": "Mia Rodriguez",
+          "OrderDate": "2025-06-22",
+          "Location": "Chennai",
+          "Status": "Shipped",
+          "Invoiced": true,
+          "items": ["Tablet", "Charger"]
+        },
+        {
+          "OrderNo": "ORD-3004",
+          "InvoiceNo": "INV-7004",
+          "CustomerName": "Noah Hernandez",
+          "OrderDate": "2025-06-23",
+          "Location": "Chennai",
+          "Status": "Confirmed",
+          "Invoiced": false,
+          "items": ["Camera", "Memory Card"]
+        },
+        {
+          "OrderNo": "ORD-3005",
+          "InvoiceNo": "INV-7005",
+          "CustomerName": "Ava Lopez",
+          "OrderDate": "2025-06-24",
+          "Location": "Chennai",
+          "Status": "Draft",
+          "Invoiced": false,
+          "items": ["Printer", "Ink Cartridge"]
+        }
       ]
   }
 },
@@ -858,6 +1076,68 @@
           "productType":"Sportswear",
           "products": ["Running Shoes", "Hiking Boots", "Dress Shoes", "Fitness Gear", "Yoga Mats"]
         } 
+      ],
+      "orders" : [
+        {
+          "OrderNo": "ORD-4001",
+          "InvoiceNo": "INV-8001",
+          "CustomerName": "Charlotte White",
+          "OrderDate": "2025-05-10",
+          "Location": "Mumbai",
+          "Status": "Confirmed",
+          "Invoiced": false,
+          "items": ["Smartphone", "Charger"]
+        },
+        {
+          "OrderNo": "ORD-4002",
+          "InvoiceNo": "INV-8002",
+          "CustomerName": "Elijah Harris",
+          "OrderDate": "2025-05-11",
+          "Location": "Mumbai",
+          "Status": "Shipped",
+          "Invoiced": true,
+          "items": ["Laptop", "Mouse"]
+        },
+        {
+          "OrderNo": "ORD-4003",
+          "InvoiceNo": "INV-8003",
+          "CustomerName": "Amelia Clark",
+          "OrderDate": "2025-05-12",
+          "Location": "Mumbai",
+          "Status": "Delivered",
+          "Invoiced": true,
+          "items": ["Tablet", "Headphones"]
+        },
+        {
+          "OrderNo": "ORD-4004",
+          "InvoiceNo": "INV-8004",
+          "CustomerName": "James Lewis",
+          "OrderDate": "2025-05-13",
+          "Location": "Mumbai",
+          "Status": "Pending",
+          "Invoiced": false,
+          "items": ["Camera", "Tripod"]
+        },
+        {
+          "OrderNo": "ORD-4005",
+          "InvoiceNo": "INV-8005",
+          "CustomerName": "Evelyn Walker",
+          "OrderDate": "2025-05-14",
+          "Location": "Mumbai",
+          "Status": "Draft",
+          "Invoiced": false,
+          "items": ["Monitor", "USB Cable"]
+        },
+        {
+          "OrderNo": "ORD-4006",
+          "InvoiceNo": "INV-8006",
+          "CustomerName": "Benjamin Hall",
+          "OrderDate": "2025-05-15",
+          "Location": "Mumbai",
+          "Status": "Packed",
+          "Invoiced": true,
+          "items": ["Printer", "Ink Cartridge"]
+        }
       ]
   }
 },
@@ -1021,6 +1301,68 @@
           "country":"India",
           "productType":"Cosmetics",
           "products": ["Mascara", "Eyeshadow", "Blush", "Sunscreen", "Hair Spray", "Foundation"]
+        }
+      ],
+      "orders" : [
+        {
+          "OrderNo": "ORD-2001",
+          "InvoiceNo": "INV-6001",
+          "CustomerName": "Daniel King",
+          "OrderDate": "2025-07-15",
+          "Location": "Ahmedabad",
+          "Status": "Shipped",
+          "Invoiced": true,
+          "items": ["Laptop", "Mouse"]
+        },
+        {
+          "OrderNo": "ORD-2002",
+          "InvoiceNo": "INV-6002",
+          "CustomerName": "Grace Scott",
+          "OrderDate": "2025-07-16",
+          "Location": "Ahmedabad",
+          "Status": "Delivered",
+          "Invoiced": true,
+          "items": ["Smartphone", "Charger"]
+        },
+        {
+          "OrderNo": "ORD-2003",
+          "InvoiceNo": "INV-6003",
+          "CustomerName": "Matthew Green",
+          "OrderDate": "2025-07-17",
+          "Location": "Ahmedabad",
+          "Status": "Pending",
+          "Invoiced": false,
+          "items": ["Tablet", "Headphones"]
+        },
+        {
+          "OrderNo": "ORD-2004",
+          "InvoiceNo": "INV-6004",
+          "CustomerName": "Hannah Adams",
+          "OrderDate": "2025-07-18",
+          "Location": "Ahmedabad",
+          "Status": "Confirmed",
+          "Invoiced": false,
+          "items": ["Camera", "Memory Card"]
+        },
+        {
+          "OrderNo": "ORD-2005",
+          "InvoiceNo": "INV-6005",
+          "CustomerName": "Joseph Baker",
+          "OrderDate": "2025-07-19",
+          "Location": "Ahmedabad",
+          "Status": "Draft",
+          "Invoiced": false,
+          "items": ["Printer", "Ink Cartridge"]
+        },
+        {
+          "OrderNo": "ORD-2006",
+          "InvoiceNo": "INV-6006",
+          "CustomerName": "Ella Nelson",
+          "OrderDate": "2025-07-20",
+          "Location": "Ahmedabad",
+          "Status": "Packed",
+          "Invoiced": true,
+          "items": ["Monitor", 	"USB Cable"]
         }
       ]
   }
@@ -1204,7 +1546,59 @@
           "productType":"Sportswear",
           "products": ["Running Shoes", "Hiking Boots", "Dress Shoes", "Fitness Gear", "Yoga Mats", "Cycling Helmets"]
         }
-      ]
+      ],
+      "orders" : [
+        {
+          "OrderNo": "ORD-1001",
+          "InvoiceNo": "INV-5001",
+          "CustomerName": "Olivia Johnson",
+          "OrderDate": "2025-08-05",
+          "Location": "Noida",
+          "Status": "Delivered",
+          "Invoiced": true,
+          "items": ["Smartphone", "Headphones"]
+        },
+        {
+          "OrderNo": "ORD-1002",
+          "InvoiceNo": "INV-5002",
+          "CustomerName": "Ethan Williams",
+          "OrderDate": "2025-08-06",
+          "Location": "Noida",
+          "Status": "Pending",
+          "Invoiced": false,
+          "items": ["Laptop", "Mouse"]
+        },
+        {
+          "OrderNo": "ORD-1003",
+          "InvoiceNo": "INV-5003",
+          "CustomerName": "Sophia Brown",
+          "OrderDate": "2025-08-07",
+          "Location": "Noida",
+          "Status": "Shipped",
+          "Invoiced": true,
+          "items": ["Tablet", "Charger"]
+        },
+        {
+          "OrderNo": "ORD-1004",
+          "InvoiceNo": "INV-5004",
+          "CustomerName": "Alexander Jones",
+          "OrderDate": "2025-08-08",
+          "Location": "Noida",
+          "Status": "Confirmed",
+          "Invoiced": false,
+          "items": ["Camera", 	"Memory Card"]
+        },
+        {
+          "OrderNo": "ORD-1005",
+          "InvoiceNo": "INV-5005",
+          "CustomerName": "Isabella Garcia",
+          "OrderDate": "2025-08-09",
+          "Location": "Noida",
+          "Status": "Draft",
+          "Invoiced": false,
+          "items": ["Printer", 	"Ink Cartridge"]
+        }
+      ]    
     }
   }
 
