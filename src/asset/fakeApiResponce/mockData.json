@@ -222,7 +222,73 @@
           "Invoiced": true,
           "items": ["Camera", "Tripod"]
         }
-      ]
+      ],
+      "customer" : [
+        {
+          "CustomerName": "Rina Mukherjee",
+          "email": "rina@gmail.com",
+          "number": "7894561230",
+          "location": "kolkata",
+          "country": "India"
+        },
+        {
+        "name": "Arindam Sen",
+        "email": "arindam.sen@example.com",
+        "number": "9830012345",
+        "location": "kolkata",
+        "country": "India"
+      },
+      {
+        "name": "Sohini Chatterjee",
+        "email": "sohini.c@example.com",
+        "number": "9748123456",
+        "location": "kolkata",
+        "country": "India"
+      },
+      { 
+        "name": "Debashish Ghosh", 
+        "email": "deb.ghosh@example.com", 
+        "number": "9800012345", 
+        "location": "kolkata", 
+        "country": "India" 
+      },
+      { 
+        "name": "Moumita Roy", 
+        "email": "moumita.roy@example.com", 
+        "number": "9831112345", 
+        "location": "kolkata", 
+        "country": "India" 
+      }
+    ],
+    "reports" : [
+      {
+        "analyticsSnapshot": {
+          "labels": ["Total Availability", "New Added", "Sold Out"],
+          "items": [4520, 160, 310],
+          "percentageChange": [4.2, 3.1, -2.3]
+        },
+        "analyticsTrend": {
+          "labels": [
+            "September 2024", "October 2024", "November 2024", "December 2024",
+            "January 2025", "February 2025", "March 2025", "April 2025",
+            "May 2025", "June 2025", "July 2025", "August 2025"
+          ],
+          "datasets": [
+            {
+              "label": "Total Availability",
+              "data": [3500, 3700, 3600, 3900, 4100, 3950, 4250, 4150, 4400, 4300, 4480, 4520]
+            },
+            {
+              "label": "New Added",
+              "data": [70, 95, 85, 120, 110, 100, 140, 130, 160, 150, 165, 160]
+            },
+            {                "label": "Sold Out",
+              "data": [180, 200, 190, 220, 250, 230, 270, 260, 290, 280, 305, 310]
+            }
+          ]
+        }
+      }      
+    ]
   }
 },
 {
@@ -439,6 +505,73 @@
           "Status": "Packed",
           "Invoiced": true,
           "items": ["Monitor", "USB Cable"]
+        }
+      ],
+      "customer":[
+        { 
+          "name": "Rohit Sharma", 
+          "email": "rohit.sharma@example.com", 
+          "number": "9986001122", 
+          "location": "Bangalore", 
+          "country": "India" 
+        },
+        { 
+          "name": "Ananya Rao", 
+          "email": "ananya.rao@example.com", 
+          "number": "9845012345", 
+          "location": "Bangalore", 
+          "country": "India" 
+        },
+        { 
+          "name": "Manoj Reddy", 
+          "email": "manoj.reddy@example.com", 
+          "number": "9916012345", 
+          "location": "Bangalore", 
+          "country": "India" 
+        },
+        { 
+          "name": "Shruti Nair", 
+          "email": "shruti.nair@example.com", 
+          "number": "9731012345", 
+          "location": "Bangalore", 
+          "country": "India" 
+        },
+        { 
+          "name": "Kiran Kumar", 
+          "email": "kiran.k@example.com", 
+          "number": "9740012345", 
+          "location": "Bangalore", 
+          "country": "India" 
+        }
+      ],
+      "reports" : [
+        {
+          "analyticsSnapshot": {
+            "labels": ["Total Availability", "New Added", "Sold Out"],
+            "items": [3280, 100, 230],
+            "percentageChange": [3.2, 2.1, -2.9]
+          },
+          "analyticsTrend": {
+            "labels": [
+              "September 2024", "October 2024", "November 2024", "December 2024",
+              "January 2025", "February 2025", "March 2025", "April 2025",
+              "May 2025", "June 2025", "July 2025", "August 2025"
+            ],
+            "datasets": [
+              {
+                "label": "Total Availability",
+                "data": [3380, 3700, 4000, 4100, 3950, 4250, 4400, 4300, 4480, 4520, 4890, 5000]
+              },
+              {
+                "label": "New Added",
+                "data": [50, 65, 85, 110, 150, 100, 140, 130, 180, 155, 165, 260]
+              },
+              {
+                "label": "Sold Out",
+                "data": [150, 250, 290, 220, 250, 330, 270, 260, 390, 280, 305, 410]
+              }
+            ]
+          }
         }
       ]
   }
@@ -665,6 +798,66 @@
           "Status": "Packed",
           "Invoiced": true,
           "items": ["Laptop", "Mouse", "Keyboard"]
+        }
+      ],
+      "customer" : [
+        { 
+          "name": "Simran Kaur", 
+          "email": "simran.kaur@example.com", 
+          "number": "9873012345", 
+          "location": "Delhi", 
+          "country": "India" 
+        },
+        { 
+          "name": "Arjun Khanna", 
+          "email": "arjun.khanna@example.com", 
+          "number": "9875012345", 
+          "location": "Delhi", 
+          "country": "India" 
+        },
+        { 
+          "name": "Nisha Bansal", 
+          "email": "nisha.bansal@example.com", 
+          "number": "9876012345", 
+          "location": "Delhi", 
+          "country": "India" 
+        },
+        { 
+          "name": "Aditya Kapoor", 
+          "email": "aditya.kapoor@example.com", 
+          "number": "9877012345", 
+          "location": "Delhi", 
+          "country": "India" 
+        }
+      ],
+      "reports" : [
+        {
+          "analyticsSnapshot": {
+            "labels": ["Total Availability", "New Added", "Sold Out"],
+            "items": [3820, 300, 330],
+            "percentageChange": [4.2, 2.9, -3.9]
+          },
+          "analyticsTrend": {
+            "labels": [
+              "September 2024", "October 2024", "November 2024", "December 2024",
+              "January 2025", "February 2025", "March 2025", "April 2025",
+              "May 2025", "June 2025", "July 2025", "August 2025"
+            ],
+            "datasets": [
+              {
+                "label": "Total Availability",
+                "data": [3920, 3700, 4000, 4400, 4680, 4950, 5400, 5300, 6480, 5520, 5890, 6000]
+              },
+              {
+                "label": "New Added",
+                "data": [60, 85, 105, 130, 150, 180, 240, 130, 380, 255, 365, 260]
+              },
+              {
+                "label": "Sold Out",
+                "data": [250, 150, 290, 320, 350, 130, 270, 160, 390, 280, 205, 310]
+              }
+            ]
+          }
         }
       ]
   }
@@ -910,6 +1103,66 @@
           "Invoiced": false,
           "items": ["Printer", "Ink Cartridge"]
         }
+      ],
+      "customer" :[
+        { 
+          "name": "Karthik Subramanian", 
+          "email": "karthik.subramanian@example.com", 
+          "number": "9840012345", 
+          "location": "Chennai", 
+          "country": "India" 
+        },
+        { 
+          "name": "Meera Krishnan", 
+          "email": "meera.krishnan@example.com", 
+          "number": "9876543210", 
+          "location": "Chennai", 
+          "country": "India" 
+        },
+        { 
+          "name": "Suresh Iyer", 
+          "email": "suresh.iyer@example.com", 
+          "number": "9841012345", 
+          "location": "Chennai", 
+          "country": "India" 
+        },
+        { 
+          "name": "Lakshmi Narayan", 
+          "email": "lakshmi.n@example.com", 
+          "number": "9842012345", 
+          "location": "Chennai", 
+          "country": "India" 
+        }
+      ],
+      "reports" : [
+        {
+          "analyticsSnapshot": {
+            "labels": ["Total Availability", "New Added", "Sold Out"],
+            "items": [4420, 350, 430],
+            "percentageChange": [5.1, 2.2, -3.7]
+          },
+          "analyticsTrend": {
+            "labels": [
+              "September 2024", "October 2024", "November 2024", "December 2024",
+              "January 2025", "February 2025", "March 2025", "April 2025",
+              "May 2025", "June 2025", "July 2025", "August 2025"
+            ],
+            "datasets": [
+              {
+                "label": "Total Availability",
+                "data": [4430, 3700, 4300, 4100, 3950, 5050, 5400, 4300, 4580, 5520, 5190, 4800]
+              },
+              {
+                "label": "New Added",
+                "data": [20, 45, 85, 100, 250, 140, 190, 230, 180, 255, 165, 300]
+              },
+              {
+                "label": "Sold Out",
+                "data": [190, 250, 210, 200, 130, 230, 170, 260, 380, 280, 305, 405]
+              }
+            ]
+          }
+        }
       ]
   }
 },
@@ -1138,6 +1391,66 @@
           "Invoiced": true,
           "items": ["Printer", "Ink Cartridge"]
         }
+      ],
+      "customer" :[
+        { 
+          "name": "Priya Deshmukh", 
+          "email": "priya.deshmukh@example.com", 
+          "number": "9892012345", 
+          "location": "Mumbai", 
+          "country": "India" 
+        },
+        { 
+          "name": "Amit Kulkarni", 
+          "email": "amit.kulkarni@example.com", 
+          "number": "9769012345", 
+          "location": "Mumbai", 
+          "country": "India" 
+        },
+        { 
+          "name": "Ritika Mehta", 
+          "email": "ritika.mehta@example.com", 
+          "number": "9820012345", 
+          "location": "Mumbai", 
+          "country": "India" 
+        },
+        { 
+          "name": "Vivek Joshi", 
+          "email": "vivek.joshi@example.com", 
+          "number": "9819012345", 
+          "location": "Mumbai", 
+          "country": "India" 
+        }
+      ],
+      "reports" : [
+        {
+          "analyticsSnapshot": {
+            "labels": ["Total Availability", "New Added", "Sold Out"],
+            "items": [2220, 130, 170],
+            "percentageChange": [2.4, 2.0, -1.9]
+          },
+          "analyticsTrend": {
+            "labels": [
+              "September 2024", "October 2024", "November 2024", "December 2024",
+              "January 2025", "February 2025", "March 2025", "April 2025",
+              "May 2025", "June 2025", "July 2025", "August 2025"
+            ],
+            "datasets": [
+              {
+                "label": "Total Availability",
+                "data": [3000, 2500, 2650, 3180, 3320, 4000, 2950, 3300, 2480, 2920, 3890, 4080]
+              },
+              {
+                "label": "New Added",
+                "data": [41, 55, 75, 110, 135, 150, 140, 130, 184, 155, 125, 246]
+              },
+              {
+                "label": "Sold Out",
+                "data": [175, 220, 290, 220, 150, 330, 275, 260, 313, 284, 350, 210]
+              }
+            ]
+          }
+        }
       ]
   }
 },
@@ -1363,6 +1676,66 @@
           "Status": "Packed",
           "Invoiced": true,
           "items": ["Monitor", 	"USB Cable"]
+        }
+      ],
+      "customer" :[
+        { 
+          "name": "Nirav Patel", 
+          "email": "nirav.patel@example.com", 
+          "number": "9824012345", 
+          "location": "Ahmedabad", 
+          "country": "India" 
+        },
+        { 
+          "name": "Pooja Shah", 
+          "email": "pooja.shah@example.com", 
+          "number": "9825012345", 
+          "location": "Ahmedabad", 
+          "country": "India" 
+        },
+        { 
+          "name": "Rajesh Mehta", 
+          "email": "rajesh.mehta@example.com", 
+          "number": "9826012345", 
+          "location": "Ahmedabad", 
+          "country": "India" 
+        },
+        { 
+          "name": "Komal Trivedi", 
+          "email": "komal.trivedi@example.com", 
+          "number": "9827012345", 
+          "location": "Ahmedabad", 
+          "country": "India" 
+        }
+      ],
+      "reports" : [
+        {
+          "analyticsSnapshot": {
+            "labels": ["Total Availability", "New Added", "Sold Out"],
+            "items": [3120, 280, 180],
+            "percentageChange": [4.4, 3.1, -2.8]
+          },
+          "analyticsTrend": {
+            "labels": [
+              "September 2024", "October 2024", "November 2024", "December 2024",
+              "January 2025", "February 2025", "March 2025", "April 2025",
+              "May 2025", "June 2025", "July 2025", "August 2025"
+            ],
+            "datasets": [
+              {
+                "label": "Total Availability",
+                "data": [3200, 3420, 4000, 3350, 3608, 4250, 4800, 4390, 4680, 3520, 4890, 3980]
+              },
+              {
+                "label": "New Added",
+                "data": [54, 23, 56, 84, 72, 55, 39, 63, 90, 28, 103, 150]
+              },
+              {
+                "label": "Sold Out",
+                "data": [110, 149, 238, 140, 122, 203, 165, 172, 210, 130, 225, 158]
+              }
+            ]
+          }
         }
       ]
   }
@@ -1598,7 +1971,74 @@
           "Invoiced": false,
           "items": ["Printer", 	"Ink Cartridge"]
         }
-      ]    
+      ],
+      "customer" :[
+        { 
+          "name": "Vikas Yadav", 
+          "email": "vikas.yadav@example.com", 
+          "number": "9818012345", 
+          "location": "Noida", 
+          "country": "India" 
+        },
+        { 
+          "name": "Neha Gupta", 
+          "email": "neha.gupta@example.com", 
+          "number": "9810012345", 
+          "location": "Noida", 
+          "country": "India" 
+        },
+        { 
+          "name": "Rohan Malhotra", 
+          "email": "rohan.malhotra@example.com", 
+          "number": "9812012345", 
+          "location": "Noida", 
+          "country": "India" 
+        },
+        {
+          "name": "Anjali Verma", 
+          "email": "anjali@gmail.com", 
+          "number": "9819012345",
+          "location": "Noida",
+          "country": "India"
+        },
+        { 
+          "name": "Swati Arora", 
+          "email": "swati.arora@example.com", 
+          "number": "9813012345", 
+          "location": "Noida", 
+          "country": "India" 
+        }
+      ],
+      "reports" : [
+        {
+          "analyticsSnapshot": {
+            "labels": ["Total Availability", "New Added", "Sold Out"],
+            "items": [4020, 250, 280],
+            "percentageChange": [4.8, 2.9, -3.3]
+          },
+          "analyticsTrend": {
+            "labels": [
+              "September 2024", "October 2024", "November 2024", "December 2024",
+              "January 2025", "February 2025", "March 2025", "April 2025",
+              "May 2025", "June 2025", "July 2025", "August 2025"
+            ],
+            "datasets": [
+              {
+                "label": "Total Availability",
+                "data": [4100, 4350, 4608, 4200, 4800, 4790, 3680, 3020, 4890, 3980, 5102, 5540]
+              },
+              {
+                "label": "New Added",
+                "data": [34, 23, 36, 64, 79, 52, 89, 65, 100, 128, 135, 150]
+              },
+              {
+                "label": "Sold Out",
+                "data": [68, 190, 138, 180, 155, 203, 235, 172, 210, 130, 250, 120]
+              }
+            ]
+          }
+        }
+      ]
     }
   }
 
