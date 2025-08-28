@@ -91,7 +91,7 @@ const LineChart = () => {
   };
 
   return (
-    <div className="bg-white p-4 rounded-2xl shadow-md border border-[#bd78b5] h-72 lg:ml-6">
+    <div className="bg-white p-4 rounded-2xl shadow-md border border-[#bd78b5] h-72">
       <Line data={data} options={options} />
     </div>
   );
