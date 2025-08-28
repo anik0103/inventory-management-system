@@ -2,8 +2,7 @@
   "analyticsSnapshot": {
     "labels": ["Total Availability", "New Added", "Sold Out"],
     "items": [4520, 160, 310],
-    "percentageChange": [4.2, 3.1, -2.3],
-    "month": "August 2025"
+    "percentageChange": [4.2, 3.1, -2.3]
   },
   "analyticsTrend": {
     "labels": [

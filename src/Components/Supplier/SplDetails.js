@@ -1,53 +1,42 @@
 export const SplDetails = [
-    {
-        vendorsName: "Balaji Vendors",
-        pocName:"Sunil Tripathy",
-        contact:"629873254",
-        email:"abs@gmail.com",
-        location:"Hydrabad",
-        country:"India",
-        productType:"Electronics",
-        products: ["TV", "Speaker", "Cables", "Refrigerator", "Washing Machine", "Microwave", "Air Conditioner", "Laptop", "Mobile Phone", "Tablet"]
-    },
-    {
-        vendorsName: "Joy Maa Traders",
-        pocName:"Anik Adhikary",
-        contact:"8420625731",
-        email:"abs@gmail.com",
-        location:"Dhaka",
-        country:"Bangladesh",
-        productType:"Clothes",
-        products: ["Shirt", "Jeans", "T-Shirt", "Jacket", "Sweater", "Socks", "Belt", "Scarf", "Hat", "Gloves",]
-    },
-    {
-        vendorsName: "Das Traders",
-        pocName:"Priyabrata Das",
-        contact:"9217655321",
-        email:"abs@gmail.com",
-        location:"Tokyo",
-        country:"Japan",
-        productType:"Footwear",
-        products: ["Sneakers", "Boots", "Sandals", "Loafers", "Flip Flops", "Heels", "Ballet Flats", "Running Shoes", "Hiking Boots", "Dress Shoes"]
-    },
-    {
-        vendorsName: "Azura Traders",
-        pocName:"Taslim Khan",
-        contact:"8546213872",
-        email:"taslimkh94325@gmail.com",
-        location:"Mumbai",
-        country:"India",
-        productType:"Furniture",
-        products: ["Sofa", "Table", "Chair", "Bed", "Cabinet", "Desk", "Bookshelf", "Dresser", "Nightstand", "Recliner"]
-    },
-    {
-        vendorsName: "Cosmo",
-        pocName:"Briti Singh",
-        contact:"6254379516",
-        email:"abs@gmail.com",
-        location:"Bangalore",
-        country:"India",
-        productType:"Cosmetics",
-        products: ["Lipstick", "Foundation", "Mascara", "Eyeshadow", "Blush", "Nail Polish", "Perfume", "Moisturizer", "Sunscreen", "Hair Spray"]
-    },
-
+        {
+          "vendorsName": "Azura Traders",
+          "pocName":"Taslim Khan",
+          "contact":"8546213872",
+          "email":"taslimkh94325@gmail.com",
+          "location":"kolkata",
+          "country":"India",
+          "productType":"Furniture",
+          "products": ["Sofa", "Table", "Chair", "Bed", "Cabinet", "Desk", "Bookshelf", "Dresser", "Nightstand", "Recliner"]
+        },
+        {
+          "vendorsName": "Elite Trader",
+          "pocName":"Rina Mukherjee",
+          "contact":"7894561230",
+          "email":"rina@gmail.com",
+          "location":"Kolkata",
+          "country":"India",
+          "productType":"Electronics",
+          "products": ["Smartphone", "Laptop", "Tablet", "Smartwatch", "Headphones", "Camera", "Printer", "Monitor", "Router", "External Hard Drive"]
+        },
+        {
+          "vendorsName": "Fashion Point",
+          "pocName":"Ritu Singh",
+          "contact":"9632587411",
+          "email":"ritusingh@gmail.com",
+          "location":"Noida",
+          "country":"India",
+          "productType":"Clothes",
+          "products": ["Dresses", "Skirts", "Jumpsuits", "Shorts", "Cardigans", "Coats", "Blazers", "Suits"]
+        },
+        {
+          "vendorsName": "Comfort Living",
+          "pocName":"Rakesh Mehta",
+          "contact":"9678901236",
+          "email":"mehta@gmail.com",
+          "location":"Ahmedabad",
+          "country":"India",
+          "productType":"Furniture",
+          "products": ["Sofa", "Chair", "Bed", "Cabinet", "Table"]
+        }
 ];
