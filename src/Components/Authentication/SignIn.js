@@ -1,34 +1,30 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import pic from "../../asset/pictures1.png";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import mockData from "../../asset/fakeApiResponce/mockdata2.json";
+import users from "../../asset/fakeApiResponce/mockdata2.json"; 
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    const match = mockData.find(
-      (entry) => entry.email === email && entry.password === password
+    // find matching user
+    const matchedUser = users.find(
+      (u) => u.email === email && u.password === password
     );
 
-    if (!match) {
-      alert("Invalid credentials");
-      return;
-    }
+    if (matchedUser) {
+      // save only the "user" object in localStorage
+      localStorage.setItem("loggedInUser", JSON.stringify(matchedUser.user));
 
-    const { token, user } = match;
-    localStorage.setItem("token", token);
-    localStorage.setItem("role", user.role);
-
-    if (user.role === "admin") {
-      navigate("/");
-    } else if (user.role === "user") {
-      navigate("/products");
+      // redirect to dashboard
+      navigate("/app"); 
+    } else {
+      setError("Invalid email or password");
     }
   };
 
@@ -52,18 +48,14 @@ const SignIn = () => {
           <h2 className="text-xl md:text-2xl font-bold text-center text-[#bd78b5] mb-4">
             Sign In
           </h2>
-          <form className="space-y-4" method="POST">
+          <form className="space-y-4" onSubmit={handleLogin}>
             <div>
-              <label
-                htmlFor="email"
-                className="block mb-1 text-sm font-medium text-gray-700"
-              >
+              <label className="block mb-1 text-sm font-medium text-gray-700">
                 Email
               </label>
               <input
                 type="email"
-                id="email"
-                name="email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email"
                 required
@@ -71,27 +63,25 @@ const SignIn = () => {
               />
             </div>
             <div>
-              <label
-                htmlFor="password"
-                className="block mb-1 text-sm font-medium text-gray-700"
-              >
+              <label className="block mb-1 text-sm font-medium text-gray-700">
                 Password
               </label>
               <input
                 type="password"
-                id="password"
-                name="password"
-                required
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
+                required
                 className="w-full px-3 py-2 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#bd78b5] shadow-xl"
               />
             </div>
+
+            {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+
             <div className="flex justify-center">
               <button
                 type="submit"
                 className="w-28 py-2 font-semibold text-[#bd78b5] bg-white shadow rounded-3xl hover:bg-slate-100"
-                onClick={handleLogin}
               >
                 Sign In
               </button>

@@ -9,36 +9,36 @@ import AppLayout from "./Components/Layout/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProductDetails from "./Components/Product/ProductDetails";
 import Order from "./Components/Orders/Order";
-import { ProductProvider } from "./Components/Product/PdtContext";  
-
+import { ProductProvider } from "./Components/Product/PdtContext";
 import AddSupplier from "./Components/Supplier/AddSupplier/AddSupplier";
 import { RegionProvider } from "./Components/Dashbord/RegionContext";
-
 import Reports from "./Components/Reports/Reports";
+import UserDetails from "./Components/UserDetails";
+
 const appRouter = createBrowserRouter([
   {
-    path: "/",
-    element: <AppLayout />,
-    children: [
-      { index: true, element: <Dashboard /> },
-      { path: "products", element: <Products /> },
-      { path: "suppliers", element: <Suppliers />},
-      { path: "AddSupplier", element: <AddSupplier /> }, 
-      {path: "add-product", element: <AddProducts />},
-      {path: "product/:productName", element: <ProductDetails />},
-      { path: "suppliers", element: <div>Suppliers Page</div> },
-      { path: "orders", element: <Order/> },
-      { path: "customer", element: <div>Customer Page</div> },
-      { path: "reports", element: <Reports /> },
-    ],
-  },
-  {
-    path: "/signin",
+    path: "/", // 👈 now SignIn is the default
     element: <SignIn />,
   },
   {
     path: "/signup",
     element: <SignUp />,
+  },
+  {
+    path: "/app", // 👈 move AppLayout here
+    element: <AppLayout />,
+    children: [
+      { index: true, element: <Dashboard /> },
+      { path: "products", element: <Products /> },
+      { path: "suppliers", element: <Suppliers /> },
+      { path: "AddSupplier", element: <AddSupplier /> },
+      { path: "add-product", element: <AddProducts /> },
+      { path: "product/:productName", element: <ProductDetails /> },
+      { path: "orders", element: <Order /> },
+      { path: "customer", element: <div>Customer Page</div> },
+      { path: "reports", element: <Reports /> },
+      { path: "userdetails", element: <UserDetails /> },
+    ],
   },
 ]);
 
@@ -49,7 +49,7 @@ function App() {
         <RouterProvider router={appRouter} />
       </RegionProvider>
     </ProductProvider>
-  )
+  );
 }
 
 export default App;

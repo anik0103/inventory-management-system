@@ -34,7 +34,7 @@ const handleSubmit = (e) => {
       image: preview,
     };
     addProduct(newProduct); 
-    navigate("/products"); 
+    navigate("/app/products"); 
 };
 
 return ( 

@@ -10,7 +10,7 @@ const Filters = ({ filters = {}, setFilters }) => {
   };
 
   const handleAddClick = () => {
-    navigate("/add-product");
+    navigate("/app/add-product");
   };
 
   return (

@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
 import SearchIcon from "../asset/search.png";
 import Cart from "../asset/shopping-cart.png";
-import theme from "../asset/themes.png";
+// import theme from "../asset/themes.png";
 import man from "../asset/man.png";
 import location from "../asset/location.png";
 import notifiaction from "../asset/notification.png";
@@ -9,14 +9,30 @@ import plus from "../asset/add.png";
 import mockData from "../asset/fakeApiResponce/mockData.json";
 import { RegionContext } from "../Components/Dashbord/RegionContext";
 import { FaBars } from "react-icons/fa";
+import Profile from "./Profile";
 
 const Navbar = ({ expanded, setExpanded }) => {
   const { selectedRegion, setSelectedRegion } = useContext(RegionContext);
   const [showSearch, setShowSearch] = useState(false);
+  const [showHover, setShowHover] = useState(false);
+  const menuRef = useRef(null);
 
   const handleRegionChange = (e) => {
     setSelectedRegion(e.target.value);
   };
+
+  // Close profile menu on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setShowHover(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="w-full p-4 flex items-center justify-between bg-[#d19fca]">
@@ -76,7 +92,7 @@ const Navbar = ({ expanded, setExpanded }) => {
       </div>
 
       {/* Right - Actions */}
-      <div className="flex items-center space-x-4 md:space-x-6">
+      <div className="flex items-center space-x-4 md:space-x-6 relative">
         {/* Location dropdown */}
         <div className="flex items-center space-x-2">
           <img
@@ -105,8 +121,22 @@ const Navbar = ({ expanded, setExpanded }) => {
           alt="notifiaction"
           className="w-5 md:w-6 cursor-pointer"
         />
-        <img src={theme} alt="theme" className="w-6 md:w-8 cursor-pointer" />
-        <img src={man} alt="man" className="w-6 md:w-8 cursor-pointer" />
+        {/* <img src={theme} alt="theme" className="w-6 md:w-8 cursor-pointer" /> */}
+
+        {/* Man icon with Profile dropdown */}
+        <div className="relative" ref={menuRef}>
+          <img
+            src={man}
+            alt="man"
+            className="w-6 md:w-8 cursor-pointer"
+            onClick={() => setShowHover((prev) => !prev)}
+          />
+          {showHover && (
+            <div className="absolute right-0 mt-2">
+              <Profile />
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );
