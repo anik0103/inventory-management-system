@@ -42,18 +42,14 @@ const Products = () => {
 
   // 🔹 Apply filters & sorting
   const filteredProducts = [...allProducts]
-    // ✅ 1. Reorder so category matches come first
-    .sort((a, b) => {
-      if (filters.category) {
-        const aMatch = a.category?.toLowerCase().includes(filters.category.toLowerCase());
-        const bMatch = b.category?.toLowerCase().includes(filters.category.toLowerCase());
-        if (aMatch && !bMatch) return -1;
-        if (!aMatch && bMatch) return 1;
-      }
-      return 0;
-    })
-    // ✅ 2. Apply other filters
+    // ✅ 1. Apply filters
     .filter((p) => {
+      if (filters.category && filters.category !== "All") {
+        if (!p.category?.toLowerCase().includes(filters.category.toLowerCase())) {
+          return false;
+        }
+      }
+
       if (filters.productName && !p.name.toLowerCase().includes(filters.productName.toLowerCase()))
         return false;
 
@@ -63,7 +59,7 @@ const Products = () => {
 
       return true;
     })
-    // ✅ 3. Apply sorting
+    // ✅ 2. Apply sorting
     .sort((a, b) => {
       if (filters.sortOrder === "priceLowHigh") return a.price - b.price;
       if (filters.sortOrder === "priceHighLow") return b.price - a.price;
