@@ -1,47 +1,57 @@
-import React from "react";
+import React, { useContext } from "react";
 import Cards from "./Cards";
 import LineChart from "./LineChart";
-import Pichart from "./Pichart";
-import mockDataReports from "../../asset/fakeApiResponce/mockDataReports.json";
+import PieChart from "./Pichart";
+import mockData from "../../asset/fakeApiResponce/mockData.json";
+import { RegionContext } from "../Dashbord/RegionContext";
 
 const Reports = () => {
-  const snapshot = mockDataReports.analyticsSnapshot;
+  const { selectedRegion } = useContext(RegionContext);
+
+  // get data for selected region
+  const regionData = mockData.find((r) => r.region === selectedRegion);
+
+  if (!regionData || !regionData.regionWiseData.reports) {
+    return (
+      <div className="p-6 text-center text-gray-500">
+        ⚠️ No report data available for {selectedRegion}
+      </div>
+    );
+  }
+
+  const report = regionData.regionWiseData.reports?.[0] || {};
+  const snapshot = report.analyticsSnapshot || { items: [], percentageChange: [] };
+  const trend = report.analyticsTrend || null;
+
 
   return (
-
-<div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-8">
-      {/* Row 1, Column 1 */}
+    <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {/* Top Cards */}
       <Cards
         title="Total Availability"
-        value={snapshot.items[0]}
-        percentageChange={snapshot.percentageChange[0]}
+        value={snapshot?.items?.[0] ?? 0}
+        percentageChange={snapshot?.percentageChange?.[0] ?? 0}
         description="Current supply stock levels are constantly updated..."
       />
-
-      {/* Row 1, Column 2 */}
       <Cards
         title="New Added"
-        value={snapshot.items[1]}
-        percentageChange={snapshot.percentageChange[1]}
+        value={snapshot?.items?.[1] ?? 0}
+        percentageChange={snapshot?.percentageChange?.[1] ?? 0}
         description="The latest supply stock levels that were recently added..."
       />
-
-      {/* Row 1, Column 3 */}
       <Cards
         title="Sold Out"
-        value={snapshot.items[2]}
-        percentageChange={snapshot.percentageChange[2]}
+        value={snapshot?.items?.[2] ?? 0}
+        percentageChange={snapshot?.percentageChange?.[2] ?? 0}
         description="The latest supply stock levels that recently sold..."
       />
 
-      {/* Row 2, Spanning Columns 1 & 2 */}
+      {/* Charts */}
       <div className="lg:col-span-2">
-        <LineChart />
+        <LineChart trend={trend} />
       </div>
-
-      {/* Row 2, Column 3 */}
       <div>
-        <Pichart />
+        <PieChart snapshot={snapshot} />
       </div>
     </div>
   );
