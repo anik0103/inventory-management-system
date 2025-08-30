@@ -1,98 +1,63 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
+  LineChart as LChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
   Tooltip,
   Legend,
-} from "chart.js";
-import mockDataReports from "../../asset/fakeApiResponce/mockDataReports.json";
+  ResponsiveContainer,
+} from "recharts";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+const LineChart = ({ trend }) => {
+  const safeTrend = trend || {};
+  const months = safeTrend.labels || [];
+  const datasets = safeTrend.datasets || [];
 
-const LineChart = () => {
-  const trend = mockDataReports.analyticsTrend;
+  // Build data dynamically
+  const data = months.map((month, i) => {
+    let row = { month };
+    datasets.forEach((ds) => {
+      row[ds.label] = ds.data?.[i] ?? 0;
+    });
+    return row;
+  });
 
-  const data = {
-    labels: trend.labels,
-    datasets: [
-      {
-        label: trend.datasets[0].label,
-        data: trend.datasets[0].data,
-        borderColor: "#bd78b5",
-        backgroundColor: "rgba(189, 120, 181, 0.3)",
-        tension: 0.3,
-        fill: false,
-        yAxisID: "y",
-      },
-      {
-        label: trend.datasets[1].label,
-        data: trend.datasets[1].data,
-        borderColor: "green",
-        backgroundColor: "rgba(0, 128, 0, 0.3)",
-        tension: 0.3,
-        fill: false,
-        yAxisID: "y1",
-      },
-      {
-        label: trend.datasets[2].label,
-        data: trend.datasets[2].data,
-        borderColor: "red",
-        backgroundColor: "rgba(255, 0, 0, 0.3)",
-        tension: 0.3,
-        fill: false,
-        yAxisID: "y1",
-      },
-    ],
-  };
+  if (data.length === 0) {
+    return (
+      <div className="bg-white shadow-lg rounded-2xl p-4 text-center text-gray-500">
+        ⚠️ No trend data available
+      </div>
+    );
+  }
 
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { position: "top" },
-      title: {
-        display: true,
-        text: "Inventory Trends (Sept 2024 - Aug 2025)",
-        color: "#bd78b5",
-        font: { size: 14, weight: "bold" },
-      },
-    },
-    scales: {
-      x: {
-        ticks: { color: "#666" },
-        grid: { color: "#eee" },
-      },
-      y: {
-        type: "linear",
-        position: "left",
-        ticks: { color: "#bd78b5" },
-        grid: { color: "#eee" },
-      },
-      y1: {
-        type: "linear",
-        position: "right",
-        ticks: { color: "#666" },
-        grid: { drawOnChartArea: false },
-      },
-    },
-  };
+  // Define some colors for each dataset (you can customize)
+  const colors = ["#9b59b6", "#27ae60", "#e74c3c", "#2980b9", "#f39c12"];
 
   return (
-    <div className="bg-white p-4 rounded-2xl shadow-md border border-[#bd78b5] h-72">
-      <Line data={data} options={options} />
+    <div className="bg-white shadow-lg rounded-2xl p-4">
+      <h3 className="text-center font-semibold text-purple-700 mb-2">
+        Inventory Trends (Sept 2024 - Aug 2025)
+      </h3>
+      <ResponsiveContainer width="100%" height={300}>
+        <LChart data={data}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="month" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          {datasets.map((ds, idx) => (
+            <Line
+              key={ds.label}
+              type="monotone"
+              dataKey={ds.label}
+              stroke={colors[idx % colors.length]}
+              strokeWidth={2}
+            />
+          ))}
+        </LChart>
+      </ResponsiveContainer>
     </div>
   );
 };
