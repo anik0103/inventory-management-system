@@ -225,6 +225,7 @@
       ],
       "customer" : [
         {
+          "CustomerID": "CUST-1001",
           "CustomerName": "Rina Mukherjee",
           "email": "rina@gmail.com",
           "number": "7894561230",
@@ -232,30 +233,34 @@
           "country": "India"
         },
         {
-        "name": "Arindam Sen",
-        "email": "arindam.sen@example.com",
-        "number": "9830012345",
-        "location": "kolkata",
-        "country": "India"
+          "CustomerID": "CUST-1002",
+          "CustomerName": "Arindam Sen",
+          "email": "arindam.sen@example.com",
+          "number": "9830012345",
+          "location": "kolkata",
+          "country": "India"
       },
       {
-        "name": "Sohini Chatterjee",
+        "CustomerID": "CUST-1003",
+        "CustomerName": "Sohini Chatterjee",
         "email": "sohini.c@example.com",
         "number": "9748123456",
         "location": "kolkata",
         "country": "India"
       },
-      { 
-        "name": "Debashish Ghosh", 
-        "email": "deb.ghosh@example.com", 
-        "number": "9800012345", 
-        "location": "kolkata", 
-        "country": "India" 
+      {
+        "CustomerID": "CUST-1004",
+        "CustomerName": "Debashish Ghosh",
+        "email": "deb.ghosh@example.com",
+        "number": "9800012345",
+        "location": "kolkata",
+        "country": "India"
       },
-      { 
-        "name": "Moumita Roy", 
-        "email": "moumita.roy@example.com", 
-        "number": "9831112345", 
+      {
+        "CustomerID": "CUST-1005",
+        "CustomerName": "Moumita Roy",
+        "email": "moumita.roy@example.com",
+        "number": "9831112345",
         "location": "kolkata", 
         "country": "India" 
       }
@@ -1106,28 +1111,32 @@
       ],
       "customer" :[
         { 
-          "name": "Karthik Subramanian", 
+          "CustomerID": "CUST-1001",
+          "CustomerName": "Karthik Subramanian", 
           "email": "karthik.subramanian@example.com", 
           "number": "9840012345", 
           "location": "Chennai", 
           "country": "India" 
         },
-        { 
-          "name": "Meera Krishnan", 
+        {
+          "CustomerID": "CUST-1002",
+          "CustomerName": "Meera Krishnan", 
           "email": "meera.krishnan@example.com", 
           "number": "9876543210", 
           "location": "Chennai", 
           "country": "India" 
         },
-        { 
-          "name": "Suresh Iyer", 
+        {
+          "CustomerID": "CUST-1003",
+          "CustomerName": "Suresh Iyer", 
           "email": "suresh.iyer@example.com", 
           "number": "9841012345", 
           "location": "Chennai", 
           "country": "India" 
         },
-        { 
-          "name": "Lakshmi Narayan", 
+        {
+          "CustomerID": "CUST-1004",
+          "CustomerName": "Lakshmi Narayan", 
           "email": "lakshmi.n@example.com", 
           "number": "9842012345", 
           "location": "Chennai", 
@@ -1394,28 +1403,32 @@
       ],
       "customer" :[
         { 
-          "name": "Priya Deshmukh", 
+          "CustomerID": "CUST-1001",
+          "CustomerName": "Priya Deshmukh", 
           "email": "priya.deshmukh@example.com", 
           "number": "9892012345", 
           "location": "Mumbai", 
           "country": "India" 
         },
         { 
-          "name": "Amit Kulkarni", 
+          "CustomerID": "CUST-1002",
+          "CustomerName": "Amit Kulkarni", 
           "email": "amit.kulkarni@example.com", 
           "number": "9769012345", 
           "location": "Mumbai", 
           "country": "India" 
         },
-        { 
-          "name": "Ritika Mehta", 
+        {
+          "CustomerID": "CUST-1003",
+          "CustomerName": "Ritika Mehta", 
           "email": "ritika.mehta@example.com", 
           "number": "9820012345", 
           "location": "Mumbai", 
           "country": "India" 
         },
-        { 
-          "name": "Vivek Joshi", 
+        {
+          "CustomerID": "CUST-1004",
+          "CustomerName": "Vivek Joshi", 
           "email": "vivek.joshi@example.com", 
           "number": "9819012345", 
           "location": "Mumbai", 
@@ -1680,28 +1693,32 @@
       ],
       "customer" :[
         { 
-          "name": "Nirav Patel", 
+          "CustomerID": "CUST-1001",
+          "CustomerName": "Nirav Patel", 
           "email": "nirav.patel@example.com", 
           "number": "9824012345", 
           "location": "Ahmedabad", 
           "country": "India" 
         },
-        { 
-          "name": "Pooja Shah", 
-          "email": "pooja.shah@example.com", 
-          "number": "9825012345", 
+        {
+          "CustomerID": "CUST-1002",
+          "CustomerName": "Pooja Shah",
+          "email": "pooja.shah@example.com",
+          "number": "9825012345",
+          "location": "Ahmedabad",
+          "country": "India"
+        },
+        {
+          "CustomerID": "CUST-1003",
+          "CustomerName": "Rajesh Mehta",
+          "email": "rajesh.mehta@example.com",
+          "number": "9826012345",
           "location": "Ahmedabad", 
           "country": "India" 
         },
-        { 
-          "name": "Rajesh Mehta", 
-          "email": "rajesh.mehta@example.com", 
-          "number": "9826012345", 
-          "location": "Ahmedabad", 
-          "country": "India" 
-        },
-        { 
-          "name": "Komal Trivedi", 
+        {
+          "CustomerID": "CUST-1004",
+          "CustomerName": "Komal Trivedi",
           "email": "komal.trivedi@example.com", 
           "number": "9827012345", 
           "location": "Ahmedabad", 
@@ -1973,40 +1990,45 @@
         }
       ],
       "customer" :[
-        { 
-          "name": "Vikas Yadav", 
-          "email": "vikas.yadav@example.com", 
-          "number": "9818012345", 
+        {
+          "CustomerID": "CUST-1001",
+          "CustomerName": "Vikas Yadav",
+          "email": "vikas.yadav@example.com",
+          "number": "9818012345",
+          "location": "Noida",
+          "country": "India"
+        },
+        {
+          "CustomerID": "CUST-1002",
+          "CustomerName": "Neha Gupta",
+          "email": "neha.gupta@example.com",
+          "number": "9810012345",
           "location": "Noida", 
           "country": "India" 
         },
-        { 
-          "name": "Neha Gupta", 
-          "email": "neha.gupta@example.com", 
-          "number": "9810012345", 
-          "location": "Noida", 
-          "country": "India" 
-        },
-        { 
-          "name": "Rohan Malhotra", 
+        {
+          "CustomerID": "CUST-1003",
+          "CustomerName": "Rohan Malhotra",
           "email": "rohan.malhotra@example.com", 
           "number": "9812012345", 
           "location": "Noida", 
           "country": "India" 
         },
         {
-          "name": "Anjali Verma", 
-          "email": "anjali@gmail.com", 
+          "CustomerID": "CUST-1004",
+          "CustomerName": "Anjali Verma",
+          "email": "anjali@gmail.com",
           "number": "9819012345",
           "location": "Noida",
           "country": "India"
         },
-        { 
-          "name": "Swati Arora", 
-          "email": "swati.arora@example.com", 
-          "number": "9813012345", 
-          "location": "Noida", 
-          "country": "India" 
+        {
+          "CustomerID": "CUST-1005",
+          "CustomerName": "Swati Arora",
+          "email": "swati.arora@example.com",
+          "number": "9813012345",
+          "location": "Noida",
+          "country": "India"
         }
       ],
       "reports" : [
