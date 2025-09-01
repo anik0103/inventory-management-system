@@ -9,9 +9,9 @@ import CustomerTable from "../Customer/CustomerTable";
 const CustomerPage = () => {
   const { selectedRegion } = useContext(RegionContext);
   const [customers, setCustomers] = useState([]);
+
+  const [searchCustomerID, setSearchCustomerID] = useState("");
   const [searchName, setSearchName] = useState("");
-  const [searchLocation, setSearchLocation] = useState("");
-  const [searchCountry, setSearchCountry] = useState("");
   const [searchEmail, setSearchEmail] = useState("");
 
   useEffect(() => {
@@ -28,12 +28,15 @@ const CustomerPage = () => {
 
   const filteredCustomers = customers.filter((customer) => {
     return (
+      (customer.CustomerID || "")
+        .toLowerCase()
+        .includes(searchCustomerID.toLowerCase()) &&
       (customer.CustomerName || customer.name || "")
         .toLowerCase()
         .includes(searchName.toLowerCase()) &&
-      (customer.location || "").toLowerCase().includes(searchLocation.toLowerCase()) &&
-      (customer.country || "").toLowerCase().includes(searchCountry.toLowerCase()) &&
-      (customer.email || "").toLowerCase().includes(searchEmail.toLowerCase())
+      (customer.email || "")
+        .toLowerCase()
+        .includes(searchEmail.toLowerCase())
     );
   });
 
@@ -41,12 +44,10 @@ const CustomerPage = () => {
     <div className="p-6">
       <CustomerHeader />
       <CustomerFilters
+        searchCustomerID={searchCustomerID}
+        setSearchCustomerID={setSearchCustomerID}
         searchName={searchName}
         setSearchName={setSearchName}
-        searchLocation={searchLocation}
-        setSearchLocation={setSearchLocation}
-        searchCountry={searchCountry}
-        setSearchCountry={setSearchCountry}
         searchEmail={searchEmail}
         setSearchEmail={setSearchEmail}
       />
