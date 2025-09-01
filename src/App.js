@@ -34,7 +34,7 @@ const appRouter = createBrowserRouter([
       { path: "suppliers", element: <Suppliers /> },
       { path: "AddSupplier", element: <AddSupplier /> },
       { path: "add-product", element: <AddProducts /> },
-      { path: "product/:productName", element: <ProductDetails /> },
+      { path: ":productName", element: <ProductDetails /> },
       { path: "orders", element: <Order /> },
       { path: "customer", element: <Customer/> },
       { path: "reports", element: <Reports /> },
