@@ -32,7 +32,7 @@
       "lowStockItems": 100,
       "allItemGroups": 100,
       "allItems": 300,
-      "activeItems": 0
+      "activeItems":10
     },
     "topSellingItems": [
       {
