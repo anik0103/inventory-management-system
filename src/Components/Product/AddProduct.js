@@ -37,14 +37,27 @@ const handleSubmit = (e) => {
     navigate("/app/products"); 
 };
 
+const handleClose = () => {
+  navigate(-1); // 👈 goes back to previous page
+};
+
 return ( 
-      <div className="px-6 py-6 overflow-x-auto"> 
+      <div className="relative px-6 py-6 overflow-x-auto"> 
         <div className="flex justify-between items-center mb-6"> 
           <h1 className="text-2xl font-bold">Add Product</h1> 
         
         <div className="flex gap-4">  
-          <button type="submit" form="addProductForm" className="px-4 py-2 bg-[#bd78b5] text-white rounded hover:bg-[#d19fca] transition"
-            > Add Product </button> 
+          <button type="submit" form="addProductForm" className="px-2 py-1 h-8 mt-5 bg-[#bd78b5] text-white rounded hover:bg-[#d19fca] transition"
+            > Add Product 
+          </button>
+
+          {/* ✅ Cross Button */}
+          <button
+            onClick={handleClose}
+            className="mb-8 ml-2 text-gray-500 hover:text-gray-800 text-3xl font-bold"
+          >
+            &times;
+          </button> 
         </div>
         </div>
 
@@ -128,7 +141,7 @@ return (
       </div>
     </form>
 
-    <div className="col-span-1 space-y-4">
+    <div className="col-span-1 space-y-4 mt-6">
       <div className="bg-white p-4 rounded shadow">
         <label className="block font-medium mb-2">Upload Image</label>
         <input
