@@ -10,12 +10,18 @@ import mockData from "../asset/fakeApiResponce/mockData.json";
 import { RegionContext } from "../Components/Dashbord/RegionContext";
 import { FaBars } from "react-icons/fa";
 import Profile from "./Profile";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ expanded, setExpanded }) => {
   const { selectedRegion, setSelectedRegion } = useContext(RegionContext);
   const [showSearch, setShowSearch] = useState(false);
   const [showHover, setShowHover] = useState(false);
   const menuRef = useRef(null);
+  // Plus dropdown
+  const [showPlusMenu, setShowPlusMenu] = useState(false);
+  const plusMenuRef = useRef(null);
+
+  const navigate = useNavigate();
 
   const handleRegionChange = (e) => {
     setSelectedRegion(e.target.value);
@@ -26,6 +32,9 @@ const Navbar = ({ expanded, setExpanded }) => {
     const handleClickOutside = (e) => {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
         setShowHover(false);
+      }
+      if (plusMenuRef.current && !plusMenuRef.current.contains(e.target)) {
+        setShowPlusMenu(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -115,7 +124,38 @@ const Navbar = ({ expanded, setExpanded }) => {
         </div>
 
         {/* Action icons */}
-        <img src={plus} alt="plus" className="w-5 md:w-6 cursor-pointer" />
+        {/* Plus Dropdown */}
+        <div className="relative" ref={plusMenuRef}>
+          <img
+            src={plus}
+            alt="plus"
+            className="w-5 md:w-6 cursor-pointer"
+            onClick={() => setShowPlusMenu((prev) => !prev)}
+          />
+          {showPlusMenu && (
+            <div className="absolute right-0 mt-2 w-40 bg-white rounded shadow-lg p-2 z-50">
+              <button
+                onClick={() => {
+                  setShowPlusMenu(false);
+                  navigate("/app/add-product");
+                }}
+                className="block text-left px-3 py-2 hover:bg-gray-100"
+              >
+                ➕ Add Product
+              </button>
+              <button
+                onClick={() => {
+                  setShowPlusMenu(false);
+                  navigate("/app/AddSupplier");
+                }}
+                className="block text-left px-3 py-2 hover:bg-gray-100"
+              >
+                🏭 Add Supplier
+              </button>
+            </div>
+          )}
+        </div>
+        {/* Notification */}
         <img
           src={notifiaction}
           alt="notifiaction"
