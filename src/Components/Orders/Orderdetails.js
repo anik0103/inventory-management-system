@@ -72,13 +72,6 @@ export const OrderDetails = [
     ]
   },
   {
-    region: "Lucknow",
-    orders: [
-      { "OrderNo": "ORD-2010", "InvoiceNo": "", "CustomerName": "Kiara Ali", "OrderDate": "2025-08-25", "Location": "Lucknow", "Status": "Pending", "Invoiced": false, "items": ["Chikankari Kurtas"] },
-      { "OrderNo": "ORD-2020", "InvoiceNo": "INV-6020", "CustomerName": "Imran Siddiqui", "OrderDate": "2025-07-25", "Location": "Lucknow", "Status": "Delivered", "Invoiced": true, "items": ["Attar Oils", "Frozen Kebabs"] }
-    ]
-  },
-  {
     region: "Noida",
     orders: [
       { "OrderNo": "ORD-2030", "InvoiceNo": "INV-6030", "CustomerName": "Amit Agarwal", "OrderDate": "2025-08-08", "Location": "Noida", "Status": "Delivered", "Invoiced": true, "items": ["Drones", "VR Headsets"] }
