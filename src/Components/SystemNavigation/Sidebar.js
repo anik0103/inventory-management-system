@@ -4,12 +4,12 @@ import { menuItems } from "./MenuItems";
 const Sidebar = ({ expanded }) => {
   return (
     <div
-      className={`h-screen fixed top-0 left-0 z-40 bg-[#bd78b5] text-white font-semibold flex flex-col transition-all duration-300 ${
+      className={`h-screen fixed top-5 left-0 z-40 bg-[#bd78b5] text-white font-semibold flex flex-col transition-all duration-300 ${
         expanded ? "w-52" : "w-16"
       } pt-16`}
     >
       {/* Menu */}
-      <ul className="space-y-2 mt-4">
+      <ul className="space-y-3 mt-4">
         {menuItems.map((item) => (
           <li key={item.key}>
             <Link

@@ -7,7 +7,7 @@ const SupplierSearch = ({
   productTypeTerm, setProductTypeTerm,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row gap-3 items-start md:items-center">
+    <div className="grid grid-cols-2 md:flex md:flex-row gap-3 items-center">
 
       <div className="relative w-full md:w-40">
         <input

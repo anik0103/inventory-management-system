@@ -5,7 +5,7 @@ const ProductTable = ({ products = [] }) => {
   const navigate = useNavigate();
 
   const handleProductClick = (item) => {
-    navigate(`/product/${item.name}`);
+    navigate(`/app/${item.name}`);
   };
 
   return (

@@ -125,7 +125,6 @@ export const SplDetails = [
     ]
   },
   {
-    // **NEW** Inventory Region: Delhi
     region: "Delhi",
     suppliers: [
       {
@@ -267,6 +266,61 @@ export const SplDetails = [
         "country": "India",
         "productType": "Pharmaceuticals",
         "products": ["Painkillers", "Antibiotics", "Vitamins", "Syringes"]
+      }
+    ]
+  },
+  {
+    region: "Bangalore",
+    suppliers: [
+      {
+        "vendorsName": "Silicon Valley IT Hardware",
+        "pocName": "Prakash Reddy",
+        "contact": "9879879871",
+        "email": "p.reddy@sv-ithardware.com",
+        "location": "Bangalore",
+        "country": "India",
+        "productType": "IT Hardware",
+        "products": ["Servers", "RAM Modules", "SSDs", "Networking Cables"]
+      },
+      {
+        "vendorsName": "Garden City Organics",
+        "pocName": "Aisha Sharma",
+        "contact": "9129129123",
+        "email": "aisha@gardencityorg.in",
+        "location": "Mysuru",
+        "country": "India",
+        "productType": "Organic Produce",
+        "products": ["Coffee Beans", "Millets", "Spices", "Honey"]
+      },
+      {
+        "vendorsName": "Deccan Aerospace Components",
+        "pocName": "Rohan Gowda",
+        "contact": "8885551234",
+        "email": "rohan.g@deccanaero.com",
+        "location": "Bangalore",
+        "country": "India",
+        "productType": "Aerospace",
+        "products": ["Machined Aluminum Parts", "Carbon Fiber Panels", "Wiring Harnesses"]
+      },
+      {
+        "vendorsName": "BioGen Life Sciences",
+        "pocName": "Dr. Meera Iyengar",
+        "contact": "9988776600",
+        "email": "meera.i@biogen.co.in",
+        "location": "Bangalore",
+        "country": "India",
+        "productType": "Biotechnology",
+        "products": ["Lab Reagents", "Petri Dishes", "Microscopes"]
+      },
+      {
+        "vendorsName": "Mysore Silk Weavers",
+        "pocName": "Santosh Kumar",
+        "contact": "8123812381",
+        "email": "santosh@mysorusilk.com",
+        "location": "Mysuru",
+        "country": "India",
+        "productType": "Textiles",
+        "products": ["Raw Silk Yarn", "Finished Silk Sarees", "Silk Fabric"]
       }
     ]
   }
