@@ -62,11 +62,11 @@ const PdtList = () => {
       <div className="grid grid-cols-3 gap-4">
         {filteredProducts.map((p) => (
           <div key={p.name} className="border p-4 rounded shadow">
-            <a href={`/product/${p.name}`}>
+            <Link href={`/app/product/${p.name}`}>
               <img src={p.image} alt={p.name} className="h-40 object-contain" />
               <h3 className="font-bold">{p.name}</h3>
               <p>₹{p.price}</p>
-            </a>
+            </Link>
           </div>
         ))}
       </div>
