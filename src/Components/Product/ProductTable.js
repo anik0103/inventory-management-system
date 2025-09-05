@@ -26,7 +26,12 @@ const ProductTable = ({ products = [] }) => {
                 key={index}
                 className="border-b text-sm cursor-pointer hover:bg-gray-100"
               >
-                <td className="py-3 px-4 cursor-pointer" onClick={() => handleProductClick(item)}>{item.name}</td>
+                <td
+                  className="py-3 px-4 cursor-pointer"
+                  onClick={() => handleProductClick(item)}
+                >
+                  {item.name}
+                </td>
                 <td className="py-3 px-4">{item.category}</td>
                 <td className="py-3 px-4">{item.quantity}</td>
                 <td className="py-3 px-4">${item.price}</td>
@@ -34,8 +39,8 @@ const ProductTable = ({ products = [] }) => {
             ))
           ) : (
             <tr>
-              <td colSpan="7" className="text-center text-gray-500 py-6">
-                No products found
+              <td colSpan="4" className="text-center text-gray-500 py-6">
+                No Products Found
               </td>
             </tr>
           )}

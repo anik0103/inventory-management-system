@@ -27,7 +27,7 @@ export const OrderDetails = [
   {
     region: "Ahmedabad",
     orders: [
-      { "OrderNo": "ORD-2004", "InvoiceNo": "", "CustomerName": "Diya Patel", "OrderDate": "2025-08-20", "Location": "Ahmedabad", "Status": "Pending", "Invoiced": false, "items": ["Cotton Fabric Rolls", "Molded Containers"] },
+      { "OrderNo": "ORD-2004", "InvoiceNo": "INV-6616", "CustomerName": "Diya Patel", "OrderDate": "2025-08-20", "Location": "Ahmedabad", "Status": "Pending", "Invoiced": false, "items": ["Cotton Fabric Rolls", "Molded Containers"] },
       { "OrderNo": "ORD-2014", "InvoiceNo": "INV-6014", "CustomerName": "Priya Shah", "OrderDate": "2025-08-01", "Location": "Ahmedabad", "Status": "Cancelled", "Invoiced": false, "items": ["Printed Linens"] }
     ]
   },
@@ -60,7 +60,7 @@ export const OrderDetails = [
     orders: [
       { "OrderNo": "ORD-2008", "InvoiceNo": "INV-6008", "CustomerName": "Ananya Iyer", "OrderDate": "2025-08-11", "Location": "Chennai", "Status": "Delivered", "Invoiced": true, "items": ["Engine Pistons", "Silk Sarees"] },
       { "OrderNo": "ORD-2018", "InvoiceNo": "INV-6018", "CustomerName": "Krishnan Nair", "OrderDate": "2025-08-02", "Location": "Chennai", "Status": "Delivered", "Invoiced": true, "items": ["Container Leasing"] },
-      { "OrderNo": "ORD-2029", "InvoiceNo": "", "CustomerName": "Meera Krishnan", "OrderDate": "2025-08-30", "Location": "Chennai", "Status": "Draft", "Invoiced": false, "items": ["Car Body Panels"] }
+      { "OrderNo": "ORD-2029", "InvoiceNo": "INV-8745", "CustomerName": "Meera Krishnan", "OrderDate": "2025-08-30", "Location": "Chennai", "Status": "Draft", "Invoiced": false, "items": ["Car Body Panels"] }
     ]
   },
   {
@@ -69,13 +69,6 @@ export const OrderDetails = [
       { "OrderNo": "ORD-2009", "InvoiceNo": "INV-6009", "CustomerName": "Ishaan Mehra", "OrderDate": "2025-08-16", "Location": "Jaipur", "Status": "Confirmed", "Invoiced": true, "items": ["Blue Pottery", "Bandhani Sarees", "Silver Anklets"] },
       { "OrderNo": "ORD-2019", "InvoiceNo": "", "CustomerName": "Aisha Kumari", "OrderDate": "2025-08-29", "Location": "Jaipur", "Status": "Pending", "Invoiced": false, "items": ["Jaipuri Quilts", "Marble Figurines"] },
       { "OrderNo": "ORD-2024", "InvoiceNo": "", "CustomerName": "Vikram Singh", "OrderDate": "2025-08-27", "Location": "Jaipur", "Status": "Pending", "Invoiced": false, "items": ["Cut Emeralds"] }
-    ]
-  },
-  {
-    region: "Lucknow",
-    orders: [
-      { "OrderNo": "ORD-2010", "InvoiceNo": "", "CustomerName": "Kiara Ali", "OrderDate": "2025-08-25", "Location": "Lucknow", "Status": "Pending", "Invoiced": false, "items": ["Chikankari Kurtas"] },
-      { "OrderNo": "ORD-2020", "InvoiceNo": "INV-6020", "CustomerName": "Imran Siddiqui", "OrderDate": "2025-07-25", "Location": "Lucknow", "Status": "Delivered", "Invoiced": true, "items": ["Attar Oils", "Frozen Kebabs"] }
     ]
   },
   {
