@@ -24,9 +24,39 @@
     "password": "user123",
     "token": "user456token",
     "user": {
-      "id": "205",
+      "id": "100",
       "name": "Anik Adhikary",
-      "role": "user"
+      "role": "admin"
+    }
+  },
+  {
+    "email": "briti@example.com",
+    "password": "Briti123",
+    "token": "user456token",
+    "user": {
+      "id": "205",
+      "name": "Briti Singh",
+      "role": "admin"
+    }
+  },
+  {
+    "email": "priyobroto@example.com",
+    "password": "priyobroto123",
+    "token": "user456token",
+    "user": {
+      "id": "200",
+      "name": "priyobroto Saha",
+      "role": "admin"
+    }
+  },
+  {
+    "email": "taslim@example.com",
+    "password": "taslim123",
+    "token": "user456token",
+    "user": {
+      "id": "200",
+      "name": "Taslim khan",
+      "role": "admin"
     }
   }
 ]
