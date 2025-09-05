@@ -31,7 +31,7 @@ const Products = () => {
         const productsList = regionObj.regionWiseData?.products || [];
         setRegionProducts(productsList);
       } else {
-        console.warn("No matching products for", selectedRegion);
+        // console.warn("No matching products for", selectedRegion);
         setRegionProducts([]);
       }
     }
@@ -72,19 +72,7 @@ const Products = () => {
     <div className="bg-neutral-background min-h-screen p-6">
       <Head />
       <Filters filters={filters} setFilters={setFilters} />
-      {selectedRegion ? (
-      filteredProducts.length > 0 ? (
-        <ProductTable products={filteredProducts} />
-      ) : (
-        <p className="text-center mt-6 text-gray-500">
-          No products available for this region.
-        </p>
-      )
-    ) : (
-      <p className="text-center mt-6 text-gray-500">
-        Please select a region to view products.
-      </p>
-    )}
+      <ProductTable products={selectedRegion ? filteredProducts : []} />
     </div>
   );
 };
