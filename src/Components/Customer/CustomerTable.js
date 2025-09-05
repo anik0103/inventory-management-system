@@ -1,54 +1,32 @@
 import React from "react";
+import CustomerRow from "./CustomerRow";
 
 const CustomerTable = ({ customers }) => {
   return (
-    <div className="overflow-x-auto shadow-md rounded-lg">
-      <table className="min-w-full table-fixed bg-white border border-gray-200 rounded-lg">
-        <thead className="bg-gray-100">
-          <tr>
-            <th className="w-1/6 px-6 py-3 border-b text-left text-sm font-bold text-gray-700">
-              Customer ID
-            </th>
-            <th className="w-1/6 px-6 py-3 border-b text-left text-sm font-bold text-gray-700">
-              Name
-            </th>
-            <th className="w-1/6 px-6 py-3 border-b text-left text-sm font-bold text-gray-700">
-              Email
-            </th>
-            <th className="w-1/6 px-6 py-3 border-b text-left text-sm font-bold text-gray-700">
-              Phone
-            </th>
-            <th className="w-1/6 px-6 py-3 border-b text-left text-sm font-bold text-gray-700">
-              Location
-            </th>
-            <th className="w-1/6 px-6 py-3 border-b text-left text-sm font-bold text-gray-700">
-              Country
-            </th>
+    <div className="px-6 py-6 overflow-x-auto">
+      <table className="min-w-full border-collapse text-left bg-white shadow-md rounded-lg">
+        <thead>
+          <tr className="text-gray-700 text-sm border-b bg-gray-100 uppercase tracking-wider">
+            <th className="py-3 px-4">Customer ID</th>
+            <th className="py-3 px-4">Name</th>
+            <th className="py-3 px-4">Email</th>
+            <th className="py-3 px-4">Phone</th>
+            <th className="py-3 px-4">Location</th>
+            <th className="py-3 px-4">Country</th>
           </tr>
         </thead>
         <tbody>
-          {customers.map((customer, index) => (
-            <tr key={index} className="hover:bg-gray-50">
-              <td className="w-1/6 px-6 py-3 border-b text-left whitespace-nowrap">
-                {customer.CustomerID || "-"}
-              </td>
-              <td className="w-1/6 px-6 py-3 border-b text-left whitespace-nowrap">
-                {customer.CustomerName || customer.name || "-"}
-              </td>
-              <td className="w-1/6 px-6 py-3 border-b text-left whitespace-nowrap">
-                {customer.email || "-"}
-              </td>
-              <td className="w-1/6 px-6 py-3 border-b text-left whitespace-nowrap">
-                {customer.number || "-"}
-              </td>
-              <td className="w-1/6 px-6 py-3 border-b text-left whitespace-nowrap">
-                {customer.location || "-"}
-              </td>
-              <td className="w-1/6 px-6 py-3 border-b text-left whitespace-nowrap">
-                {customer.country || "-"}
+          {customers.length > 0 ? (
+            customers.map((customer, index) => (
+              <CustomerRow key={index} customer={customer} />
+            ))
+          ) : (
+            <tr>
+              <td colSpan="6" className="text-center text-gray-500 py-6">
+                No Customers Found
               </td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
