@@ -14,11 +14,13 @@ import AddSupplier from "./Components/Supplier/AddSupplier/AddSupplier";
 import { RegionProvider } from "./Components/Dashbord/RegionContext";
 import Reports from "./Components/Reports/Reports";
 import UserDetails from "./Components/UserDetails";
-import Customer from "./Components/Customer/Customer"
+import Customer from "./Components/Customer/Customer";
+import ProtectedRoute from "./Components/Authentication/ProtectedRoute ";
+import Unauthorized from "./Components/Authentication/Unauthorized ";
 
 const appRouter = createBrowserRouter([
   {
-    path: "/", // 👈 now SignIn is the default
+    path: "/",
     element: <SignIn />,
   },
   {
@@ -26,19 +28,36 @@ const appRouter = createBrowserRouter([
     element: <SignUp />,
   },
   {
-    path: "/app", // 👈 move AppLayout here
+    path: "/unauthorized",
+    element: <Unauthorized />,
+  },
+  {
+    path: "/app",
     element: <AppLayout />,
     children: [
-      { index: true, element: <Dashboard /> },
-      { path: "products", element: <Products /> },
-      { path: "suppliers", element: <Suppliers /> },
-      { path: "AddSupplier", element: <AddSupplier /> },
-      { path: "add-product", element: <AddProducts /> },
-      { path: ":productName", element: <ProductDetails /> },
-      { path: "orders", element: <Order /> },
-      { path: "customer", element: <Customer/> },
-      { path: "reports", element: <Reports /> },
-      { path: "userdetails", element: <UserDetails /> },
+      // Admin-only section
+      {
+        element: <ProtectedRoute role="admin" />, // wrapper
+        children: [
+          { index: true, element: <Dashboard /> },
+          { path: "suppliers", element: <Suppliers /> },
+          { path: "AddSupplier", element: <AddSupplier /> },
+          { path: "add-product", element: <AddProducts /> },
+          { path: "orders", element: <Order /> },
+          { path: "customer", element: <Customer /> },
+          { path: "reports", element: <Reports /> },
+        ],
+      },
+
+      // User + Admin section
+      {
+        element: <ProtectedRoute />, // no role restriction
+        children: [
+          { path: "products", element: <Products /> },
+          { path: ":productName", element: <ProductDetails /> },
+          { path: "userdetails", element: <UserDetails /> },
+        ],
+      },
     ],
   },
 ]);
