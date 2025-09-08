@@ -21,8 +21,7 @@ const Filters = ({ filters = {}, setFilters }) => {
         value={filters.sortOrder || ""}
         onChange={(e) => {
           const value = e.target.value;
-
-          // 🔹 if dropdown is a category, update category filter
+          // dropdown options in all filters
           if (["fashion", "electronic", "accessories"].includes(value.toLowerCase())) {
             setFilters({
               ...filters,
@@ -30,7 +29,6 @@ const Filters = ({ filters = {}, setFilters }) => {
               sortOrder: ""      // clear sort order
             });
           } else {
-            // 🔹 otherwise update sorting
             setFilters({
               ...filters,
               sortOrder: value,
@@ -90,7 +88,7 @@ const Filters = ({ filters = {}, setFilters }) => {
       </div>
 
       {/* Quantity */}
-      <div className="relative">
+      {/* <div className="relative">
         <input
           type="text"
           placeholder="Quantity"
@@ -108,7 +106,7 @@ const Filters = ({ filters = {}, setFilters }) => {
             <IoCloseCircle size={20} />
           </button>
         )}
-      </div>
+      </div> */}
 
       {/* Price */}
       <div className="relative">
