@@ -6,7 +6,7 @@ import OrderStatus from "./OrderStatus";
 import InventorySummary from "./SalesOverVew/InventorySummary";
 import mockData from "../../asset/fakeApiResponce/mockData.json";
 import { RegionContext } from "../Dashbord/RegionContext";
-import SalesOrder from "./SalesOrder";
+import LineChart from "../Reports/LineChart";
 
 const Dashboard = () => {
   const { selectedRegion } = useContext(RegionContext);
@@ -27,11 +27,11 @@ const Dashboard = () => {
             <ItemDetails regionData={regionData} />
             <OrderStatus regionData={regionData} />
           </div>
-          <TopProducts regionData={regionData} />
+          <LineChart trend={regionData?.regionWiseData?.reports?.[0]?.analyticsTrend} />
         </div>
         <div className="flex flex-col gap-8">
           <InventorySummary regionData={regionData} />
-          <SalesOrder regionData={regionData} />
+          <TopProducts regionData={regionData} />
         </div>
       </div>
     </div>

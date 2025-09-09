@@ -10,29 +10,29 @@ const TopProducts = ({ regionData }) => {
       </h2>
 
       {topSellingItems.length > 0 ? (
-        <div className="space-y-1  grid grid-cols-2 gap-3 justify-around m-auto">
+        <div className="grid grid-cols-2 gap-4">
           {topSellingItems.map((item, index) => (
             <div
               key={index}
-              className="flex items-center bg-white border border-purple-200 rounded-lg shadow p-3"
+              className="flex flex-col items-center bg-white border border-purple-200 rounded-lg shadow p-3"
             >
               {/* Product Image */}
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-10 h-10 object-contain rounded-md mr-3"
+                className="w-16 h-16 object-contain rounded-md mb-3"
               />
 
               {/* Product Info */}
               <div className="flex-1">
-                <h4 className="text-sm font-semibold text-black">
+                <h4 className="text-sm font-semibold text-gray-800 text-center leading-tight">
                   {item.name}
                 </h4>
                 <p className="text-sm font-medium text-gray-700">{topSellingItems.name}</p>
               </div>
 
               {/* Quantity Sold */}
-              <span className="text-sm font-bold text-purple-600">
+              <span className="text-md font-bold text-purple-600 mt-2">
                 {item.quantitySold}
               </span>
             </div>
@@ -40,7 +40,7 @@ const TopProducts = ({ regionData }) => {
         </div>
       ) : (
         <p className="text-gray-500 text-sm text-center">
-           🚫 No top-selling items available
+          🚫 No top-selling items available
         </p>
       )}
     </div>
