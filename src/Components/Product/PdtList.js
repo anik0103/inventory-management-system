@@ -27,13 +27,13 @@ const PdtList = () => {
     }
   }, [selectedRegion]);
 
-  // 🔹 Apply filters & sorting
+  // Apply filters & sorting
   const filteredProducts = products
   .filter((p) => {
     // Product name filter
     if (filters.productName && !p.name.toLowerCase().includes(filters.productName.toLowerCase())) return false;
 
-    // Category filter (from either category input OR All filter dropdown)
+    // Category filter 
     if (filters.category && p.category?.toLowerCase() !== filters.category.toLowerCase()) return false;
     if (
       filters.sortOrder &&

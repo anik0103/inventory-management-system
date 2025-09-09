@@ -37,12 +37,12 @@ const Products = () => {
     }
   }, [selectedRegion]);
 
-  // ✅ Combine mockData products + added products
+  // Combine mockData products + added products
   const allProducts = [...regionProducts, ...addedProducts];
 
-  // 🔹 Apply filters & sorting
+  //  Apply filters & sorting
   const filteredProducts = [...allProducts]
-    // ✅ 1. Apply filters
+    // Apply filters
     .filter((p) => {
       if (filters.category && filters.category !== "All") {
         if (!p.category?.toLowerCase().includes(filters.category.toLowerCase())) {
@@ -59,7 +59,7 @@ const Products = () => {
 
       return true;
     })
-    // ✅ 2. Apply sorting
+    // Apply sorting
     .sort((a, b) => {
       if (filters.sortOrder === "priceLowHigh") return a.price - b.price;
       if (filters.sortOrder === "priceHighLow") return b.price - a.price;

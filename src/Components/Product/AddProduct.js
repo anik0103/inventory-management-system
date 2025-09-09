@@ -38,7 +38,7 @@ const handleSubmit = (e) => {
 };
 
 const handleClose = () => {
-  navigate(-1); // 👈 goes back to previous page
+  navigate(-1); // goes back to previous page
 };
 
 return ( 
@@ -51,7 +51,7 @@ return (
             > Add Product 
           </button>
 
-          {/* ✅ Cross Button */}
+          {/* Cross Button */}
           <button
             onClick={handleClose}
             className="mb-8 ml-2 text-gray-500 hover:text-gray-800 text-3xl font-bold"

@@ -25,13 +25,9 @@ const ProductTable = ({ products = [] }) => {
               <tr
                 key={index}
                 className="border-b text-sm cursor-pointer hover:bg-gray-100"
+                onClick={() => handleProductClick(item)}
               >
-                <td
-                  className="py-3 px-4 cursor-pointer"
-                  onClick={() => handleProductClick(item)}
-                >
-                  {item.name}
-                </td>
+                <td className="py-3 px-4">{item.name}</td>
                 <td className="py-3 px-4">{item.category}</td>
                 <td className="py-3 px-4">{item.quantity}</td>
                 <td className="py-3 px-4">${item.price}</td>
