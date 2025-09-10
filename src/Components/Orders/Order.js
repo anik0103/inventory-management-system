@@ -6,7 +6,8 @@ import { RegionContext } from "../Dashbord/RegionContext";
 
 const Orders = () => {
   const [displayedOrders, setDisplayedOrders] = useState([]);
-  const [expandedIndex, setExpandedIndex] = useState(null);
+  // REMOVED: No longer need to track expanded index
+  // const [expandedIndex, setExpandedIndex] = useState(null);
 
   const { selectedRegion } = useContext(RegionContext);
 
@@ -22,18 +23,16 @@ const Orders = () => {
     }
   }, [selectedRegion]);
 
-  const toggleExpand = (index) => {
-    setExpandedIndex((prev) => (prev === index ? null : index));
-  };
+  // REMOVED: The toggleExpand function is no longer needed
+  // const toggleExpand = (index) => {
+  //   setExpandedIndex((prev) => (prev === index ? null : index));
+  // };
 
   return (
     <div className="bg-neutral-background min-h-screen p-6">
       <OrderHead />
-      <OrderTable
-        data={displayedOrders}
-        onRowClick={toggleExpand}
-        expandedIndex={expandedIndex}
-      />
+      {/* REMOVED: Pass only the data prop to OrderTable */}
+      <OrderTable data={displayedOrders} />
     </div>
   );
 };
