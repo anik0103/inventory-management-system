@@ -1,8 +1,9 @@
 import React from "react";
 import OrderRow from "./OrderRow";
-import OrderItemsRow from "./OrderItemsRow";
+// REMOVED: OrderItemsRow is no longer used here
+// import OrderItemsRow from "./OrderItemsRow";
 
-const OrderTable = ({ data, onRowClick, expandedIndex }) => {
+const OrderTable = ({ data }) => { // Removed onRowClick and expandedIndex
   return (
     <div className="px-6 py-6 overflow-x-auto">
       <table className="min-w-full border-collapse text-left bg-white shadow-md rounded-lg">
@@ -20,12 +21,8 @@ const OrderTable = ({ data, onRowClick, expandedIndex }) => {
         <tbody>
           {data.length > 0 ? (
             data.map((item, index) => (
-              <React.Fragment key={index}>
-                <OrderRow Order={item} index={index} onClick={onRowClick} />
-                {expandedIndex === index && (
-                  <OrderItemsRow items={item.items} />  
-                )}
-              </React.Fragment>
+              // SIMPLIFIED: No need for Fragment or expanded row logic
+              <OrderRow key={index} Order={item} />
             ))
           ) : (
             <tr>

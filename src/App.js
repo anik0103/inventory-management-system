@@ -9,6 +9,8 @@ import AppLayout from "./Components/Layout/AppLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProductDetails from "./Components/Product/ProductDetails";
 import Order from "./Components/Orders/Order";
+// Import the new component
+import OrderFullDetails from "./Components/Orders/OrderFullDetails";
 import { ProductProvider } from "./Components/Product/PdtContext";
 import AddSupplier from "./Components/Supplier/AddSupplier/AddSupplier";
 import { RegionProvider } from "./Components/Dashbord/RegionContext";
@@ -43,6 +45,8 @@ const appRouter = createBrowserRouter([
           { path: "suppliers", element: <Suppliers /> },
           { path: "AddSupplier", element: <AddSupplier /> },
           { path: "orders", element: <Order /> },
+          // Add the new dynamic route for order details here
+          { path: "orders/:orderId", element: <OrderFullDetails /> },
           { path: "customer", element: <Customer /> },
           { path: "reports", element: <Reports /> },
         ],
