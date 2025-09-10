@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import pic from "../../asset/pictures1.png";
 import { useState } from "react";
-import users from "../../asset/fakeApiResponce/mockdata2.json"; 
+import users from "../../asset/fakeApiResponce/mockdata2.json";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -18,14 +18,16 @@ const SignIn = () => {
     );
 
     if (matchedUser) {
-      // save only the "user" object in localStorage
-      localStorage.setItem("loggedInUser", JSON.stringify(matchedUser.user));
-
-      // redirect to dashboard
-      navigate("/app"); 
-    } else {
-      setError("Invalid email or password");
-    }
+          localStorage.setItem("loggedInUser", JSON.stringify(matchedUser.user));
+    
+          if (matchedUser.user.role === "admin") {
+              navigate("/app");
+          } else {
+              navigate("/app/products");
+          }
+        } else {
+          setError("Invalid email or password");
+        }
   };
 
   return (
@@ -76,7 +78,9 @@ const SignIn = () => {
               />
             </div>
 
-            {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+            {error && (
+              <p className="text-red-500 text-sm text-center">{error}</p>
+            )}
 
             <div className="flex justify-center">
               <button
