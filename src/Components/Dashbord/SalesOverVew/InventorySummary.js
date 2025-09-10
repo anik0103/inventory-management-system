@@ -23,6 +23,7 @@ const InventorySummary = ({ regionData }) => {
               status="IN HAND"
               valueColor="text-purple-800"
               labelColor="text-purple-600"
+              dotColor="bg-teal-600"
             />
             <InventoryStatCard
               value={inventory.packagesToBeReceived}
@@ -30,6 +31,7 @@ const InventorySummary = ({ regionData }) => {
               status="TO BE RECEIVED"
               valueColor="text-purple-800"
               labelColor="text-purple-600"
+              dotColor="bg-orange-500"
             />
           </div>
         ) : (

@@ -25,6 +25,7 @@ const SummaryCards = ({ regionData }) => {
               status="TO BE PACKED"
               valueColor="text-blue-700"
               labelColor="text-gray-600"
+              dotColor="bg-blue-500"
             />
           )}
 
@@ -35,6 +36,7 @@ const SummaryCards = ({ regionData }) => {
               status="TO BE SHIPPED"
               valueColor="text-red-500"
               labelColor="text-gray-600"
+              dotColor="bg-red-500"
             />
           )}
 
@@ -45,6 +47,7 @@ const SummaryCards = ({ regionData }) => {
               status="TO BE DELIVERED"
               valueColor="text-green-500"
               labelColor="text-gray-600"
+              dotColor="bg-green-500"
             />
           )}
 
@@ -55,6 +58,7 @@ const SummaryCards = ({ regionData }) => {
               status="TO BE INVOICED"
               valueColor="text-yellow-600"
               labelColor="text-gray-600"
+              dotColor="bg-yellow-500"
             />
           )}
         </div>

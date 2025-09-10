@@ -34,7 +34,7 @@ const LineChart = ({ trend }) => {
   const colors = ["#9b59b6", "#27ae60", "#e74c3c", "#2980b9", "#f39c12"];
 
   return (
-    <div className="bg-white shadow-lg rounded-2xl p-4">
+    <div className="bg-gradient-to-br from-white to-purple-50 border border-[#bd78b5] rounded-xl shadow-md shadow-[#bd78b5] p-4 transition-all duration-300 w-full h-full">
       <h3 className="text-center font-semibold text-purple-700 mb-2">
         Inventory Trends (Sept 2024 - Aug 2025)
       </h3>
