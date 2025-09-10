@@ -8,50 +8,68 @@ import { RegionContext } from "../Dashbord/RegionContext";
 const Reports = () => {
   const { selectedRegion } = useContext(RegionContext);
 
-  // get data for selected region
   const regionData = mockData.find((r) => r.region === selectedRegion);
 
-  if (!regionData || !regionData.regionWiseData.reports) {
-    return (
-      <div className="p-6 text-center text-gray-500">
-        ⚠️ No report data available for {selectedRegion}
-      </div>
-    );
-  }
-
-  const report = regionData.regionWiseData.reports?.[0] || {};
+  const report = regionData?.regionWiseData?.reports?.[0] || {};
   const snapshot = report.analyticsSnapshot || { items: [], percentageChange: [] };
   const trend = report.analyticsTrend || null;
 
+  const renderCard = (title, value, percentageChange, description) => {
+    if (value === undefined || value === null) {
+      return (
+        <div className="flex items-center justify-center h-32 border rounded-lg shadow bg-white text-gray-500">
+          No data available
+        </div>
+      );
+    }
+    return (
+      <Cards
+        title={title}
+        value={value}
+        percentageChange={percentageChange}
+        description={description}
+      />
+    );
+  };
 
   return (
     <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
-      {/* Top Cards */}
-      <Cards
-        title="Total Availability"
-        value={snapshot?.items?.[0] ?? 0}
-        percentageChange={snapshot?.percentageChange?.[0] ?? 0}
-        description="Current supply stock levels are constantly updated..."
-      />
-      <Cards
-        title="New Added"
-        value={snapshot?.items?.[1] ?? 0}
-        percentageChange={snapshot?.percentageChange?.[1] ?? 0}
-        description="The latest supply stock levels that were recently added..."
-      />
-      <Cards
-        title="Sold Out"
-        value={snapshot?.items?.[2] ?? 0}
-        percentageChange={snapshot?.percentageChange?.[2] ?? 0}
-        description="The latest supply stock levels that recently sold..."
-      />
+      {renderCard(
+        "Total Availability",
+        snapshot?.items?.[0],
+        snapshot?.percentageChange?.[0],
+        "Current supply stock levels are constantly updated..."
+      )}
+      {renderCard(
+        "New Added",
+        snapshot?.items?.[1],
+        snapshot?.percentageChange?.[1],
+        "The latest supply stock levels that were recently added..."
+      )}
+      {renderCard(
+        "Sold Out",
+        snapshot?.items?.[2],
+        snapshot?.percentageChange?.[2],
+        "The latest supply stock levels that recently sold..."
+      )}
 
-      {/* Charts */}
       <div className="lg:col-span-2">
-        <LineChart trend={trend} />
+        {trend ? (
+          <LineChart trend={trend} />
+        ) : (
+          <div className="flex items-center justify-center h-64 border rounded-lg shadow bg-white text-gray-500">
+            ⚠️ No trend data available
+          </div>
+        )}
       </div>
       <div>
-        <PieChart snapshot={snapshot} />
+        {snapshot?.items?.length ? (
+          <PieChart snapshot={snapshot} />
+        ) : (
+          <div className="flex items-center justify-center h-64 border rounded-lg shadow bg-white text-gray-500">
+            ⚠️ No snapshot data available
+          </div>
+        )}
       </div>
     </div>
   );

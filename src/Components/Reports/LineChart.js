@@ -31,8 +31,6 @@ const LineChart = ({ trend }) => {
       </div>
     );
   }
-
-  // Define some colors for each dataset (you can customize)
   const colors = ["#9b59b6", "#27ae60", "#e74c3c", "#2980b9", "#f39c12"];
 
   return (
