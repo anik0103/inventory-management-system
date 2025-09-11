@@ -79,6 +79,7 @@
     },
     "products": [
         {
+          "id": "P-1001",
           "name": "MOUSE",
           "category": "ELECTRONIC",
           "quantity": 18,
@@ -87,6 +88,7 @@
           "description": "Wireless mouse with precision tracking."
         },
         {
+          "id": "P-1002",
           "name": "EARING",
           "category": "ACCESSORIES",
           "quantity": 15,
@@ -95,6 +97,7 @@
           "description": "Elegant stud earrings for all occasions."
         },
         {
+          "id": "P-1003",
           "name": "SHIRT",
           "category": "FASHION",
           "quantity": 20,
@@ -103,6 +106,7 @@
           "description": "Stylish cotton shirt for all-day comfort."
         },
         {
+          "id": "P-1004",
           "name": "HEADPHONE",
           "category": "ELECTRONIC",
           "quantity": 17,
@@ -111,6 +115,7 @@
           "description": "Noise-cancelling headphones with crystal-clear sound."
         },
         {
+          "id": "P-1005",
           "name": "APPLE WATCH",
           "category": "ACCESSORIES",
           "quantity": 24,
@@ -376,6 +381,7 @@
     },
     "products": [
         {
+          "id": "P-2001",
           "name": "LAPTOP BAG",
           "category": "ACCESSORIES",
           "quantity": 10,
@@ -384,6 +390,7 @@
           "description": "Durable laptop bag with multiple compartments."
         },
         {
+          "id": "P-2002",
           "name": "SPEAKER",
           "category": "ELECTRONIC",
           "quantity": 14,
@@ -392,6 +399,7 @@
           "description": "Bluetooth speaker with deep bass."
         },
         {
+          "id": "P-2003",
           "name": "APPLE AIRPORDS",
           "category": "ELECTRONIC",
           "quantity": 10,
@@ -400,6 +408,7 @@
           "description": "Apple AirPods with high-quality sound, seamless Bluetooth pairing, and all-day battery life."
         },
         {
+          "id": "P-2004",
           "name": "HP Pavilion 15",
           "category": "ELECTRONIC",
           "price": 90,
@@ -666,6 +675,7 @@
     },
     "products": [
         {
+          "id": "P-3001",
           "name": "SHOES",
           "category": "FASHION",
           "quantity": 25,
@@ -674,6 +684,7 @@
           "description": "Comfortable running shoes for daily wear."
         },
         {
+          "id": "P-3002",
           "name": "APPLE WATCH",
           "category": "ACCESSORIES",
           "quantity": 24,
@@ -682,6 +693,7 @@
           "description": "Sleek analog Apple Watch that combines fashion and function."
         },
         {
+          "id": "P-3003",
           "name": "SMARTWATCH",
           "category": "ELECTRONIC",
           "quantity": 12,
@@ -690,6 +702,7 @@
           "description": "Fitness smartwatch with heart rate monitor."
         },
         {
+          "id": "P-3004",
           "name": "MAYBELLINE LIPSTICK",
           "category": "Makeup",
           "quantity": 50,
@@ -698,6 +711,7 @@
           "description": "Maybelline Color Sensational Matte Lipstick - Nude Shade."
         },
         {
+          "id": "P-3005",
           "name": "SAMSUNG GALAXY TAB S8",
           "category": "ELECTRONIC",
           "quantity": 15,
@@ -956,6 +970,7 @@
     },
     "products": [
         {
+          "id": "P-4001",
           "name": "KEYBOARD",
           "category": "ELECTRONIC",
           "quantity": 19,
@@ -964,6 +979,7 @@
           "description": "Compact mechanical keyboard with RGB lights."
         },
         {
+          "id": "P-4002",
           "name": "SUNGLASSES",
           "category": "ACCESSORIES",
           "quantity": 22,
@@ -972,6 +988,7 @@
           "description": "Stylish UV-protection sunglasses."
         },
         {
+          "id": "P-4003",
           "name": "POLO T-SHIRT",
           "category": "FASHION",
           "quantity": 20,
@@ -980,6 +997,7 @@
           "description": "Stylish Polo T-shirt for all-day comfort."
         },
         {
+          "id": "P-4004",
           "name": "LAKME EYELINER",
           "category": "Makeup",
           "quantity": 40,
@@ -988,6 +1006,7 @@
           "description": "Lakme Insta Eye Liner, long-lasting and waterproof."
         },
         {
+          "id": "P-4005",
           "name": "LOGITECH MX MASTER 3S MOUSE",
           "category": "ELECTRONIC",
           "quantity": 15,
@@ -996,6 +1015,7 @@
           "description": "Advanced wireless mouse with ergonomic design."
         },
         {
+          "id": "P-4006",
           "name": "LAKME SUNSCREEN",
           "category": "Makeup",
           "quantity": 20,
@@ -1264,6 +1284,7 @@
     },
     "products": [
         {
+          "id": "P-5001",
           "name": "SHOES",
           "category": "FASHION",
           "quantity": 25,
@@ -1272,6 +1293,7 @@
           "description": "Comfortable running shoes for daily wear."
         },
         {
+          "id": "P-5002",
           "name": "VINTAGE WATCH",
           "category": "ELECTRONIC",
           "quantity": 12,
@@ -1280,6 +1302,7 @@
           "description": "Aesthetic vintage watches with small dial and cool look."
         },
         {
+          "id": "P-5003",
           "name": "APPLE MACBOOK AIR M2",
           "category": "ELECTRONIC",
           "quantity": 10,
@@ -1288,6 +1311,7 @@
           "description": "Apple MacBook Air with M2 chip, 13.6-inch Liquid Retina display."
         },
         {
+          "id": "P-5004",
           "name": "SILVER HOOP EARRINGS",
           "category": "ACCESSORIES",
           "quantity": 25,
@@ -1556,6 +1580,7 @@
     },
     "products": [
         {
+          "id": "P-6001",
           "name": "BAG",
           "category": "ACCESSORIES",
           "quantity": 16,
@@ -1564,6 +1589,7 @@
           "description": "Waterproof tote bag for carrying laptop and small necessary items."
         },
         {
+          "id": "P-6002",
           "name": "T-SHIRT",
           "category": "FASHION",
           "quantity": 15,
@@ -1572,6 +1598,7 @@
           "description": "Stylish cotton backprinted T-shirt for all-day comfort and stylish for fashion."
         },
         {
+          "id": "P-6003",
           "name": "POWERBANK",
           "category": "ELECTRONIC",
           "quantity": 21,
@@ -1580,6 +1607,7 @@
           "description": "10,000mAh fast-charging power bank."
         },
         {
+          "id": "P-6004",
           "name": "WOMEN'S FLORAL TOP",
           "category": "FASHION",
           "quantity": 18,
@@ -1588,6 +1616,7 @@
           "description": "Lightweight floral printed top for women."
         },
         {
+          "id": "P-6005",
           "name": "SAMSUNG GALAXY S23",
           "category": "ELECTRONIC",
           "quantity": 14,
@@ -1846,6 +1875,7 @@
     },
     "products": [
         {
+          "id": "P-7001",
           "name": "FOSSIL CHRONOGRAPH WATCH",
           "category": "ACCESSORIES",
           "quantity": 7,
@@ -1854,6 +1884,7 @@
           "description": "Stainless steel chronograph watch with leather strap."
         },
         {
+          "id": "P-7002",
           "name": "GUCCI SUNGLASSES",
           "category": "ACCESSORIES",
           "quantity": 22,
@@ -1862,6 +1893,7 @@
           "description": "Stylish UV-protection Gucci Sunglasses."
         },
         {
+          "id": "P-7003",
           "name": "WIRELESS KEYBOARD",
           "category": "ELECTRONIC",
           "quantity": 19,
@@ -1870,6 +1902,7 @@
           "description": "Compact mechanical keyboard with RGB lights."
         },
         {
+          "id": "P-7004",
           "name": "BLAZER",
           "category": "FASHION",
           "quantity": 11,
@@ -1878,6 +1911,7 @@
           "description": "Formal blazer suitable for office and meetings."
         },
         {
+          "id": "P-7005",
           "name": "BLUETOOTH SPEAKER",
           "category": "ELECTRONIC",
           "quantity": 14,
@@ -1886,6 +1920,7 @@
           "description": "Portable Bluetooth speaker with powerful sound."
         },
         {
+          "id": "P-7006",
           "name": "CASIO DIGITAL WATCH",
           "category": "ACCESSORIES",
           "quantity": 14,
