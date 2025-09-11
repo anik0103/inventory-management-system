@@ -61,10 +61,11 @@ const PdtList = () => {
       <Filters filters={filters} setFilters={setFilters} />
       <div className="grid grid-cols-3 gap-4">
         {filteredProducts.map((p) => (
-          <div key={p.name} className="border p-4 rounded shadow">
-            <Link href={`/app/product/${p.name}`}>
+          <div key={p.productId} className="border p-4 rounded shadow">
+            <Link href={`/app/product/${p.productId}`} className="flex flex-col items-center">
               <img src={p.image} alt={p.name} className="h-40 object-contain" />
               <h3 className="font-bold">{p.name}</h3>
+              <p>ID: {p.productId}</p>
               <p>₹{p.price}</p>
             </Link>
           </div>

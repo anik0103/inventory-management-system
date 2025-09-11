@@ -13,6 +13,7 @@ const ProductTable = ({ products = [] }) => {
       <table className="min-w-full border-collapse text-left bg-white shadow-md rounded-lg">
         <thead>
           <tr className="text-gray-700 text-sm border-b bg-gray-100 uppercase tracking-wider">
+            <th className="py-3 px-4">PRODUCT ID</th>
             <th className="py-3 px-4">PRODUCT</th>
             <th className="py-3 px-4">CATEGORY</th>
             <th className="py-3 px-4">QUANTITY</th>
@@ -27,6 +28,7 @@ const ProductTable = ({ products = [] }) => {
                 className="border-b text-sm cursor-pointer hover:bg-gray-100"
                 onClick={() => handleProductClick(item)}
               >
+                <td className="py-3 px-4">{item.id}</td>
                 <td className="py-3 px-4">{item.name}</td>
                 <td className="py-3 px-4">{item.category}</td>
                 <td className="py-3 px-4">{item.quantity}</td>
