@@ -49,6 +49,7 @@ const appRouter = createBrowserRouter([
           { path: "orders/:orderId", element: <OrderFullDetails /> },
           { path: "customer", element: <Customer /> },
           { path: "reports", element: <Reports /> },
+          { path: "add-product", element: <AddProducts /> },
         ],
       },
 
@@ -59,7 +60,6 @@ const appRouter = createBrowserRouter([
           { path: "products", element: <Products /> },
           { path: ":productName", element: <ProductDetails /> },
           { path: "userdetails", element: <UserDetails /> },
-          { path: "add-product", element: <AddProducts /> },
         ],
       },
     ],
