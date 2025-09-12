@@ -685,12 +685,12 @@
         },
         {
           "id": "P-3002",
-          "name": "APPLE WATCH",
+          "name": "BRACELET",
           "category": "ACCESSORIES",
           "quantity": 24,
-          "price": 150,
-          "image": "https://m.media-amazon.com/images/I/61ofBVHTbaL._UF894,1000_QL80_.jpg",
-          "description": "Sleek analog Apple Watch that combines fashion and function."
+          "price": 15,
+          "image": "https://i.pinimg.com/736x/d3/c1/5f/d3c15f8e5ae4c8689ed53b1330528cdf.jpg",
+          "description": "A Love Bracelet Cartier Gold that combines fashion and function."
         },
         {
           "id": "P-3003",
@@ -698,7 +698,7 @@
           "category": "ELECTRONIC",
           "quantity": 12,
           "price": 180,
-          "image": "https://andreadams.com.br/wp-content/uploads/2024/01/WEAR-OS-3-1024x768.png",
+          "image": "https://png.pngtree.com/png-clipart/20250104/original/pngtree-smart-watch-png-image_18709852.png",
           "description": "Fitness smartwatch with heart rate monitor."
         },
         {
@@ -999,7 +999,7 @@
         {
           "id": "P-4004",
           "name": "LAKME EYELINER",
-          "category": "Makeup",
+          "category": "FASHION",
           "quantity": 40,
           "price": 9,
           "image": "https://www.lakmeindia.com/cdn/shop/files/24894_S1-8901030979552_1000x.jpg?v=1709807079",
@@ -1017,7 +1017,7 @@
         {
           "id": "P-4006",
           "name": "LAKME SUNSCREEN",
-          "category": "Makeup",
+          "category": "FASHION",
           "quantity": 20,
           "price": 8,
           "image": "https://www.lakmeindia.com/cdn/shop/files/19642_H-8901030978753.jpg",
