@@ -9,7 +9,7 @@ const CustomerFilters = ({
   setSearchEmail,
 }) => {
   return (
-    <div className="flex items-center gap-3 mb-6 mt-6">
+    <div className="flex items-center gap-3 pl-6 mb-6 mt-6">
       <div>
         <input
           type="text"
