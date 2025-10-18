@@ -12,6 +12,12 @@ const Filters = ({ filters = {}, setFilters }) => {
   const handleAddClick = () => {
     navigate("/app/add-product");
   };
+  const handlePickClick = () => {
+    navigate("/app/pick");
+  };
+  const handlePutClick = () => {
+    navigate("/app/put");
+  };
 
   return (
     <div className="flex flex-wrap gap-3 items-center m-3">
@@ -22,17 +28,21 @@ const Filters = ({ filters = {}, setFilters }) => {
         onChange={(e) => {
           const value = e.target.value;
           // dropdown options in all filters
-          if (["fashion", "electronic", "accessories"].includes(value.toLowerCase())) {
+          if (
+            ["fashion", "electronic", "accessories"].includes(
+              value.toLowerCase()
+            )
+          ) {
             setFilters({
               ...filters,
-              category: value,   // set category
-              sortOrder: ""      // clear sort order
+              category: value, // set category
+              sortOrder: "", // clear sort order
             });
           } else {
             setFilters({
               ...filters,
               sortOrder: value,
-              category: ""       // clear category when sorting
+              category: "", // clear category when sorting
             });
           }
         }}
@@ -52,7 +62,8 @@ const Filters = ({ filters = {}, setFilters }) => {
           placeholder="Product Name"
           className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
           value={filters.productName}
-          onChange={(e) => setFilters((prev) => ({ ...prev, productName: e.target.value }))
+          onChange={(e) =>
+            setFilters((prev) => ({ ...prev, productName: e.target.value }))
           }
         />
         {filters.productName && (
@@ -73,7 +84,8 @@ const Filters = ({ filters = {}, setFilters }) => {
           placeholder="Category"
           className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
           value={filters.category}
-          onChange={(e) => setFilters((prev) => ({ ...prev, category: e.target.value }))
+          onChange={(e) =>
+            setFilters((prev) => ({ ...prev, category: e.target.value }))
           }
         />
         {filters.category && (
@@ -86,28 +98,6 @@ const Filters = ({ filters = {}, setFilters }) => {
           </button>
         )}
       </div>
-
-      {/* Quantity */}
-      {/* <div className="relative">
-        <input
-          type="text"
-          placeholder="Quantity"
-          className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
-          value={filters.quantity}
-          onChange={(e) => setFilters((prev) => ({ ...prev, quantity: e.target.value }))
-          }
-        />
-        {filters.quantity && (
-          <button
-            type="button"
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
-            onClick={() => clearField("quantity")}
-          >
-            <IoCloseCircle size={20} />
-          </button>
-        )}
-      </div> */}
-
       {/* Price */}
       <div className="relative">
         <input
@@ -115,7 +105,8 @@ const Filters = ({ filters = {}, setFilters }) => {
           placeholder="Price"
           className="border border-neutral-200 w-28 px-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-[#bd78b5] text-sm"
           value={filters.price}
-          onChange={(e) => setFilters((prev) => ({ ...prev, price: e.target.value }))
+          onChange={(e) =>
+            setFilters((prev) => ({ ...prev, price: e.target.value }))
           }
         />
         {filters.price && (
@@ -128,15 +119,31 @@ const Filters = ({ filters = {}, setFilters }) => {
           </button>
         )}
       </div>
-
-        {/* Add Product Button */}
-          <button
-            className="lg:ml-auto bg-[#bd78b5] text-white w-28 px-2 py-2 rounded-lg hover:bg-[#d19fca] transition text-sm"
-            onClick={handleAddClick}
-          >
-            + Add Product
-          </button>
-      
+      <div className="justtify-between flex gap-4">
+        {/* PUT */}
+        <button
+          type="button"
+          className="lg:ml-auto bg-[#bd78b5] text-white w-28 px-2 py-2 rounded-lg hover:bg-[#d19fca] transition text-sm"
+          onClick={handlePutClick}
+        >
+          Put
+        </button>
+        {/* Pick */}
+        <button
+          type="button"
+          className="lg:ml-auto bg-[#bd78b5] text-white w-28 px-2 py-2 rounded-lg hover:bg-[#d19fca] transition text-sm"
+          onClick={handlePickClick}
+        >
+          Pick
+        </button>
+      </div>
+      {/* Add Product Button */}
+      <button
+        className="lg:ml-auto bg-[#bd78b5] text-white w-28 px-2 py-2 rounded-lg hover:bg-[#d19fca] transition text-sm"
+        onClick={handleAddClick}
+      >
+        + Add Product
+      </button>
     </div>
   );
 };

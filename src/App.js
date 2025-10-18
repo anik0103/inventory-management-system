@@ -19,6 +19,8 @@ import UserDetails from "./Components/UserDetails";
 import Customer from "./Components/Customer/Customer";
 import ProtectedRoute from "./Components/Authentication/ProtectedRoute ";
 import Unauthorized from "./Components/Authentication/Unauthorized ";
+import Pick from "./Components/Product/Pick";
+import Put from "./Components/Product/Put";
 
 const appRouter = createBrowserRouter([
   {
@@ -60,6 +62,8 @@ const appRouter = createBrowserRouter([
           { path: "products", element: <Products /> },
           { path: ":productName", element: <ProductDetails /> },
           { path: "userdetails", element: <UserDetails /> },
+          { path: "pick", element: <Pick /> },
+          { path: "put", element: <Put/> },
         ],
       },
     ],

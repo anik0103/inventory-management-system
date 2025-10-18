@@ -13,7 +13,8 @@ const AddProduct = () => {
   const [price, setPrice] = useState(""); 
   const [description, setDescription] = useState("");
   const [supplier, setSupplier] = useState("");
-  const [discount, setDiscount] = useState("");
+  const [quantity, setquantity] = useState("");
+  const [id, setid] = useState("");
 
 const handleImageChange = (e) => { 
   const file = e.target.files[0]; 
@@ -30,7 +31,8 @@ const handleSubmit = (e) => {
       price,
       description,
       supplier,
-      discount,
+      id,
+      quantity,
       image: preview,
     };
     addProduct(newProduct); 
@@ -127,7 +129,7 @@ return (
             required
           />
         </div>
-        <div className="w-full">
+        {/* <div className="w-full">
           <label className="block font-medium">Discounts</label>
           <input
             type="text"
@@ -135,6 +137,28 @@ return (
             onChange={(e) => setDiscount(e.target.value)}
             className="w-full border px-3 py-2 rounded"
             placeholder="Enter % discount"
+            required
+          />
+        </div> */}
+        <div className="w-full">
+          <label className="block font-medium">Quantity</label>
+          <input
+            type="text"
+            value={quantity}
+            onChange={(e) => setquantity(e.target.value)}
+            className="w-full border px-3 py-2 rounded"
+            placeholder="Quantity"
+            required
+          />
+        </div>
+        <div className="w-full">
+          <label className="block font-medium">ProductId</label>
+          <input
+            type="text"
+            value={id}
+            onChange={(e) => setid(e.target.value)}
+            className="w-full border px-3 py-2 rounded"
+            placeholder="Product ID"
             required
           />
         </div>

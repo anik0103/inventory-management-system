@@ -48,7 +48,7 @@ const AddSupplier = () => {
     };
 
     // Navigate back to the suppliers page and pass the new supplier in the state
-    navigate("/suppliers", { state: { newSupplier } });
+    navigate("/app/suppliers", { state: { newSupplier } });
   };
 
   return (
